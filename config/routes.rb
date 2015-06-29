@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   
 
-  get 'channels/new'
-
   #get 'channels_sessions/new'
   #get 'channels/new'
   root 'sessions#new'
@@ -27,6 +25,6 @@ Rails.application.routes.draw do
 
   
   resources :users
-  #resources :channels
+  resources :channels
   resources :ameens_menus
   end
