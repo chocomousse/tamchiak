@@ -1,2 +1,29 @@
-<h1>AmeensMenus#new</h1>
-<p>Find me in app/views/ameens_menus/new.html.erb</p>
+
+<% provide(:title, 'Add new items to Ameens Menu') %> 
+
+  <div class="row">
+    <div class = "col-md-6 col-md-offset-3">
+        <h1>Add new items to Ameens Menu</h1>
+      <%= form_for(@ameens_menu) do |f| %>
+      
+      <%= f.label :category %>
+      <%= f.text_field :category, class: 'form-control' %>
+
+      <%= f.label :subcat %>
+      <%= f.text_field :subcat, class: 'form-control' %>
+
+      <%= f.label :item_code %>
+      <%= f.text_field :item_code, class: 'form-control' %>
+      
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      
+      <%= f.label :price %>
+      <%= f.text_field :price, class: 'form-control' %>
+
+
+
+      <%= f.submit "Add Item", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>

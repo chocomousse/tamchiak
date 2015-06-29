@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'ameens_menus/new'
+  
 
   #get 'channels_sessions/new'
-  #get 'ameens_menu/new'
   #get 'channels/new'
   root 'sessions#new'
   
@@ -19,7 +18,13 @@ Rails.application.routes.draw do
   delete 'logout' => 'session#destroy'
   get 'logout' => 'sessions#new'
   
+  #For menu
+  get 'ameens_menus/new'
+  get 'ameensadmin' => 'ameens_menus#new'
+  get 'ameens_menus' => 'ameens_menus#show'
+
+  
   resources :users
   #resources :channels
-  #resources :ameens_menus
+  resources :ameens_menus
   end
