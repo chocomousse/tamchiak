@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'join_channel' => 'csessions#new'
   post 'join_channel' => 'csessions#create'
   delete 'exit_channel' => 'csessions#destroy'
+  get 'join_or_create' => 'users#choose'
   
   #For user log in log out
   get 'signup' => 'users#new'

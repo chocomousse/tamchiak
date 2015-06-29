@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save 
       log_in(@user)
       flash[:success] = "Welcome to Tam Chiak!"
-      redirect_to @user
+      redirect_to join_or_create
     else 
       render 'new'
     end 
