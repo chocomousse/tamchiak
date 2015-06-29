@@ -1,11 +1,8 @@
 class CsessionsController < ApplicationController
-  include CsessionHelper
-  
-  def new
-  end
-  
+  include CsessionsHelper
+
   def create
-    channel = Channel.find_by(cname: [:csession][:cname])
+    channel = Channel.find_by(params[:csession][:cname])
     if channel 
       join_channel channel
       redirect_to channel
@@ -17,6 +14,6 @@ class CsessionsController < ApplicationController
   
   def destroy
     exit_channel if joined_channel
-    redirect_to @user
+    redirect_to login_path
   end
 end

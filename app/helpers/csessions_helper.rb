@@ -15,4 +15,5 @@ module CsessionsHelper
   def exit_channel 
     csssion.delete(:channel_id)
     @current_channel = nil
+  end
 end
