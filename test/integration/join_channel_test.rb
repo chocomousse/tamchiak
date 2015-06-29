@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class JoinChannelTest < ActionDispatch::IntegrationTest
+  def setup
+    @channel = channels(:channelTest)
+  end
+  
   test "Invalid Channel" do
     get join_channel_path
     assert_template 'csessions/new'
@@ -10,4 +14,5 @@ class JoinChannelTest < ActionDispatch::IntegrationTest
     get join_channel_path
     assert flash.empty?
   end
+  
 end

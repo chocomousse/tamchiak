@@ -5,11 +5,17 @@ class CsessionsController < ApplicationController
   def create
     channel = Channel.find_by(cname: [:csession][:cname])
     if channel 
-      #jointhe channel
-      else
+      join_channel channel
+      redirect_to channel
+    else
       flash[:danger] = 'The channel does not exist'
       render 'new'
     end 
   end 
+  
+  def destroy
+    exit_channel 
+    redirect_to @user
+  end
   
 end
