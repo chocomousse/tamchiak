@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629053344) do
+ActiveRecord::Schema.define(version: 20150629113125) do
 
   create_table "ameens_menus", force: :cascade do |t|
     t.string   "category"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20150629053344) do
   end
 
   add_index "ameens_menus", ["item_code"], name: "index_ameens_menus_on_item_code", unique: true
+
+  create_table "channels", force: :cascade do |t|
+    t.string   "cname"
+    t.string   "menu"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

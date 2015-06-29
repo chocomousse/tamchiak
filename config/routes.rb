@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
   
   #For channels
-  #get 'create_channel' => 'channels#new'
+  get 'create_channel' => 'channels#new'
   #get 'join_channel' => 'channels_sessions#new'
   #post 'join_channel' => 'channels_sessions#create'
   #delete 'exit_channel' => 'channel_sessions#destroy'
@@ -25,6 +25,6 @@ Rails.application.routes.draw do
 
   
   resources :users
-  #resources :channels
+  resources :channels
   resources :ameens_menus
   end
