@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   
   #For menu
   get 'ameens_menus/new'
-  get 'ameensadmin' => 'ameens_menus#new'
+  get 'ameensadmin' => 'ameens_menus#show'
   get 'ameens_menus' => 'ameens_menus#show'
 
   
