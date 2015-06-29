@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'csessions/new'
+
   #get 'channels_sessions/new'
   #get 'channels/new'
   root 'sessions#new'
