@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150629103132) do
+ActiveRecord::Schema.define(version: 20150629113125) do
 
   create_table "ameens_menus", force: :cascade do |t|
     t.string   "category"
