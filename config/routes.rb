@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ameens_menus/new'
+
   #get 'channels_sessions/new'
   #get 'ameens_menu/new'
   #get 'channels/new'

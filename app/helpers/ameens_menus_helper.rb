@@ -1,0 +1,2 @@
+module AmeensMenusHelper
+end
