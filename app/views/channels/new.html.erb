@@ -9,8 +9,10 @@
     <%= f.text_field :cname %>
     
     <%= f.label :Menu_Type %>
-    <div class="row">
-      <div class="col-md-2">
+   <!-- <%= f.text_field :menu %> -->
+    
+    <div class="row"> 
+      <div class="col-md-2"> 
         <%= radio_button_tag(:menu, "Ameens") %>
       </div>
       <div class="col-md-4">
@@ -19,11 +21,11 @@
     </div>
    
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-2"> 
         <%= radio_button_tag(:menu, "Macs") %>
       </div>
       <div class="col-md-4">
-        Macs
+        <p class="pull-left">Macs</p>
       </div>
     </div>
   </div>
