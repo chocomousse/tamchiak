@@ -7,4 +7,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  #Returns true is a test user is logged in
+  def has_joined_channel?
+    !csession[channel_id].nil?
+  end
 end

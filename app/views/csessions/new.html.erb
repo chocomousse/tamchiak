@@ -1,0 +1,35 @@
+<% provide(:title, 'Join a channel') %>
+
+
+<div class= "row">
+  <div class= "col-md-6 col-md-offset-3">
+    <h1>Create a channel</h1>
+    <%= form_for(@channel) do |f| %>
+    <%= f.label :Channel_Name %>
+    <%= f.text_field :cname %>
+    
+    <%= f.label :Menu_Type %>
+    <div class="row">
+      <div class="col-md-2">
+        <%= radio_button_tag(:menu, "Ameens") %>
+      </div>
+      <div class="col-md-4">
+        Ameens
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-md-2">
+        <%= radio_button_tag(:menu, "Macs") %>
+      </div>
+      <div class="col-md-4">
+        Macs
+      </div>
+    </div>
+  </div>
+
+  <div class "col-md-12"><%= f.submit "Join this channel", class: "btn btn-primary" %></div>
+    
+    <% end %>
+  </div>
+</div>
