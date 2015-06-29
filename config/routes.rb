@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#new'
   
   #For menu
-  get 'ameens_menus/new'
-  get 'ameensadmin' => 'ameens_menus#show'
-  get 'ameens_menus' => 'ameens_menus#show'
+  get 'ameensadmin' => 'ameens_menus#new'
+  post 'ameensadmin' => 'ameens_menu#create'
+  get 'ameensmenu' => 'ameens_menus#show'
 
   
   resources :users

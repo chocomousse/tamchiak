@@ -12,7 +12,7 @@ class AmeensMenusController < ApplicationController
     if @ameens_menu.save 
       log_in(@ameens_menu)
       flash[:success] = "Item has been successfully added!"
-      redirect_to ameensadmin_path
+      redirect_to ameensmenu_path
     else 
       render 'new'
     end 
