@@ -1,4 +1,6 @@
 class CsessionsController < ApplicationController
+  include CsessionHelper
+  
   def new
   end
   
@@ -14,8 +16,7 @@ class CsessionsController < ApplicationController
   end 
   
   def destroy
-    exit_channel 
+    exit_channel if joined_channel
     redirect_to @user
   end
-  
 end
