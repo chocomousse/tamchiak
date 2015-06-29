@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
   
-
   #get 'channels_sessions/new'
   #get 'channels/new'
   root 'sessions#new'
   
   #For channels
   get 'create_channel' => 'channels#new'
-  #get 'join_channel' => 'channels_sessions#new'
-  #post 'join_channel' => 'channels_sessions#create'
-  #delete 'exit_channel' => 'channel_sessions#destroy'
+  get 'join_channel' => 'csessions#new'
+  post 'join_channel' => 'csessions#create'
+  delete 'exit_channel' => 'csessions#destroy'
+  get 'join_or_create' => 'users#choose'
+  get 'new_channel' => 'channels#show'
   
   #For user log in log out
   get 'signup' => 'users#new'

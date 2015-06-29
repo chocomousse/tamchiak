@@ -12,7 +12,7 @@ class ChannelsController < ApplicationController
     @channel = Channel.new(channel_params)
     if @channel.save 
       flash[:success] = "Join your channel now!"
-      redirect_to @channel
+      redirect_to new_channel_path
     else 
       render 'new'
     end 

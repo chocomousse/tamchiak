@@ -1,5 +1,8 @@
-<% provide(:title, @channel.cname) %>
+<% provide(:title, 'New Channel!') %> 
 
-<%= @channel.cname %>
-<%= @channel.menu %>
-<%= link_to "Join your channel now!", join_channel_path %>
+  <div class="row">
+    <div class = "col-md-6 col-md-offset-3">
+        <h1>Your channel has been created!</h1>
+      <button type="button"  class: "btn btn-primary" ><%= link_to "Join a channel!", join_channel_path %></button>
+    </div>
+  </div>
