@@ -1,7 +1,7 @@
 class ChannelsController < ApplicationController
 
   def show
-    @channel = Channel.find(params[:id])
+    @channel = Channel.all
   end 
   
   def new
@@ -10,13 +10,14 @@ class ChannelsController < ApplicationController
   
   def create 
     @channel = Channel.new(channel_params)
-    redirect_to join_channel_path
-   # if @channel.save 
-      flash[:success] = "Join your channel now!"
-     # redirect_to new_channel_path
-    #else 
-     # render 'new'
-    #end 
+    if @channel.save    
+      log_in(@channel)
+      flash[:success] = "Success!"
+      redirect_to new_channel_path
+    else 
+      flash.now[:danger] = "This channel name is already taken."
+      render 'new'
+    end 
   end 
   
   private 
