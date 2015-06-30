@@ -10,7 +10,6 @@ class AmeensMenusController < ApplicationController
   def create 
     @ameens_menu = AmeensMenu.new(ameens_menu_params)
     if @ameens_menu.save 
-      log_in(@ameens_menu)
       flash[:success] = "Item has been successfully added!"
       redirect_to ameensmenu_path
     else 

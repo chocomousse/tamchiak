@@ -1,10 +1,12 @@
 class CsessionsController < ApplicationController
-  include CsessionsHelper
-
+  
+  def new
+  end
+  
   def create
     channel = Channel.find_by(params[:csession][:cname])
     if channel
-      log_in(channel)
+      join_channel(channel)
       redirect_to join_channel_path
     else
       flash[:danger] = 'The channel does not exist'
