@@ -1,19 +1,37 @@
-<p><%= link_to "Add new item", ameensadmin_path %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Menu - Al Amaan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="ameens_menus.scss">
+</head>
 
-<p>
-  <span>Category</span>
-  <span>Sub-category</span>
-  <span>Item code</span>
-  <span>Name</span>
-  <span>Price</span>
-</p>
+<body>
+  <div class="container">
+    <h1>Menu - Al Amaan</h1>
+    <p></p>
+    <table class="table">
+      <tr>
+        Category
+        Sub-category
+        Item code
+        Name
+        Price
+      </tr>
 
-<% @ameens_menu.each do |t| %>
-  <p>
-    <%= t.category %>
-    <%= t.subcat %>
-    <%= t.item_code %>
-    <%= t.name %>
-    <%= t.price %>
-  </p>
-<% end %>
+      <% @ameens_menu.each do |t| %>
+      <p>
+        <tr>
+          <%= t.category %>
+          <%= t.subcat %>
+          <%= t.item_code %>
+          <%= t.name %>
+          <%= t.price %>
+        </tr>
+      </p>
+      <% end %>
+    </table>
+  </div>
+</body>
