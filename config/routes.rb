@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  
-  #get 'channels_sessions/new'
-  #get 'channels/new'
+
   root 'sessions#new'
   
   #For channels

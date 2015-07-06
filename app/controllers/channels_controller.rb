@@ -10,21 +10,13 @@ class ChannelsController < ApplicationController
   
   def create 
     @channel = Channel.new(channel_params)
-<<<<<<< HEAD
     if @channel.save    
       join_channel(@channel)
       flash[:success] = "Success!"
       redirect_to new_channel_path
     else 
-      flash.now[:danger] = "This channel name is already taken."
+      flash.now[:danger] 
       render 'new'
-=======
-  if @channel.save 
-    flash[:success] = "Join your channel now!"
-    redirect_to new_channel_path
-    else 
-     render 'new'
->>>>>>> Channels
     end 
   end 
   
@@ -32,4 +24,4 @@ class ChannelsController < ApplicationController
   def channel_params
     params.require(:channel).permit(:cname, :menu)
   end 
-end
+end 
