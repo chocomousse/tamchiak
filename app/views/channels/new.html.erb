@@ -1,20 +1,19 @@
 <% provide(:title, 'Create a channel') %>
 
-
 <div class= "row">
   <div class= "col-md-6 col-md-offset-3">
+    
     <h1>Create a channel</h1>
     <%= form_for(@channel) do |f| %>
-    <%= render 'shared/error_messages' %>
+    <%= render 'shared/error_messages_channel' %>
     <%= f.label :Channel_Name %>
-    <%= f.text_field :cname, class: 'form-control' %>
+    <%= f.text_field :cname, class:'form-control' %>
     
     <%= f.label :Menu_Type %>
-   <!-- <%= f.text_field :menu %> -->
     
     <div class="row"> 
       <div class="col-md-2"> 
-        <%= radio_button_tag(:menu, "Ameens"), class: 'form-control'  %>
+        <%= f.radio_button(:menu, "Ameens") %>
       </div>
       <div class="col-md-4">
         Ameens
@@ -23,16 +22,17 @@
    
     <div class="row">
       <div class="col-md-2"> 
-        <%= radio_button_tag(:menu, "Macs"),class: 'form-control'  %>
+        <%= f.radio_button(:menu, "Macs")%>
       </div>
       <div class="col-md-4">
         <p class="pull-left">Macs</p>
       </div>
     </div>
   </div>
-
-  <div class="col-md-6 col-md-offset-3"><%= f.submit "Create my channel", class: "btn btn-primary" %></div>
+  <div class="col-md-6 col-md-offset-3">
+    <%= f.submit "Create my channel", class: "btn btn-primary", :"data-no-turbolink" => true %>
+  </div>
     
-    <% end %>
+<% end %>
   </div>
 </div>

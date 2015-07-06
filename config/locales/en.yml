@@ -19,5 +19,19 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+en:  
+  activerecord:
+    models: 
+      channel: "Channel name"
+    attributes:
+      channel:
+        cname: "Channel name"
+        menu: "Menu"
+    errors:
+      models:
+        channel:
+          attributes:
+            menu:
+              blank: "cannot be empty"
+            cname:
+              blank: "cannot be empty"
