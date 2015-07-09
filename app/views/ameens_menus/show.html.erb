@@ -4,34 +4,39 @@
   <title>Menu - Al Amaan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="ameens_menus.scss">
+  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="app/stylesheets/ameens_menus.scss">
 </head>
 
 <body>
   <div class="container">
     <h1>Menu - Al Amaan</h1>
     <p></p>
-    <table class="table">
-      <tr>
-        Category
-        Sub-category
-        Item code
-        Name
-        Price
-      </tr>
-
-      <% @ameens_menu.each do |t| %>
-      <p>
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <%= t.category %>
-          <%= t.subcat %>
-          <%= t.item_code %>
-          <%= t.name %>
-          <%= t.price %>
+          <th>Category</th>
+          <th>Sub-category</th>
+          <th>Item code</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Order</th>
         </tr>
-      </p>
-      <% end %>
+      </thead>
+      <tbody>
+        <% @ameens_menu.each do |t| %>
+        <p>
+          <tr>
+            <td><%= t.category %></td>
+            <td><%= t.subcat %></td>
+            <td><%= t.item_code %></td>
+            <td><%= t.name %></td>
+            <td><%= number_to_currency(t.price) %></td>
+            <td>Add to channel</td>
+          </tr>
+        </p>
+        <% end %>
+      </tbody>
     </table>
   </div>
 </body>
