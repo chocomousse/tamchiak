@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'logout' => 'sessions#new'
   
+  #For user profile
+  get 'settings' => 'users#edit'
+  
   #For menu
   get 'ameensadmin' => 'ameens_menus#new'
   post 'ameensadmin' => 'ameens_menu#create'
