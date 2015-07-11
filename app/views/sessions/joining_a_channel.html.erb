@@ -1,0 +1,6 @@
+<h1>Enter a Channel</h1>
+<%= form_for(:session, url: join_channel_path) do |f| %>
+  <%= f.label :Channel_Name %>
+  <%= f.text_field :cname, class:'form-control' %>
+  <%= f.submit %>
+<% end %>rails

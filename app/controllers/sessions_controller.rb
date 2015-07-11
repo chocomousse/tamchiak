@@ -18,6 +18,17 @@ class SessionsController < ApplicationController
     end
   end 
   
+  def new_order
+    channel = Channel.find_by(cname: params[:session][:cname])
+    if channel 
+      join_channel(channel)
+      redirect_to new_order_path
+    else 
+      flash.now[:danger] = "Channel does not exist"
+      render 'joining_a_channel'
+    end 
+  end
+  
   def destroy
     log_out if logged_in?
     redirect_to root_url

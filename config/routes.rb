@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   
   #For channels
   get 'create_channel' => 'channels#new'
-  get 'join_channel' => 'channels#dummy'
-  #post 'join_channel' => 'csessions#create'
-  #delete 'exit_channel' => 'csessions#destroy'
+  get 'join_channel' => 'sessions#joining_a_channel' #shows that page I think
+  post 'join_channel' => 'sessions#new_order'        #happens upon clicking the submit button in the joining_a_channel pageail
+
   get 'join_or_create' => 'users#choose'
   get 'new_channel' => 'channels#show'
   
@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   resources :users
   resources :channels
   resources :ameens_menus
+  resources :orders,         only: [:create, :destroy]
   end
