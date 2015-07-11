@@ -1,6 +1,21 @@
 class OrdersController < ApplicationController
+  def show
+    @order = Order.all
+  end 
   
-  def create
+  def new
+    @order = Order.new
+  end
+  
+  def create 
+    @order = Order.new(order_params)
+    if @order.save    
+      flash[:success] = "Success!"
+      redirect_to order_received_path
+    else 
+      flash.now[:danger] = "Invalid Order!"
+      render 'new'
+    end 
   end 
   
   private 

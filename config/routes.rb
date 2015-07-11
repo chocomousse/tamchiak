@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'join_or_create' => 'users#choose'
   get 'new_order' => 'orders#new'
+  get 'order_received' => 'orders#show'
   
   #For user log in log out
   get 'signup' => 'users#new'

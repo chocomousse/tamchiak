@@ -1,1 +1,15 @@
-<h1>enter the new order here</h1>
+<% provide(:title, 'Place an order') %>
+
+<div class= "row">
+  <div class= "col-md-6 col-md-offset-3">
+
+    <h1>Place an order</h1>
+    <%= form_for(@order) do |f| %>
+    <%= f.label :Meal %>
+    <%= f.text_field :meal %>
+
+    <%= f.submit "Submit my order", class: "btn btn-primary"%>
+
+    <% end %>
+  </div>
+</div>
