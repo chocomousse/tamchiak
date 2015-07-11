@@ -1,5 +1,6 @@
 class ChannelsController < ApplicationController
-
+  before_action :logged_in_user, only: [:show, :create]
+ 
   def show
     @channel = Channel.all
   end 
