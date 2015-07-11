@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'join_channel' => 'sessions#new_order'        #happens upon clicking the submit button in the joining_a_channel pageail
 
   get 'join_or_create' => 'users#choose'
-  get 'new_channel' => 'channels#show'
+  get 'new_order' => 'orders#new'
   
   #For user log in log out
   get 'signup' => 'users#new'
