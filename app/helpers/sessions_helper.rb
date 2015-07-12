@@ -6,15 +6,15 @@ module SessionsHelper
 
   # Joins a room
   def join_channel(channel)
-    session[:cname_id] = channel.id
+    session[:channel_id] = channel.id
   end 
 
   # Returns the channel
   def current_channel 
-    if (channel_id = session[:session][:cname_id])
-      @current_channel ||= Room.findby(id: cname_id)
-    elsif (channel_id = cookies.signed[:cname_id])
-      channel = Channel.find_by(id: cname_id)
+    if (channel_id = session[:channel_id])
+      @current_channel ||= Channel.find_by(id: channel_id)
+    elsif (channel_id = cookies.signed[:channel_id])
+      channel = Channel.find_by(id: channel_id)
       if channel
         join_channel channel
         @current_channel = channel

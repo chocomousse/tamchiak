@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711171944) do
+ActiveRecord::Schema.define(version: 20150712174754) do
 
   create_table "ameens_menus", force: :cascade do |t|
     t.string   "category"
@@ -19,11 +19,16 @@ ActiveRecord::Schema.define(version: 20150711171944) do
     t.string   "item_code"
     t.string   "name"
     t.decimal  "price"
+    t.integer  "user_id"
+    t.integer  "channel_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "ameens_menus", ["item_code"], name: "index_ameens_menus_on_item_code", unique: true
+  add_index "ameens_menus", ["channel_id", "created_at"], name: "index_ameens_menus_on_channel_id_and_created_at"
+  add_index "ameens_menus", ["channel_id"], name: "index_ameens_menus_on_channel_id"
+  add_index "ameens_menus", ["user_id", "created_at"], name: "index_ameens_menus_on_user_id_and_created_at"
+  add_index "ameens_menus", ["user_id"], name: "index_ameens_menus_on_user_id"
 
   create_table "channels", force: :cascade do |t|
     t.string   "cname"

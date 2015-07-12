@@ -6,12 +6,12 @@ class CreateAmeensMenus < ActiveRecord::Migration
       t.string :item_code
       t.string :name
       t.decimal :price
-    # t.references :user, index: true
-      t.references :channel, index: true
+      t.references :user, index: true, foreign_key: true
+      t.references :channel, index: true, foreign_key: true
 
       t.timestamps null: false
     end
-  # add_index :ameensmenus, [:user_id, :created_at]
-    add_index :ameensmenus, [:cname_id, :created_at]
+    add_index :ameens_menus, [:user_id, :created_at]
+    add_index :ameens_menus, [:channel_id, :created_at]
   end
 end

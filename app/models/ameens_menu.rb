@@ -1,14 +1,12 @@
 class AmeensMenu < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :channel
-  validates :cname_id, presence: true
+  belongs_to :user, :class_name => "User", :foreign_key => "user_id"
+  belongs_to :channel, :class_name => "Channel", :foreign_key => "channel_id"
   validates :user_id, presence: true
-  before_save { self.item_code = item_code.upcase}
+  #validates :channel_id, presence: true
+  
   validates :category, presence: true
   validates :subcat, presence: true
-  validates :item_code, presence: true,
-                        uniqueness: {case_sensitive: false}
+  validates :item_code, presence: true
   validates :name, presence: true
   validates :price, presence: true
-  
 end

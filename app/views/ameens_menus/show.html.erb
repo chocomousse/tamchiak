@@ -21,6 +21,7 @@
           <th>Name</th>
           <th>Price</th>
           <th>Order</th>
+          <th>User ID</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +33,8 @@
             <td><%= t.item_code %></td>
             <td><%= t.name %></td>
             <td><%= number_to_currency(t.price) %></td>
+            <td><%= t.user %></td>
+            <td><%= t.channel %></td>
             <td>Add to channel</td>
           </tr>
         </p>

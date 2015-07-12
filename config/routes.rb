@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'join_channel' => 'sessions#joining_a_channel' #shows that page I think
   post 'join_channel' => 'sessions#new_order'        #happens upon clicking the submit button in the joining_a_channel pageail
   get 'new_channel' => 'channels#show'
+  delete 'exit' => 'sessions#quit'
+  get 'exit' => 'users#choose'
 
   get 'join_or_create' => 'users#choose'
   #get 'new_order' => 'orders#new'
