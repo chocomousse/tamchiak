@@ -64,6 +64,24 @@ module SessionsHelper
     forget(current_user)
     session.delete(:user_id)
     @current_user = nil
+  end  
+
+  # Confirms a logged in user
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+  end
+
+  # Authenticates a user
+  def authenticate_user
+    if session[:user_id]
+      @current_user ||= User.find_by(id: user_id)
+    else 
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
   end
 
 end

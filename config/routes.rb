@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   post 'ameensadmin' => 'ameens_menu#create'
   get 'ameensmenu' => 'ameens_menus#show'
 
-  
   resources :users
   resources :channels
   resources :ameens_menus

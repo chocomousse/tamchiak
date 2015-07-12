@@ -1,14 +1,15 @@
 class ChannelsController < ApplicationController
-  before_action :logged_in_user, only: [:show, :create]
- 
+  before_action :logged_in_user
+  #before_action :authenticate_user
+
   def show
     @channel = Channel.all
   end 
-  
+
   def new
     @channel = Channel.new
   end
-  
+
   def create 
     @channel = Channel.new(channel_params)
     if @channel.save    
@@ -20,7 +21,7 @@ class ChannelsController < ApplicationController
       render 'new'
     end 
   end 
-  
+
   private 
   def channel_params
     params.require(:channel).permit(:cname, :menu)

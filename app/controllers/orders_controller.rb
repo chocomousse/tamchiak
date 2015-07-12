@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+  before_action :logged_in_user
+  #before_action :authenticate_user
+  
   def show
     @order = Order.all
   end 

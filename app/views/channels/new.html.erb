@@ -1,16 +1,16 @@
 <% provide(:title, 'Create a channel') %>
-<% if logged_in? %>
+
 <div class= "row">
   <div class= "col-md-6 col-md-offset-3">
-    
+
     <h1>Create a channel</h1>
     <%= form_for(@channel) do |f| %>
     <%= render 'shared/error_messages_channel' %>
     <%= f.label :Channel_Name %>
     <%= f.text_field :cname, class:'form-control' %>
-    
+
     <%= f.label :Menu_Type %>
-    
+
     <div class="row"> 
       <div class="col-md-2"> 
         <%= f.radio_button(:menu, "Ameens") %>
@@ -19,7 +19,7 @@
         Ameens
       </div>
     </div>
-   
+
     <div class="row">
       <div class="col-md-2"> 
         <%= f.radio_button(:menu, "Macs") %>
@@ -32,10 +32,8 @@
   <div class="col-md-6 col-md-offset-3">
     <%= f.submit "Create my channel", class: "btn btn-primary", :"data-no-turbolink" => true %>
   </div>
-    
-<% end %>
-  </div>
+  <% end %>
+
+
 </div>
-<% else %>
-<ul><li><%= link_to "Log in", login_path %></li></ul>
-        <% end %>
+</div>
