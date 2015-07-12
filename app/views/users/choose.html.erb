@@ -2,12 +2,15 @@
 
 <div class="row">
   <div class = "col-md-6 col-md-offset-3">
-    <%= @user %>
     <h1>What do you want to do?</h1>
-    <button type="button"  class: "btn btn-primary" ><%= link_to "Create a channel!", create_channel_path %></button>
+    <div>
+      <button type="button"  class: "btn btn-primary" ><%= link_to "Create a channel!", create_channel_path %></button>
     <button type="button"  class: "btn btn-primary" ><%= link_to "Join a channel!", join_channel_path %></button>   
-    <%= link_to "Log out", logout_path %>
-    <%= link_to "Settings", settings_path %>
+    </div>
+    <div> 
+      <%= link_to "Log out", logout_path %>
+     <%= link_to "Settings", settings_path %>
+    </div>
   </div>
 </div>
 

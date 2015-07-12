@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
     channel = Channel.find_by(cname: params[:session][:cname])
     if channel 
       join_channel(channel)
-      redirect_to new_order_path
+      redirect_to ameensadmin_path
     else 
       flash.now[:danger] = "Channel does not exist"
       render 'joining_a_channel'
@@ -34,5 +34,10 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     redirect_to root_url
+  end
+  
+  def quit
+    exit_channel if joined_channel?
+    redirect_to join_or_create_path
   end
 end 

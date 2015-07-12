@@ -1,4 +1,7 @@
 class AmeensMenusController < ApplicationController
+  before_action :logged_in_user
+  before_action :in_a_channel
+  
   def show
     @ameens_menu = AmeensMenu.all
   end
@@ -11,7 +14,7 @@ class AmeensMenusController < ApplicationController
     @ameens_menu = AmeensMenu.new(ameens_menu_params)
     if @ameens_menu.save 
       flash[:success] = "Item has been successfully added!"
-      redirect_to ameensmenu_path
+      redirect_to ameensadmin_path
     else 
       render 'new'
     end 

@@ -1,4 +1,8 @@
 class AmeensMenu < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :channel
+  validates :cname_id, presence: true
+  validates :user_id, presence: true
   before_save { self.item_code = item_code.upcase}
   validates :category, presence: true
   validates :subcat, presence: true
@@ -6,4 +10,5 @@ class AmeensMenu < ActiveRecord::Base
                         uniqueness: {case_sensitive: false}
   validates :name, presence: true
   validates :price, presence: true
+  
 end
