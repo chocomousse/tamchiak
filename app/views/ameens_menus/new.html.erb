@@ -4,7 +4,7 @@
 <div class="row">
   <div class = "col-md-6 col-md-offset-3">
     <h1>Add new item</h1>
-    <%= form_for(@ameens_menu) do |f| %>
+    <%= form_for(user.ameens_menus) do |f| %>
 
     <%= f.label :category %>
     <%= f.text_field :category, class: 'form-control' %>
@@ -21,8 +21,8 @@
     <%= f.label :price %>
     <%= f.text_field :price, class: 'form-control' %>
     
-    <%= f.hidden_field :user_id, id: "user_id" %>
-    <%= f.hidden_field :channel_id, id: "channel_id" %>
+    <%= f.hidden_field :user_id, value: "user_id" %>
+    <%= hidden_field_tag :channel_id, :value => channel.id %>
 
     <%= f.submit "Add Item", class: "btn btn-primary" %>
 
