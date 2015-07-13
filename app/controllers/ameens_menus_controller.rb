@@ -30,6 +30,6 @@ class AmeensMenusController < ApplicationController
     #user_id = session[:user_id]
     #channel_id = current_channel
     #user_id = current_user
-    params.require(:ameens_menu).permit(:category, :subcat, :item_code, :name, :price, :channel_id)
+    params.require(:ameens_menu).permit(:category, :subcat, :item_code, :name, :price)
   end 
 end

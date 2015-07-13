@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Channels and their Owners</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="app/stylesheets/ameens_menus.scss">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Menu - Al Amaan</h1>
+    <p></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Channel</th>
+          <th>Menu</th>
+          <th>Channel Owner ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @channel_owner.each do |t| %>
+        <p>
+          <tr>
+            <td><%= t.cname %></td>
+            <td><%= t.menu %></td>
+            <td><%= t.user_id %></td>
+          </tr>
+        </p>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</body>

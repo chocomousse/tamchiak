@@ -2,18 +2,18 @@ class ChannelsController < ApplicationController
   before_action :logged_in_user
   #before_action :authenticate_user
 
-  def show
-    @channel = Channel.all
+  def display
+    @channel_owner = Channel.all
   end 
 
   def new
-    @channel = Channel.new
+    @channel_owner = Channel.new
   end
 
   def create 
-    @channel = Channel.new(channel_params)
-    if @channel.save    
-      join_channel(@channel)
+    @channel_owner = current_user.channels.new(channel_params)
+    if @channel_owner.save    
+      join_channel(@channel_owner)
       flash[:success] = "Success!"
       redirect_to new_channel_path
     else 
