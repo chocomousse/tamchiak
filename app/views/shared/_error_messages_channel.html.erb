@@ -1,10 +1,10 @@
-<% if @channel.errors.any? %>
+<% if @channel_owner.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
-      The form contains <%= pluralize(@channel.errors.count, "error") %>.
+      The form contains <%= pluralize(@channel_owner.errors.count, "error") %>.
     </div>
     <ul>
-      <% @channel.errors.full_messages.each do |msg| %>
+      <% @channel_owner.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>

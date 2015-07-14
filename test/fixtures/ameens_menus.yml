@@ -1,19 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  category: MyString
-  subcat: MyString
-  item_code: MyString
-  name: MyString
-  price: 9.99
-  user_id: 
-  channel_id: 
-
-two:
-  category: MyString
-  subcat: MyString
-  item_code: MyString
-  name: MyString
-  price: 9.99
-  user_id: 
-  channel_id: 
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

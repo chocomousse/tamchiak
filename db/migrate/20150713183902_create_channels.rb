@@ -7,6 +7,6 @@ class CreateChannels < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :ameens_menus, [:user_id, :created_at]
+    add_index :users, [:user_id, :created_at]
   end
 end
