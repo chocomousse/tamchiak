@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :channels, dependent: :destroy
   has_many :ameens_menus, dependent: :destroy
-  belongs_to :channel
+
   attr_accessor :remember_token
   
   before_save { self.email = email.downcase }

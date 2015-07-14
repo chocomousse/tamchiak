@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'new_channel' => 'channels#show'
   delete 'exit' => 'sessions#quit'
   get 'exit' => 'users#choose'
+  get 'all_channels' => "channels#display"
 
   get 'join_or_create' => 'users#choose'
   #get 'new_order' => 'orders#new'

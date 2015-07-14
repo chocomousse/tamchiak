@@ -4,7 +4,7 @@
   <div class= "col-md-6 col-md-offset-3">
 
     <h1>Create a channel</h1>
-    <%= form_for(@channel) do |f| %>
+    <%= form_for(@channel_owner) do |f| %>
     <%= render 'shared/error_messages_channel' %>
     <%= f.label :Channel_Name %>
     <%= f.text_field :cname, class:'form-control' %>

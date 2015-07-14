@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712174754) do
+ActiveRecord::Schema.define(version: 20150714053922) do
 
   create_table "ameens_menus", force: :cascade do |t|
     t.string   "category"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 20150712174754) do
   add_index "ameens_menus", ["channel_id"], name: "index_ameens_menus_on_channel_id"
   add_index "ameens_menus", ["user_id", "created_at"], name: "index_ameens_menus_on_user_id_and_created_at"
   add_index "ameens_menus", ["user_id"], name: "index_ameens_menus_on_user_id"
+
+  create_table "channels", force: :cascade do |t|
+    t.string   "cname"
+    t.string   "menu"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "channels", ["user_id"], name: "index_channels_on_user_id"
 
   create_table "orders", force: :cascade do |t|
     t.string   "meal"
