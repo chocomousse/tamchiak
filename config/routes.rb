@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'ameens/new'
+
   root 'sessions#new'
   
   #For channels
