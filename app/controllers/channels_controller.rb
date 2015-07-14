@@ -1,6 +1,5 @@
 class ChannelsController < ApplicationController
-  before_action :logged_in_user
-  #before_action :authenticate_user
+  before_action :logged_in_user  
 
   def display
     @channel_owner = Channel.all

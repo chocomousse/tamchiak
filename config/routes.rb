@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'carts/show'
+
+  get 'items/index'
+
   get 'ameens/new'
 
   root 'sessions#new'
