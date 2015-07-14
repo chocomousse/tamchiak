@@ -28,12 +28,18 @@ Rails.application.routes.draw do
   get 'settings' => 'users#edit'
   
   #For menu
+  get 'ameens_admin' => 'ameens#new'
+  post 'ameens_admin' => 'ameens#create'
+  get 'ameens_menu' => 'ameens#show'
+  
+  #For menu which annabel changed to orders -_- hehehe kidding
   get 'ameensadmin' => 'ameens_menus#new'
   post 'ameensadmin' => 'ameens_menus#create'
   get 'ameensmenu' => 'ameens_menus#show'
 
   resources :users
   resources :channels
+  resources :ameens
   resources :ameens_menus,    only: [:create, :destroy]
   resources :orders,         only: [:create, :destroy]
   end

@@ -1,2 +1,29 @@
-<h1>Ameens#new</h1>
-<p>Find me in app/views/ameens/new.html.erb</p>
+<% provide(:title, 'Add new item') %> 
+
+<div class="row">
+  <div class = "col-md-6 col-md-offset-3">
+    <h1>Add new item</h1>
+    <%= form_for(@ameens) do |f| %>
+
+    <%= f.label :category %>
+    <%= f.text_field :category, class: 'form-control' %>
+
+    <%= f.label :subcat %>
+    <%= f.text_field :subcat, class: 'form-control' %>
+
+    <%= f.label :item_code %>
+    <%= f.text_field :item_code, class: 'form-control' %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :price %>
+    <%= f.text_field :price, class: 'form-control' %>
+    
+    <%= f.hidden_field :user_id, value: "user_id" %>
+
+    <%= f.submit "Add Item", class: "btn btn-primary" %>
+
+    <% end %>
+  </div>
+</div>
