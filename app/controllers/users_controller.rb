@@ -1,11 +1,11 @@
-class UsersController < ApplicationController  
-  def show
-    @user = User.find(params[:id])
-  end 
-  
+class UsersController < ApplicationController    
   def new
     @user = User.new
   end
+  
+  def show
+    @user = User.find(params[:id])
+  end 
   
   def create 
     @user = User.new(user_params)
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
-      redirect_to @user
+      redirect_to join_or_create_path
     else
       render 'edit'
     end
