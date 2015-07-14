@@ -15,6 +15,8 @@ class AmeensMenusController < ApplicationController
   def create 
     #@ameens_menu = AmeensMenu.new(ameens_menu_params)
     @ameens_menu = current_user.ameens_menus.build(ameens_menu_params)
+    @ameens_menu.channel = current_channel
+    
     if @ameens_menu.save 
       flash[:success] = "Item has been successfully added!"
       redirect_to ameensmenu_path
