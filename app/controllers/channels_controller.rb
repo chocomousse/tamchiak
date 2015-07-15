@@ -1,5 +1,9 @@
 class ChannelsController < ApplicationController
   before_action :logged_in_user  
+  
+  def show
+    @order_items = current_channel.order_items
+  end
 
   def display
     @channel_owner = Channel.all

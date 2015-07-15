@@ -3,6 +3,15 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   include SessionsHelper
+  helper_method :current_channel
+
+  def current_channel
+    if !session[:channel_id].nil?
+      Channel.find(session[:channel_id])
+    else
+      Channel.new
+    end
+  end
   
   private
   # Confirms a logged in user

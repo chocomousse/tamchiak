@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  get 'order_items/create'
+  get 'order_items/update'
+  get 'order_items/destroy'
 
   get 'carts/show'
 
@@ -46,4 +50,6 @@ Rails.application.routes.draw do
   resources :ameens
   resources :ameens_menus,    only: [:create, :destroy]
   resources :orders,         only: [:create, :destroy]
+  resources :items,      only: [:index]
+  resources :order_items,    only: [:create, :destroy, :update]
   end

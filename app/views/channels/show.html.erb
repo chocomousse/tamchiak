@@ -1,8 +1,56 @@
-<% provide(:title, 'New Channel!') %> 
+<!-- <% provide(:title, 'New Channel!') %>
 
   <div class="row">
     <div class = "col-md-6 col-md-offset-3">
         <h1>Your channel has been created!</h1>
       <button type="button"  class: "btn btn-primary" ><%= link_to "Home", join_or_create_path %></button>
     </div>
+  </div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= @channel.cname %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="app/stylesheets/ameens_menus.scss">
+</head>
+
+<body>
+  <div class="container">
+    <h1><%= @channel.cname %></h1>
+    <p></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Sub-category</th>
+          <th>Item code</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @order_items.size == 0 %>
+          <p class="text-center">
+            There are no orders in your channel.
+          </p>
+        <% else %>
+          <% @order_items.each do |t| %>
+            <tr>
+              <td><%= t.cat %></td>
+              <td><%= t.subcat %></td>
+              <td><%= t.item_code %></td>
+              <td><%= t.name %></td>
+              <td><%= number_to_currency(t.price) %></td>
+            </tr>
+          <% end %>
+          <tr>
+            <td><%= show_total: true %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
+</body>
