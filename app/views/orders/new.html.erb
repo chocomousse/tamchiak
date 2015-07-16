@@ -1,15 +1,18 @@
-<% provide(:title, 'Place an order') %>
+<% provide(:title, 'Add new item') %> 
 
-<div class= "row">
-  <div class= "col-md-6 col-md-offset-3">
-
-    <h1>Place an order</h1>
+<div class="row">
+  <div class = "col-md-6 col-md-offset-3">
+    <h1>Add new item</h1>
     <%= form_for(@order) do |f| %>
-    <%= f.label :Meal %>
-    <%= f.text_field :meal %>
 
-    <%= f.submit "Submit my order", class: "btn btn-primary"%>
+    <%= f.label :meal %>
+    <%= f.text_field :meal, class: 'form-control' %>
 
+    <%= f.submit "Submit Order", class: "btn btn-primary" %>
+
+    <% if joined_channel? %>
+    <%= link_to "Quit Channel", exit_path %>
+    <% end %>
     <% end %>
   </div>
 </div>

@@ -1,1 +1,36 @@
-<h1>Your order has been recorded </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>All Orders</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="app/stylesheets/ameens_menus.scss">
+</head>
+
+<body>
+  <div class="container">
+    <h1>All Orders</h1>
+    <p></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Meal</th>
+          <th>User ID</th>
+          <th>Channel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.each do |t| %>
+        <p>
+          <tr>
+            <td><%= t.meal %></td>
+            <td><%= t.user_id %></td>
+            <td><%= t.channel_id %></td>
+          </tr>
+        </p>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</body>

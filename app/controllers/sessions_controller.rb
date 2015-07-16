@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   before_action :logged_in_user, only: [:new_order, :destroy]
-  #before_action :authenticate_user, only: [:new_order, :destroy]
 
   def new
   end
@@ -24,7 +23,7 @@ class SessionsController < ApplicationController
     channel = Channel.find_by(cname: params[:session][:cname])
     if channel 
       join_channel(channel)
-      redirect_to ameensadmin_path
+      redirect_to create_order_path
     else 
       flash.now[:danger] = "Channel does not exist"
       render 'joining_a_channel'

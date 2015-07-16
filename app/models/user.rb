@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :channels, dependent: :destroy
-  has_many :ameens_menus, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   attr_accessor :remember_token
   
