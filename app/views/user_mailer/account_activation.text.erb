@@ -1,5 +1,7 @@
-Hi <%= @user.name %>,
+<h1><Tamchiak/h1>
 
-Welcome to the Sample App! Click on the link below to activate your account:
+  <p>Hi <%= @user.name %>,</p>
+
+  <p>Welcome to Tamchiak! Click on the link below to activate your account:</p>
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
