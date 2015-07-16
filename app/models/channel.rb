@@ -1,7 +1,9 @@
 class Channel < ActiveRecord::Base
-  has_many :users
-  has_many :orders, dependent: :destroy
-  validates :cname, presence: true, length: {maximum: 30}, uniqueness: true
-  validates :menu, presence: true
+  belongs_to :channel_status
+  has_many :order_items
+  before_create :set_channel_status
+  before_save :update_subtotal
+  
+  #belongs_to :users
 
 end
