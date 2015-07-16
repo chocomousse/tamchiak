@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   
   get 'create_order' => 'orders#new'
   post 'create_order' => 'orders#create'
-  get 'order_received' => 'orders#order_created'
+  get 'order_received' => 'orders/order_created'
   get 'all_orders' => 'orders#show'
 
   #For user log in log out
@@ -44,4 +44,5 @@ Rails.application.routes.draw do
   resources :ameens
   resources :ameens_menus,    only: [:create, :destroy]
   resources :orders,         only: [:create, :destroy]
+  resources :account_activations, only: [:edit]
 end
