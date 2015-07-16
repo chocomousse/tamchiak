@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AmeensMenuTest < ActiveSupport::TestCase
+class MenuItemTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
