@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'menu_items/index'
+
   get 'order_items/create'
   get 'order_items/update'
   get 'order_items/destroy'
