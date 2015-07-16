@@ -11,6 +11,71 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716065020) do
+ActiveRecord::Schema.define(version: 20150716102717) do
+
+  create_table "channel_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "channels", force: :cascade do |t|
+    t.string   "cname"
+    t.string   "menu"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.decimal  "subtotal"
+    t.decimal  "delivery"
+    t.decimal  "tax"
+    t.decimal  "total"
+    t.integer  "order_status_id"
+  end
+
+  add_index "channels", ["order_status_id"], name: "index_channels_on_order_status_id"
+  add_index "channels", ["user_id"], name: "index_channels_on_user_id"
+
+  create_table "menu_items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "cat"
+    t.string   "subcat"
+    t.string   "item_code"
+    t.decimal  "price"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "meal"
+    t.integer  "user_id"
+    t.integer  "channel_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "menu_item_id"
+    t.decimal  "unit_price"
+    t.integer  "quantity"
+    t.decimal  "total_price"
+  end
+
+  add_index "orders", ["channel_id", "created_at"], name: "index_orders_on_channel_id_and_created_at"
+  add_index "orders", ["channel_id"], name: "index_orders_on_channel_id"
+  add_index "orders", ["menu_item_id"], name: "index_orders_on_menu_item_id"
+  add_index "orders", ["user_id", "created_at"], name: "index_orders_on_user_id_and_created_at"
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "password_digest"
+    t.string   "remember_digest"
+    t.string   "activation_digest"
+    t.boolean  "activated",         default: false
+    t.datetime "activated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
