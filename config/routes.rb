@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'menu_items/index'
-
-  get 'order_items/create'
-  get 'order_items/update'
-  get 'order_items/destroy'
-
-  get 'carts/show'
-
-  get 'items/index'
-
-  get 'ameens/new'
-
   root 'sessions#new'
 
   #For channels
@@ -38,21 +26,14 @@ Rails.application.routes.draw do
 
   #For user profile
   get 'settings' => 'users#edit'
-
+  
   #For menu
-  get 'ameens_admin' => 'ameens#new'
-  post 'ameens_admin' => 'ameens#create'
-  get 'ameens_menu' => 'ameens#show'
+  get 'menu' => 'menu_items#index'
 
-  #For menu which annabel changed to orders -_- hehehe kidding => cuz szeying didnt tell me what she wanted to do mah 
-  get 'ameensadmin' => 'ameens_menus#new'
-  post 'ameensadmin' => 'ameens_menus#create'
-  get 'ameensmenu' => 'ameens_menus#show'
 
   resources :users
   resources :channels
-  resources :ameens
-  resources :ameens_menus,    only: [:create, :destroy]
-  resources :orders,         only: [:create, :destroy]
+  resources :orders,         only: [:create, :update, :destroy]
+  resources :menu_items, only: [:index]
   resources :account_activations, only: [:edit]
 end

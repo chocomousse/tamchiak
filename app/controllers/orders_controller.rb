@@ -22,9 +22,12 @@ class OrdersController < ApplicationController
      render 'new'
     end 
   end 
+  
+  def update
+  end
 
   private 
   def order_params
-    params.require(:order).permit(:meal)
+    params.require(:order).permit(:quantity, :menu_item_id)
   end 
 end
