@@ -11,8 +11,13 @@ class OrdersController < ApplicationController
   end
 
   def create 
-    @order = current_user.orders.build(order_params)
+    #@order = current_user.orders.build(order_params)
     @order.channel = current_channel
+    
+    #added on
+    @order = @channel.orders.new(order_params)
+    @channel.save
+    session[:channel_id] = @channel.id
     
     if @order.save 
       flash[:success] = "Order has been recorded!"

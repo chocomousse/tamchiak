@@ -6,7 +6,7 @@ class Channel < ActiveRecord::Base
   
   #belongs_to :users
   def subtotal
-    order_items.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
+    orders.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
   end
   
 private
