@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>All Orders</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
-  <link rel="stylesheet" href="app/stylesheets/ameens_menus.scss">
-</head>
+  <head>
+    <title>All Orders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="app/stylesheets/ameens_menus.scss">
+  </head>
 
-<body>
-  <div class="container">
-    <h1>All Orders</h1>
-    <p></p>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Meal</th>
-          <th>User ID</th>
-          <th>Channel</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @order.each do |t| %>
-        <p>
+  <body>
+    <div class="container">
+      <h1>All Orders</h1>
+      <p></p>
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td><%= t.meal %></td>
-            <td><%= t.user_id %></td>
-            <td><%= t.channel_id %></td>
+            <th>Meal</th>
+            <th>User ID</th>
+            <th>Channel ID</th>
+            <th>Meal ID</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
           </tr>
-        </p>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</body>
+        </thead>
+        <tbody>
+          <% @order.each do |t| %>
+          <p>
+            <tr>
+              <td><%= t.meal %></td>
+              <td><%= t.user_id %></td>
+              <td><%= t.channel_id %></td>
+              <td><%= t.menu_item_id %></td>
+              <td><%= t.unit_price %></td>
+              <td><%= t.quantity %></td>
+            </tr>
+          </p>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </body>

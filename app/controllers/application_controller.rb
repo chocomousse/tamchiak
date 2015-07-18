@@ -21,5 +21,5 @@ class ApplicationController < ActionController::Base
       redirect_to join_channel_url
     end
   end
-
+  
 end 

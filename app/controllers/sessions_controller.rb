@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def new
   end
-
+  
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
     channel = Channel.find_by(cname: params[:session][:cname])
     if channel 
       join_channel(channel)
-      redirect_to create_order_path
+      redirect_to menu_path
     else 
       flash.now[:danger] = "Channel does not exist"
       render 'joining_a_channel'
@@ -46,4 +46,5 @@ class SessionsController < ApplicationController
     exit_channel if joined_channel?
     redirect_to join_or_create_path
   end
+
 end 

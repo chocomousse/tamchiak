@@ -21,7 +21,7 @@ module SessionsHelper
       end 
     end
   end
-
+  
   # Returns true if the user has joined a channel, false otherwise.
   def joined_channel?
     !current_channel.nil?

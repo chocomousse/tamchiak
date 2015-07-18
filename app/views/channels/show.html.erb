@@ -1,8 +1,40 @@
-<% provide(:title, 'New Channel!') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Current Channel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+</head>
 
-  <div class="row">
-    <div class = "col-md-6 col-md-offset-3">
-        <h1>Your channel has been created!</h1>
-      <button type="button"  class: "btn btn-primary" ><%= link_to "Home", join_or_create_path %></button>
-    </div>
+<body>
+  <div class="container">
+    <h1><%= @channel_owner.cname %></h1>
+    <%= link_to "Add item", menu_path %>
+    <p></p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Sub-category</th>
+          <th>Item code</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @orders.each do |t| %>
+          <p>
+            <tr>
+              <td><%= t.cat %></td>
+              <td><%= t.subcat %></td>
+              <td><%= t.item_code %></td>
+              <td><%= t.name %></td>
+              <td><%= number_to_currency(t.price) %></td>
+            </tr>
+          </p>
+        <% end %>
+      </tbody>
+    </table>
   </div>
+</body>
