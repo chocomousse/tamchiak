@@ -63,13 +63,13 @@ module SessionsHelper
   def log_out
     forget(current_user)
     session.delete(:user_id)
-    @current_user = nil
+    current_user = nil
   end  
 
   def exit_channel
     forget(current_channel)
     session.delete(:cname_id)
-    @current_channel = nil
+    current_channel = nil
   end 
 
   # Authenticates a user
