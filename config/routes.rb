@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   root 'sessions#new'
 
   #For channels
@@ -36,4 +40,5 @@ Rails.application.routes.draw do
   resources :orders,         only: [:create, :update, :destroy]
   resources :menu_items, only: [:index]
   resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end
