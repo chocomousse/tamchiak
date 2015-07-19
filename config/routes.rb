@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   
   get 'orders' => 'orders#new'
   post 'orders' => 'orders#create'
-  get 'order_received' => 'orders#order_created'
-  get 'all_orders' => 'orders#show'
+  #get 'order_received' => 'orders#order_created'
+  #get 'all_orders' => 'orders#show'
 
   #For user log in log out
   get 'signup' => 'users#new'
@@ -32,8 +32,8 @@ Rails.application.routes.draw do
   get 'settings' => 'users#edit'
   
   #For menu
-  get 'menu' => 'menu_items#index'
-  post 'menu' => 'menu_items#show'
+  #get 'menu' => 'menu_items#index'
+  #post 'menu' => 'menu_items#show'
   
   resources :users
   resources :channels
