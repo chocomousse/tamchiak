@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
-  root 'users#choose'
+  root 'sessions#new'
 
   #For channels
   get 'create_channel' => 'channels#new'
