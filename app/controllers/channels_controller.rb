@@ -2,8 +2,10 @@ class ChannelsController < ApplicationController
   before_action :logged_in_user  
   
   def show
-    @channel_owner = current_channel
-    @orders = current_channel.orders
+    #@channel_owner = current_channel
+    #@orders = current_channel.orders
+    @channel = current_channel
+    @orders = Order.all
   end
 
   def display
@@ -19,7 +21,8 @@ class ChannelsController < ApplicationController
     if @channel_owner.save    
       join_channel(@channel_owner)
       flash[:success] = "Success!"
-      redirect_to new_channel_path
+      @channel = current_channel
+      redirect_to current_channel_path
     else 
       flash.now[:danger] 
       render 'new'

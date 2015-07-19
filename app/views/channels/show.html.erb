@@ -4,12 +4,17 @@
   <title>Current Channel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
   <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+=======
+>>>>>>> fix-cart-bugs-2
 </head>
 
 <body>
   <div class="container">
-    <h1><%= @channel_owner.cname %></h1>
+    <h1><%= @channel.cname %></h1>
+    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Add item", orders_path %> </button>
+    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
     <p></p>
     <table class="table table-striped">
       <thead>
@@ -18,10 +23,32 @@
           <th>Sub-category</th>
           <th>Item code</th>
           <th>Name</th>
+<<<<<<< HEAD
           <th>Price</th>
         </tr>
       </thead>
       <tbody>
+=======
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @orders.each do |t| %>
+          <p>
+            <tr>
+              <td><%= t.cat %></td>
+              <td><%= t.subcat %></td>
+              <td><%= t.item_code %></td>
+              <td><%= t.meal %></td>
+              <td><%= number_to_currency(t.unit_price) %></td>
+              <td><%= t.quantity %></td>
+              <td><%= number_to_currency(t.total_price) %></td>
+            </tr>
+          </p>
+        <% end %>
+>>>>>>> fix-cart-bugs-2
       </tbody>
     </table>
   </div>

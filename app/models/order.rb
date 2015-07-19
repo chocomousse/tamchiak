@@ -5,7 +5,7 @@ class Order < ActiveRecord::Base
   
   validates :user_id, presence: true
   validates :channel_id, presence: true
-  validates :meal, presence: true
+  validates :menu_item_id, presence: true
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   
  before_save :finalize
@@ -18,14 +18,19 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def total_price
-    unit_price * quantity
+  def sum_price
+    @sum_price = current_order.unit_price*current_order.quantity
   end
 
+    # Returns the current order
+  def current_order
+    @current_order ||= Order.find_by(id: user_id)
+  end
+  
 private
 
   def finalize
     self[:unit_price] = unit_price
-    self[:total_price] = quantity * self[:unit_price]
+    self[:total_price] = sum_price
   end
 end

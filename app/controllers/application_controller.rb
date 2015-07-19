@@ -4,7 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  
+  # Returns the current order
+  def current_order
+    @current_order ||= Order.find_by(id: user_id)
+  end
+
   private
   # Confirms a logged in user
   def logged_in_user
@@ -13,7 +17,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
-  
+
   # Confirms that a user is in a channel
   def in_a_channel 
     unless joined_channel?

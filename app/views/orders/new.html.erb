@@ -1,18 +1,40 @@
-<% provide(:title, 'Add new item') %> 
+<h1>Menu</h1>
+<%= link_to "Back to channel", current_channel_path %>
 
-<div class="row">
-  <div class = "col-md-6 col-md-offset-3">
-    <h1>Add new item</h1>
-    <%= form_for(@order) do |f| %>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Sub-category</th>
+        <th>Item code</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>        
+    </thead>
+    <tbody>
+      <% @menu_items.each do |t| %>
+      <p>
+        <tr>
+          <td><%= t.cat %></td>
+          <td><%= t.subcat %></td>
+          <td><%= t.item_code %></td>
+          <td><%= t.name %></td>
+          <td><%= number_to_currency(t.price) %></td>
 
-    <%= f.label :meal %>
-    <%= f.text_field :meal, class: 'form-control' %>
 
-    <%= f.submit "Submit Order", class: "btn btn-primary" %>
-
-    <% if joined_channel? %>
-    <%= link_to "Quit Channel", exit_path %>
-    <% end %>
-    <% end %>
-  </div>
+          <%= form_for (@order), remote: true do |f| %>
+          <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
+          <%= f.hidden_field :menu_item_id, :value => t.id %> 
+          <%= f.hidden_field :meal, :value => t.name %>
+          <%= f.hidden_field :cat, :value => t.cat %>
+          <%= f.hidden_field :subcat, :value => t.subcat %>
+          <%= f.hidden_field :item_code, :value => t.item_code %>
+          <td><%= f.submit "Order", class: "btn btn-primary" %></td>
+          <% end %>
+        </tr>
+      </p>
+      <% end %>
+    </tbody>
+    </div>
 </div>

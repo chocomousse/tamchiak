@@ -10,14 +10,14 @@ Rails.application.routes.draw do
   get 'create_channel' => 'channels#new'
   get 'join_channel' => 'sessions#joining_a_channel' #shows that page I think
   post 'join_channel' => 'sessions#new_order'        #happens upon clicking the submit button in the joining_a_channel page
-  get 'new_channel' => 'channels#show'
+  get 'current_channel' => 'channels#show'
   delete 'exit' => 'sessions#quit'
   get 'exit' => 'users#choose'
   get 'all_channels' => "channels#display"
   
-  get 'create_order' => 'orders#new'
-  post 'create_order' => 'orders#create'
-  get 'order_received' => 'orders/order_created'
+  get 'orders' => 'orders#new'
+  post 'orders' => 'orders#create'
+  get 'order_received' => 'orders#order_created'
   get 'all_orders' => 'orders#show'
 
   #For user log in log out
@@ -33,8 +33,8 @@ Rails.application.routes.draw do
   
   #For menu
   get 'menu' => 'menu_items#index'
-
-
+  post 'menu' => 'menu_items#show'
+  
   resources :users
   resources :channels
   resources :orders,         only: [:create, :update, :destroy]

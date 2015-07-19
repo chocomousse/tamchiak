@@ -11,7 +11,7 @@ class Channel < ActiveRecord::Base
   
 private
   def set_channel_status
-    self.channel_status_id = 1
+    #self.channel_status_id = 1
   end
 
   def update_subtotal
