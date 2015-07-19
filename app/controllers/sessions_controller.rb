@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  #before_action :logged_in_user, only: [:new_order, :destroy]
+  before_action :logged_in_user, only: [:new_order, :destroy]
   
   def new
   end
