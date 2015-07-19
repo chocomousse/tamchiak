@@ -22,21 +22,21 @@
           <td><%= t.name %></td>
           <td><%= number_to_currency(t.price) %></td>
 
-
-          <%= form_for (@order), remote: true do |f| %>
-          <%= render 'shared/error_messages_order' %>
-
+          <%= form_for (@order), url: orders_path, remote: true do |f| %>
           <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
           <%= f.hidden_field :menu_item_id, :value => t.id %> 
-          <%= f.hidden_field :meal, :value => t.name %>
           <%= f.hidden_field :cat, :value => t.cat %>
           <%= f.hidden_field :subcat, :value => t.subcat %>
           <%= f.hidden_field :item_code, :value => t.item_code %>
+          <%= f.hidden_field :meal, :value => t.name %>
+          <%= f.hidden_field :unit_price, :value => t.price %>
+
           <td><%= f.submit "Order", class: "btn btn-primary" %></td>
           <% end %>
         </tr>
       </p>
       <% end %>
+
     </tbody>
     </div>
 </div>

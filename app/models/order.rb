@@ -31,6 +31,6 @@ private
 
   def finalize
     self[:unit_price] = unit_price
-    self[:total_price] = sum_price
+    self[:total_price] = quantity * self[:unit_price]
   end
 end

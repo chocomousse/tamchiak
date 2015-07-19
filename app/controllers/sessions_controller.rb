@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-  before_action :logged_in_user, only: [:new_order, :destroy]
-
+  #before_action :logged_in_user, only: [:new_order, :destroy]
+  
   def new
   end
   
@@ -27,10 +27,23 @@ class SessionsController < ApplicationController
   end 
 
   def new_order
-    channel = Channel.find_by(cname: params[:session][:cname])
-    if channel 
-      join_channel(channel)
-      redirect_to menu_path
+    channel = Channel.find_by(cname: params[:session][:cname]) 
+    if channel
+      join_channel(channel) 
+      redirect_to current_channel_path
+    else 
+      flash.now[:danger] = "Channel does not exist"
+      render 'joining_a_channel'
+    end 
+  end
+  
+  # work in progress
+  # For users to select previous channels
+  def saved_channel
+    channel = Channel.find_by(cname: params[:session][:cname]) 
+    if channel
+      join_channel(channel) 
+      redirect_to current_channel_path
     else 
       flash.now[:danger] = "Channel does not exist"
       render 'joining_a_channel'
@@ -46,5 +59,4 @@ class SessionsController < ApplicationController
     exit_channel if joined_channel?
     redirect_to join_or_create_path
   end
-
 end 

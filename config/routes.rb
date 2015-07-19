@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
-  root 'sessions#new'
+  root 'users#choose'
 
   #For channels
   get 'create_channel' => 'channels#new'
@@ -30,10 +30,6 @@ Rails.application.routes.draw do
 
   #For user profile
   get 'settings' => 'users#edit'
-  
-  #For menu
-  #get 'menu' => 'menu_items#index'
-  #post 'menu' => 'menu_items#show'
   
   resources :users
   resources :channels
