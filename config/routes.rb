@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   get 'exit' => 'users#choose'
   get 'all_channels' => "channels#display"
   
-  get 'create_order' => 'orders#new'
-  post 'create_order' => 'orders#create'
-  get 'order_received' => 'orders/order_created'
+  get 'orders' => 'orders#new'
+  post 'orders' => 'orders#create'
+  get 'order_received' => 'orders#order_created'
   get 'all_orders' => 'orders#show'
 
   #For user log in log out
@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   
   #For menu
   get 'menu' => 'menu_items#index'
-  #post 'menu' => 'orders#create'
+  post 'menu' => 'menu_items#show'
   
   resources :users
   resources :channels

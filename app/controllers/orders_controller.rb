@@ -3,30 +3,34 @@ class OrdersController < ApplicationController
   before_action :in_a_channel
 
   def new
+    @menu_items = MenuItem.all
     @order = Order.new
   end
 
+    # Returns the current order
+  def current_order
+    @current_order ||= Order.find_by(id: user_id)
+  end
+  
   def show
     @order = Order.all
   end
 
   def create 
     #@order.channel = current_channel
-
     #@channel = current_channel
     #menu_item = MenuItem.find_by(id: menu_item_id)
     #@order.menu_item = menu_item
-
-    @order = current_channel.orders.new(order_params)
+    @order = current_channel.orders.build(order_params)
     @order.user = current_user
 
     if @order.save 
-      redirect_to current_channel_path
-    #        flash[:success] = "Order has been recorded!"
-    #else 
-    # flash[:danger] = "Order was not recorded!"
-    #render 'new'
-    #end 
+      flash.now[:success] = "Order has been recorded!"
+      #redirect_to current_channel_path
+    else 
+      flash.now[:danger] = "Order was not recorded!"
+      render 'new'
+    end 
   end 
 
   def update
@@ -42,9 +46,9 @@ class OrdersController < ApplicationController
     @order.destroy
     @orders = @channel.orders
   end
-
+ 
   private 
   def order_params
-    params.require(:order).permit(:quantity, :menu_item_id, :meal)
+    params.require(:order).permit(:quantity, :menu_item_id, :meal, :name, :cat, :subcat, :item_code)
   end 
 end

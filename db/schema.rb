@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718215322) do
+ActiveRecord::Schema.define(version: 20150719073832) do
 
   create_table "channel_statuses", force: :cascade do |t|
     t.string   "name"
@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 20150718215322) do
     t.decimal  "unit_price"
     t.integer  "quantity"
     t.decimal  "total_price"
+    t.string   "cat"
+    t.string   "subcat"
+    t.string   "item_code"
   end
 
   add_index "orders", ["channel_id", "created_at"], name: "index_orders_on_channel_id_and_created_at"

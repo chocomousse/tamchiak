@@ -3,7 +3,7 @@ class ChannelsController < ApplicationController
   
   def show
     @channel = current_channel
-    @orders = current_channel.orders
+    @orders = Order.all
   end
 
   def display
