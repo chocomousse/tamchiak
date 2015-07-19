@@ -3,9 +3,9 @@ class ChannelsController < ApplicationController
   
   def show
     #@channel_owner = current_channel
-    #@orders = current_channel.orders
+    @orders = current_channel.orders
     @channel = current_channel
-    @orders = Order.all
+    #@orders = Order.all
   end
 
   def display

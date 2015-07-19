@@ -24,6 +24,8 @@
 
 
           <%= form_for (@order), remote: true do |f| %>
+          <%= render 'shared/error_messages_order' %>
+
           <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
           <%= f.hidden_field :menu_item_id, :value => t.id %> 
           <%= f.hidden_field :meal, :value => t.name %>

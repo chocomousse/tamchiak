@@ -2,6 +2,7 @@
 
 <div class= "row">
   <div class= "col-md-6 col-md-offset-3">
+  <%= link_to "Home", join_or_create_path %>
 
     <h1>Create a channel</h1>
     <%= form_for(@channel_owner) do |f| %>
@@ -33,6 +34,7 @@
     <%= f.submit "Create my channel", class: "btn btn-primary"%>
   </div>
   <% end %>
+
 
 
 </div>
