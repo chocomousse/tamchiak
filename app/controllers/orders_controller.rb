@@ -12,17 +12,16 @@ class OrdersController < ApplicationController
 
   def create 
     #@order.channel = current_channel
-    #added on
+
     #@channel = current_channel
     #menu_item = MenuItem.find_by(id: menu_item_id)
     #@order.menu_item = menu_item
 
-    @order = current_channel.orders.build(order_params)
+    @order = current_channel.orders.new(order_params)
     @order.user = current_user
 
-    @order.save 
-
-    redirect_to settings_path
+    if @order.save 
+      redirect_to current_channel_path
     #        flash[:success] = "Order has been recorded!"
     #else 
     # flash[:danger] = "Order was not recorded!"

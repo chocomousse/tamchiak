@@ -2,7 +2,7 @@ class ChannelsController < ApplicationController
   before_action :logged_in_user  
   
   def show
-    @channel_owner = current_channel
+    @channel = current_channel
     @orders = current_channel.orders
   end
 

@@ -4,13 +4,12 @@
   <title>Current Channel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
 </head>
 
 <body>
   <div class="container">
-    <h1><%= @channel_owner.cname %></h1>
-    <%= link_to "Add item", menu_path %>
+    <h1><%= @channel.cname %></h1>
+    <%= link_to "Add item", menu_path %> <%= link_to "Home", join_or_create_path %>
     <p></p>
     <table class="table table-striped">
       <thead>
