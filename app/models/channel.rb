@@ -1,5 +1,5 @@
 class Channel < ActiveRecord::Base
-  belongs_to :channel_status
+  #belongs_to :channel_status
   has_many :orders
   before_create :set_channel_status
   before_save :update_subtotal
