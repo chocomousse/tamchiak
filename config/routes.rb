@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post 'orders' => 'orders#create'
   #get 'order_received' => 'orders#order_created'
   get 'all_orders' => 'orders#show'
+  delete 'orders' => 'orders#destroy'
   
   #For user log in log out
   get 'signup' => 'users#new'
@@ -31,7 +32,7 @@ Rails.application.routes.draw do
   #For user profile
   get 'settings' => 'users#edit'
   
-  resources :orders #,         only: [:create, :update, :destroy]  
+  resources :orders
   resources :users
   resources :channels
   resources :menu_items, only: [:index]

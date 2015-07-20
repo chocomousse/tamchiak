@@ -22,11 +22,12 @@ class OrdersController < ApplicationController
     @order.user = current_user
 
     if @order.save 
-      flash.now[:success] = "Order has been recorded!"
-      redirect_to join_or_create_path
+      flash[:success] = "Order has been recorded!"
+      #redirect_to join_or_create_path
       #render 'layout/channel_text'
+      render :js => "window.location = '/channels/show'"
     else 
-      flash.now[:danger] = "Order was not recorded!"
+      flash[:danger] = "Order was not recorded!"
       render 'new'
     end 
   end 
@@ -39,10 +40,10 @@ class OrdersController < ApplicationController
   end
 
   def destroy
-    @channel = current_channel
     @order = current_channel.orders.find(params[:id])
     @order.destroy
-    @orders = @channel.orders
+    @orders = current_channel.orders
+    redirect_to current_channel_path
   end
  
   private 
