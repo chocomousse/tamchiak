@@ -12,7 +12,19 @@
     <h1><%= @channel.cname %></h1>
     <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Add item", orders_path %> </button>
     <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
+    <%= render 'layouts/channel_text' %>
     <p></p>
+    
+    <% if !@order.nil? && @order.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+        
     <table class="table table-striped">
       <thead>
         <tr>
@@ -23,6 +35,7 @@
           <th>Unit Price</th>
           <th>Quantity</th>
           <th>Total Price</th>
+          <th>Added by</th>
         </tr>
       </thead>
       <tbody>
@@ -36,6 +49,7 @@
               <td><%= number_to_currency(t.unit_price) %></td>
               <td><%= t.quantity %></td>
               <td><%= number_to_currency(t.total_price) %></td>
+              <td><%= t.user_id %></td>
             </tr>
           </p>
         <% end %>

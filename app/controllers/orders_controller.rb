@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
 
     if @order.save 
       flash.now[:success] = "Order has been recorded!"
-      redirect_to settings_path
+      render 'layout/channel_text'
     else 
       flash.now[:danger] = "Order was not recorded!"
       render 'new'

@@ -1,1 +1,5 @@
-$(".cart-text").html("<%= escape_javascript(render 'layouts/channel_text') %>")
+<% if @order.errors.any? %>
+alert("not valid.")
+<% else %>
+  $(".channel-text").html("<%= escape_javascript(render 'layouts/_channel_text') %>")
+<% end %>

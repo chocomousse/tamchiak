@@ -18,8 +18,8 @@ Rails.application.routes.draw do
   get 'orders' => 'orders#new'
   post 'orders' => 'orders#create'
   #get 'order_received' => 'orders#order_created'
-  #get 'all_orders' => 'orders#show'
-
+  get 'all_orders' => 'orders#show'
+  
   #For user log in log out
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :channels
-  resources :orders,         only: [:create, :update, :destroy]
+  resources :orders #,         only: [:create, :update, :destroy]
   resources :menu_items, only: [:index]
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
