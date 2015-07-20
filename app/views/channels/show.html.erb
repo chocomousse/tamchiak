@@ -14,16 +14,6 @@
     <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
     <%= render 'layouts/channel_text' %>
     <p></p>
-    
-    <% if !@channel.nil? && @channel.errors.any? %>
-      <div class="alert alert-danger">
-        <ul>
-          <% @channel.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
         
     <table class="table table-striped">
       <thead>
