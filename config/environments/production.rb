@@ -83,14 +83,14 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   host = 'tamchiak.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :authentication => :plain,
-    :domain               'gmail.com',
-    :user_name            'tamchiakorbital@gmail.com',
-    :password             'orbital19',
-    :enable_starttls_auto => true
-  }  
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            'tamchiakorbital@gmail.com',
+    password:             'orbital19',
+    authentication:       'plain',
+    enable_starttls_auto: true  
+  }
 
 end
