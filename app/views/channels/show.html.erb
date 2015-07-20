@@ -15,10 +15,10 @@
     <%= render 'layouts/channel_text' %>
     <p></p>
     
-    <% if !@order.nil? && @order.errors.any? %>
+    <% if !@channel.nil? && @channel.errors.any? %>
       <div class="alert alert-danger">
         <ul>
-        <% @order.errors.full_messages.each do |msg| %>
+          <% @channel.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
         </ul>

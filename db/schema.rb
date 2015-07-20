@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150719073832) do
+ActiveRecord::Schema.define(version: 20150720134800) do
 
   create_table "channel_statuses", force: :cascade do |t|
     t.string   "name"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20150719073832) do
   add_index "channels", ["user_id"], name: "index_channels_on_user_id"
 
   create_table "menu_items", force: :cascade do |t|
-    t.string   "name"
     t.string   "cat"
     t.string   "subcat"
     t.string   "item_code"
@@ -45,9 +44,8 @@ ActiveRecord::Schema.define(version: 20150719073832) do
     t.boolean  "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
-
-  add_index "menu_items", ["name"], name: "index_menu_items_on_name", unique: true
 
   create_table "orders", force: :cascade do |t|
     t.string   "meal"
