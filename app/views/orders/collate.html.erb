@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Order this!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  </head>
+
+  <body>
+    <h1><%= current_channel.cname %></h1>
+    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
+
+    <div class="container">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <!--<th>Price</th>-->
+          </tr>        
+        </thead>
+        <tbody>
+          <% @relevant_orders.find_each do |t| %>
+          <p>
+            <tr>
+              <td><%= t.meal %></td>
+              <td><%= @relevant_orders.sum(:quantity)[t.meal] %></td>
+              <!--<td><%= number_to_currency(@relevant_orders.sum(:total_price)[t.meal]) %></td> -->
+            </tr>
+          </p>
+          <% end %>
+        </tbody>
+        </div>
+      </table>
+    <div>
+      <h4>Delivery Charge: $2</h4>
+      <h3>Total Cost: <%= number_to_currency(@orders_in_channel.sum(:total_price)) %></h3>
+      </body>

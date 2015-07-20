@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   #get 'order_received' => 'orders#order_created'
   get 'all_orders' => 'orders#show'
   delete 'orders' => 'orders#destroy'
+  get "collate" => 'orders#collate'
   
   #For user log in log out
   get 'signup' => 'users#new'
