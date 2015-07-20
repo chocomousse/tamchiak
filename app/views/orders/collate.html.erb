@@ -32,9 +32,11 @@
           </p>
           <% end %>
         </tbody>
-        </div>
       </table>
-    <div>
-      <h4>Delivery Charge: $2</h4>
-      <h3>Total Cost: <%= number_to_currency(@orders_in_channel.sum(:total_price)) %></h3>
-      </body>
+      <div>
+        <h4>Delivery Charge: $2</h4>
+        <h3>Total Cost (delivery charge included): <%= number_to_currency(@orders_in_channel.sum(:total_price) + 2) %></h3>
+      </div>
+    </div>
+  </body>
+</html>
