@@ -2,8 +2,13 @@ class ChannelsController < ApplicationController
   before_action :logged_in_user  
   
   def show
-    @orders = current_channel.orders
-    @channel = current_channel
+    if !current_channel.nil?
+      @orders = current_channel.orders
+      @channel = current_channel
+    else 
+      flash[:danger] = "You are not in any channel. Please create or join a channel."
+      redirect_to join_or_create_path
+    end
   end
 
   def display
