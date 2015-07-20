@@ -4,7 +4,8 @@ class Channel < ActiveRecord::Base
   before_create :set_channel_status
   before_save :update_subtotal
   
-  #belongs_to :users
+  belongs_to :user
+  
   def subtotal
     orders.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
   end

@@ -39,7 +39,10 @@
               <td><%= number_to_currency(t.unit_price) %></td>
               <td><%= t.quantity %></td>
               <td><%= number_to_currency(t.total_price) %></td>
-              <td><%= t.user_id %></td>
+              <td><%= t.user.name %></td>              
+              <td><%= link_to 'Delete', t, :method => :delete, :confirm => "Are you sure?" %></td>
+
+
             </tr>
           </p>
         <% end %>

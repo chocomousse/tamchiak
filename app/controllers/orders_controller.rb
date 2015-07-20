@@ -23,7 +23,8 @@ class OrdersController < ApplicationController
 
     if @order.save 
       flash.now[:success] = "Order has been recorded!"
-      render 'layout/channel_text'
+      redirect_to join_or_create_path
+      #render 'layout/channel_text'
     else 
       flash.now[:danger] = "Order was not recorded!"
       render 'new'
@@ -33,13 +34,13 @@ class OrdersController < ApplicationController
   def update
     @channel = current_channel
     @order = @channel.orders.find(params[:id])
-    @order.update_attributes(order_params)
+    @order.update_attributes(params[:quantity])
     @orders = @channel.orders
   end
 
   def destroy
     @channel = current_channel
-    @order = @channel.orders.find(params[:id])
+    @order = current_channel.orders.find(params[:id])
     @order.destroy
     @orders = @channel.orders
   end

@@ -31,9 +31,9 @@ Rails.application.routes.draw do
   #For user profile
   get 'settings' => 'users#edit'
   
+  resources :orders #,         only: [:create, :update, :destroy]  
   resources :users
   resources :channels
-  resources :orders #,         only: [:create, :update, :destroy]
   resources :menu_items, only: [:index]
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]

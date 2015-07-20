@@ -21,6 +21,7 @@ class ChannelsController < ApplicationController
 
   def create 
     @channel_owner = current_user.channels.new(channel_params)
+    
     if @channel_owner.save    
       join_channel(@channel_owner)
       flash[:success] = "Success!"
