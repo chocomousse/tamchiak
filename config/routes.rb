@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'all_orders' => 'orders#show'
   
   #For user log in log out
-  get 'signup' => 'users#create'
+  get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
