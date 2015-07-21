@@ -12,7 +12,14 @@
     <%= link_to "Back to channel", current_channel_path %>
 
     <div class="container">
+
+        <% @menu_items.find_each do |s| %>
+        <h2><%= s.cat %></h2>
+                <% MenuItem.where(cat: s.cat).group(:subcat).find_each do |w| %>
+          <h3><%= w.subcat %></h3>
       <table class="table table-striped">
+
+
         <thead>
           <tr>
             <th>Category</th>
@@ -22,8 +29,10 @@
             <th>Price</th>
           </tr>        
         </thead>
+
         <tbody>
-          <% @menu_items.each do |t| %>
+
+          <% MenuItem.where(subcat: w.subcat).find_each do |t| %>
           <p>
             <tr>
               <td><%= t.cat %></td>
@@ -42,15 +51,15 @@
               <!-- DROP DOWN MENU FOR SUB-CATEGORY STARTS -->
               <td>
                 <% if t.subcat == "Mee, Beehoon, Kwayteow, Maggie" %>
-                  <%= f.select(:subcat, options_for_select([['Mee', 'Mee'], ['Beehoon', 'Beehon'], ['Kwayteow', 'Kwayteow'], ['Maggie', 'Maggie']]), {class: "form-control"}) %>
-                
-                <% else if t.subcat == "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)" %>
-                  <%= f.select(:subcat, options_for_select([['Chicken', 'Steam Rice (Chicken)'], ['Beef', 'Steam Rice (Beef)'], ['Slice Fish', 'Steam Rice (Slice Fish)'], ['Cuttle Fish', 'Steam Rice (Cuttle Fish)'], ['Prawn', 'Steam Rice (Prawn)']]), {class: "form-control"}) %>
-                <% else %>
-                  <%= f.hidden_field :subcat, :value => t.subcat %>
+                <%= f.select(:subcat, options_for_select([['Mee', 'Mee'], ['Beehoon', 'Beehon'], ['Kwayteow', 'Kwayteow'], ['Maggie', 'Maggie']]), {class: "form-control"}) %>
 
-                  <% end %>
+                <% else if t.subcat == "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)" %>
+                <%= f.select(:subcat, options_for_select([['Chicken', 'Steam Rice (Chicken)'], ['Beef', 'Steam Rice (Beef)'], ['Slice Fish', 'Steam Rice (Slice Fish)'], ['Cuttle Fish', 'Steam Rice (Cuttle Fish)'], ['Prawn', 'Steam Rice (Prawn)']]), {class: "form-control"}) %>
+                <% else %>
+                <%= f.hidden_field :subcat, :value => t.subcat %>
+
                 <% end %>
+
               </td>     
               <!-- DROP DOWN INPUT FOR SUB-CATEGORY ENDS -->
 
@@ -58,11 +67,19 @@
               <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
               <td><%= f.submit "Order", class: "btn btn-primary" %></td>
               <% end %>
+                          <% end %>
             </tr>
+
           </p>
           <% end %>
 
         </tbody>
+
         </div>
+
+      </table>
+              <% end %>
+          <% end %>
     </div>
   </body>
+</html>

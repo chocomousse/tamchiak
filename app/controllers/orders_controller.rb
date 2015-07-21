@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :in_a_channel
 
   def new
-    @menu_items = MenuItem.all
+    @menu_items = MenuItem.group(:cat)
     @order = Order.new
   end
 
@@ -16,8 +16,6 @@ class OrdersController < ApplicationController
     @channel = current_channel
     @relevant_orders ||= Order.where(channel_id: current_channel.id).group(:meal)
     @orders_in_channel ||= Order.where(channel_id: current_channel.id)
-   # @total_count = @relevant_orders.count 
-   # @total_qty = @relevant_orders.sum("quantity")
   end 
 
   def show

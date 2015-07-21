@@ -25,10 +25,10 @@
         <% @channel_owner.each do |t| %>
         <p>
           <tr>
-            <td><%= form_for(:session, url: join_channel_path) do |f| %>
+            <%= form_for(:session, url: join_channel_path) do |f| %>
             <%= f.hidden_field :cname, :value => t.cname %>
-              <%= f.submit  "#{t.cname}", type: 'submit', class: "btn btn-link" %>
-             <% end %></td>
+              <td><%= f.submit  "#{t.cname}" %></td>
+             <% end %>
             <td><%= t.menu %></td>
             <td><%= t.channel_status %></td>
  
