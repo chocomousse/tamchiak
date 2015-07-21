@@ -109,52 +109,52 @@ MenuItem.create! id: 89, name: "Jeera Rice", cat: "Indian Kitchen", subcat: "Ric
 MenuItem.create! id: 90, name: "Plain White Rice", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39", price: 1.00, active: true
 
 # Mutton
-MenuItem.create! id: 91, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N40", price: , active: true
-MenuItem.create! id: 92, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N41", price: , active: true
-MenuItem.create! id: 93, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N42", price: , active: true
-MenuItem.create! id: 94, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N43", price: , active: true
-MenuItem.create! id: 95, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N44", price: , active: true
-MenuItem.create! id: 96, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N45", price: , active: true
-MenuItem.create! id: 97, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N46", price: , active: true
-MenuItem.create! id: 98, name: "", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N47", price: , active: true
+MenuItem.create! id: 91, name: "Mutton Masala", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N40", price: 6.00, active: true
+MenuItem.create! id: 92, name: "Mutton Do Plaza", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N41", price: 7.00, active: true
+MenuItem.create! id: 93, name: "Mutton Spinach", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N42", price: 7.00, active: true
+MenuItem.create! id: 94, name: "Kadai Mutton", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N43", price: 8.00, active: true
+MenuItem.create! id: 95, name: "Mutton Kheema", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N44", price: 5.00, active: true
+MenuItem.create! id: 96, name: "Mutton Korma", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N45", price: 6.00, active: true
+MenuItem.create! id: 97, name: "Mutton Rogan Josh", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N46", price: 6.00, active: true
+MenuItem.create! id: 98, name: "Mutton Vindaloo", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N47", price: 7.00, active: true
 
 # Seafood
-MenuItem.create! id: 99, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N48", price: , active: true
-MenuItem.create! id: 100, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N49", price: , active: true
-MenuItem.create! id: 101, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N50", price: , active: true
-MenuItem.create! id: 102, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N51", price: , active: true
-MenuItem.create! id: 103, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N52", price: , active: true
-MenuItem.create! id: 104, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N53", price: , active: true
-MenuItem.create! id: 105, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N54", price: , active: true
-MenuItem.create! id: 106, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N55", price: , active: true
-MenuItem.create! id: 107, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N56", price: , active: true
-MenuItem.create! id: 108, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N57", price: , active: true
-MenuItem.create! id: 109, name: "", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N58", price: , active: true
+MenuItem.create! id: 99, name: "Kadai Fish", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N48", price: 8.00, active: true
+MenuItem.create! id: 100, name: "Fish Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N49", price: 7.00, active: true
+MenuItem.create! id: 101, name: "Madras Fish Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N50", price: 7.00, active: true
+MenuItem.create! id: 102, name: "Fish Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N51", price: 6.00, active: true
+MenuItem.create! id: 103, name: "Kadai Prawn", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N52", price: 8.00, active: true
+MenuItem.create! id: 104, name: "Prawn Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N53", price: 7.00, active: true
+MenuItem.create! id: 105, name: "Prawn Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N54", price: 6.00, active: true
+MenuItem.create! id: 106, name: "Prawn Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N55", price: 6.00, active: true
+MenuItem.create! id: 107, name: "Prawn Do Plaza", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N56", price: 7.00, active: true
+MenuItem.create! id: 108, name: "Chilli Prawn", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N57", price: 8.00, active: true
+MenuItem.create! id: 109, name: "Fish Head Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N58", price: 15.00, active: true
 
 # Vegetables
-MenuItem.create! id: 110, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N59", price: , active: true
-MenuItem.create! id: 111, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N60", price: , active: true
-MenuItem.create! id: 112, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N61", price: , active: true
-MenuItem.create! id: 113, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N62", price: , active: true
-MenuItem.create! id: 114, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N63", price: , active: true
-MenuItem.create! id: 115, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N64", price: , active: true
-MenuItem.create! id: 116, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N65", price: , active: true
-MenuItem.create! id: 117, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N66", price: , active: true
-MenuItem.create! id: 118, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N67", price: , active: true
-MenuItem.create! id: 119, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N68", price: , active: true
-MenuItem.create! id: 120, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N69", price: , active: true
-MenuItem.create! id: 121, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N70", price: , active: true
-MenuItem.create! id: 122, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N71", price: , active: true
-MenuItem.create! id: 123, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N72", price: , active: true
-MenuItem.create! id: 124, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N73", price: , active: true
-MenuItem.create! id: 125, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N74", price: , active: true
-MenuItem.create! id: 126, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N75", price: , active: true
-MenuItem.create! id: 127, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N76", price: , active: true
-MenuItem.create! id: 128, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N77", price: , active: true
-MenuItem.create! id: 129, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N78", price: , active: true
-MenuItem.create! id: 130, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N79", price: , active: true
-MenuItem.create! id: 131, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N80", price: , active: true
-MenuItem.create! id: 132, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N81", price: , active: true
+MenuItem.create! id: 110, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N59", price: 7.00, active: true
+MenuItem.create! id: 111, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N60", price: 7.00, active: true
+MenuItem.create! id: 112, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N61", price: 7.00, active: true
+MenuItem.create! id: 113, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N62", price: 7.00, active: true
+MenuItem.create! id: 114, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N63", price: 7.00, active: true
+MenuItem.create! id: 115, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N64", price: 5.00, active: true
+MenuItem.create! id: 116, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N65", price: 5.00, active: true
+MenuItem.create! id: 117, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N66", price: 5.00, active: true
+MenuItem.create! id: 118, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N67", price: 5.00, active: true
+MenuItem.create! id: 119, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N68", price: 5.00, active: true
+MenuItem.create! id: 120, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N69", price: 3.00, active: true
+MenuItem.create! id: 121, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N70", price: 5.00, active: true
+MenuItem.create! id: 122, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N71", price: 5.00, active: true
+MenuItem.create! id: 123, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N72", price: 5.00, active: true
+MenuItem.create! id: 124, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N73", price: 4.00, active: true
+MenuItem.create! id: 125, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N74", price: 3.00, active: true
+MenuItem.create! id: 126, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N75", price: 6.00, active: true
+MenuItem.create! id: 127, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N76", price: 5.00, active: true
+MenuItem.create! id: 128, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N77", price: 8.00, active: true
+MenuItem.create! id: 129, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N78", price: 3.00, active: true
+MenuItem.create! id: 130, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N79", price: 6.00, active: true
+MenuItem.create! id: 131, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N80", price: 8.00, active: true
+MenuItem.create! id: 132, name: "", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N81", price: 5.00, active: true
 
 ChannelStatus.delete_all
 ChannelStatus.create! id: 1, name: "Open"

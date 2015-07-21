@@ -41,7 +41,19 @@
                 <%= f.hidden_field :item_code, :value => t.item_code %>
                 <%= f.hidden_field :meal, :value => t.name %>
                 <%= f.hidden_field :unit_price, :value => t.price %>
-                <td><div class="form-group"><%= f.select(:subcat, options_for_select([['Mee', 'Mee'], ['Beehoon', 'Beehon'], ['Kwayteow', 'Kwayteow'], ['Maggie', 'Maggie']]), {class: "form-control"}) %></div></td>
+                
+                <!-- DROP DOWN INPUT FOR SUBCAT STARTS -->
+                <% if t.subcat == "Mee, Beehoon, Kwayteow, Maggie" %>
+                <td><%= f.select(:subcat, options_for_select([['Mee', 'Mee'], ['Beehoon', 'Beehon'], ['Kwayteow', 'Kwayteow'], ['Maggie', 'Maggie']]), {class: "form-control"}) %></td>
+                <% else if t.subcat == "Steam Rice (Chicken, Beef, Slice Fish, Cuttle Fish, Prawn)" %>
+                <td><%= f.select(:subcat, options_for_select([['Chicken', 'Steam Rice (Chicken)'], ['Beef', 'Steam Rice (Beef)'], ['Slice Fish', 'Steam Rice (Slice Fish)'], ['Cuttle Fish', 'Steam Rice (Cuttle Fish)'], ['Prawn', 'Steam Rice (Prawn)']]), {class: "form-control"}) %></td>
+                <% end %>
+                <% end %>
+
+                
+                <!-- DROP DOWN INPUT FOR SUBCAT ENDS -->
+                
+                
                 <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
                 <td><%= f.submit "Order", class: "btn btn-primary" %></td>
               </div>
