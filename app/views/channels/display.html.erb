@@ -16,18 +16,22 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Channel</th>
+          <th>Channel Name</th>
           <th>Menu</th>
-          <th>Channel Owner ID</th>
+          <th>Channel Status</th>
         </tr>
       </thead>
       <tbody>
         <% @channel_owner.each do |t| %>
         <p>
           <tr>
-            <td><%= t.cname %></td>
+            <td><%= form_for(:session, url: join_channel_path) do |f| %>
+            <%= f.hidden_field :cname, :value => t.cname %>
+              <%= f.submit  "#{t.cname}", type: 'submit', class: "btn btn-link" %>
+             <% end %></td>
             <td><%= t.menu %></td>
-            <td><%= t.user.name %></td>
+            <td><%= t.channel_status %></td>
+ 
           </tr>
         </p>
         <% end %>

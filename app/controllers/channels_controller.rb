@@ -2,12 +2,17 @@ class ChannelsController < ApplicationController
   before_action :logged_in_user  
   
   def show
-    if !current_channel.nil?
+    if !current_channel.nil? && current_channel.channel_status == "Open"
       @orders = current_channel.orders
       @channel = current_channel
     else 
+      if current_channel.nil?
       flash[:danger] = "You are not in any channel. Please create or join a channel."
       redirect_to join_or_create_path
+      else 
+      flash[:danger] = "This channel is closed."
+      redirect_to join_or_create_path
+      end
     end
   end
 
@@ -21,6 +26,7 @@ class ChannelsController < ApplicationController
 
   def create 
     @channel_owner = current_user.channels.new(channel_params)
+    @channel_owner.channel_status = "Open"
     
     if @channel_owner.save    
       join_channel(@channel_owner)
@@ -32,9 +38,16 @@ class ChannelsController < ApplicationController
       render 'new'
     end 
   end 
+  
+  def close   
+    @channel = current_channel
+    @channel.update_attribute(:channel_status, "Closed")
+    flash[:danger] = "Your channel has been closed."
+    redirect_to join_or_create_path
+  end
 
   private 
   def channel_params
-    params.require(:channel).permit(:cname, :menu)
+    params.require(:channel).permit(:cname, :menu, :channel_status)
   end 
 end 

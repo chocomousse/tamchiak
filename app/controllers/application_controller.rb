@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   def current_order
     @current_order ||= Order.find_by(id: user_id)
   end
+  
 
   private
   # Confirms a logged in user

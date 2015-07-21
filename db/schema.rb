@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720145510) do
+ActiveRecord::Schema.define(version: 20150721085035) do
 
   create_table "channel_statuses", force: :cascade do |t|
     t.string   "name"
@@ -23,12 +23,14 @@ ActiveRecord::Schema.define(version: 20150720145510) do
     t.string   "cname"
     t.string   "menu"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.decimal  "subtotal"
     t.decimal  "delivery"
     t.decimal  "tax"
     t.decimal  "total"
+    t.string   "added_by"
+    t.string   "channel_status"
   end
 
   add_index "channels", ["user_id", "created_at"], name: "index_channels_on_user_id_and_created_at"

@@ -10,6 +10,7 @@
   <body>
     <h1><%= current_channel.cname %></h1>
     <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
+    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Close Channel", @channel, :method => :get %></button>
 
     <div class="container">
 

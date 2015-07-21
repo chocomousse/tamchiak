@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
   end
   
   def collate
+    @channel = current_channel
     @relevant_orders ||= Order.where(channel_id: current_channel.id).group(:meal)
     @orders_in_channel ||= Order.where(channel_id: current_channel.id)
    # @total_count = @relevant_orders.count 

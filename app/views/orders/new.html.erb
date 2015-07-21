@@ -46,12 +46,10 @@
                 
                 <% else if t.subcat == "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)" %>
                   <%= f.select(:subcat, options_for_select([['Chicken', 'Steam Rice (Chicken)'], ['Beef', 'Steam Rice (Beef)'], ['Slice Fish', 'Steam Rice (Slice Fish)'], ['Cuttle Fish', 'Steam Rice (Cuttle Fish)'], ['Prawn', 'Steam Rice (Prawn)']]), {class: "form-control"}) %>
-                <% else if t.subcat == "Fried Rice"%>
-                  <%= f.hidden_field :subcat, :value => t.subcat %>
                 <% else %>
                   <%= f.hidden_field :subcat, :value => t.subcat %>
 
-                  <% end %><% end %>
+                  <% end %>
                 <% end %>
               </td>     
               <!-- DROP DOWN INPUT FOR SUB-CATEGORY ENDS -->
