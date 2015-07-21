@@ -10,8 +10,10 @@
   <body>
     <h1><%= current_channel.cname %> - Collated</h1>
     <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Bill", bill_path %></button>
-    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Close Channel", @channel, :method => :get %></button>
     <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
+    <% if current_channel.user_id == current_user.id %>
+    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Close Channel", @channel, :method => :get %></button>
+    <% end %>
 
     <div class="container">
 
@@ -36,8 +38,8 @@
         </tbody>
       </table>
       <div>
-        <h4>Delivery Charge: $2</h4>
-        <h3>Total Cost (delivery charge included): <%= number_to_currency(@orders_in_channel.sum(:total_price) + 2) %></h3>
+        <h5>Delivery = <%= number_to_currency(@channel.delivery) %></h5>
+        <h3>Total Cost (delivery charge included): <%= number_to_currency(@orders_in_channel.sum(:total_price) + @channel.delivery) %></h3>
       </div>
     </div>
   </body>

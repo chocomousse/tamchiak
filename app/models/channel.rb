@@ -6,6 +6,10 @@ class Channel < ActiveRecord::Base
   
   belongs_to :user
   
+  validates :cname, presence: true
+  validates :menu, presence: true
+  validates :delivery, presence: true
+  
   def subtotal
     orders.collect { |oi| oi.valid? ? (oi.quantity * oi.unit_price) : 0 }.sum
   end

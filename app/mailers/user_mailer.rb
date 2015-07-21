@@ -23,8 +23,9 @@ class UserMailer < ApplicationMailer
 
   def send_bill(user, current_channel)
     @user = user
+    @channel = current_channel
     @user_channel ||= Order.where(channel_id: current_channel.id)
     @user_order ||= @user_channel.where(user_id: user.id)
-    mail to: user.email, subject: "Supper Costs"
+    mail to: user.email, subject: "Supper Bills"
   end 
 end

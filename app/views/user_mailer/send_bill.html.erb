@@ -7,5 +7,5 @@ Thank you for using Tamchiak!
 </p>
 
 <p>
-  You owe <%= number_to_currency(@user_order.sum(:total_price)) %> .
+  You owe <%= number_to_currency(@user_order.sum(:total_price)) %> in the channel "<%= @channel.cname %>".
 </p>
