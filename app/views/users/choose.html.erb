@@ -4,12 +4,12 @@
   <div class = "col-md-6 col-md-offset-3">
     <h1>What do you want to do?</h1>
     <div>
-      <button type="button"  class: "btn btn-primary" data-no-turbolink="true"  ><%= link_to "Create a channel!", create_channel_path %></button>
+      <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Create a channel!", create_channel_path %></button>
       <button type="button"  class: "btn btn-primary" ><%= link_to "Join a channel!", join_channel_path %></button>   
     </div>
     <div>   
       <%= link_to "Current Channel", current_channel_path %> | 
-      <%= link_to "Your channels", all_channels_path %> | 
+      <span data-no-turbolink="true"><%= link_to "Your channels", all_channels_path %></a> | 
       <%= link_to "Settings", settings_path %> | 
       <%= link_to "Log out", logout_path %> 
 

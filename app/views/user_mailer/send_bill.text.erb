@@ -1,0 +1,11 @@
+<h1>Tamchiak</h1>
+
+<p>Hi <%= @user.name %>,</p>
+
+<p>
+Thank you for using Tamchiak! 
+</p>
+
+<p>
+  You owe <%= number_to_currency(@user_order.sum(:total_price)) %> 
+</p>

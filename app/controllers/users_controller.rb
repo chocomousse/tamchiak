@@ -34,6 +34,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def bill 
+    @user = current_user
+    @user.send_billing_email(current_channel)
+    flash[:info] = "The bills have been sent!"
+    redirect_to join_or_create_path
+  end 
+
+  # Sends password reset email.
+  def send_billing_email
+    UserMailer.send_bill(self, current_channel).deliver_now
+  end
+  
   private 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)

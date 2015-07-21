@@ -19,4 +19,12 @@ class UserMailer < ApplicationMailer
     @user = user
     mail to: user.email, subject: "Password reset"
   end
+
+
+  def send_bill(user, current_channel)
+    @user = user
+    @user_channel ||= Order.where(channel_id: current_channel.id)
+    @user_order ||= @user_channel.where(user_id: user.id)
+    mail to: user.email, subject: "Supper Costs"
+  end 
 end

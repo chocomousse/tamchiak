@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bill</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1><%= @channel.cname %> - Bill</h1>
+      <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
+      <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Back to Channel", current_channel_path %></button>
+
+      <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Send Bill", send_bill_path %></button>
+      <p></p>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount payable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @bills.each do |t| %>
+          <p>
+            <tr>
+              <td><%= t.user.name %></td>
+              <td><%= number_to_currency(@bills.sum(:total_price)[t.user_id]) %></td>
+            </tr>
+          </p>
+          <% end %>
+
+      </table>
+      </tbody>
+    </div>
+  </body>

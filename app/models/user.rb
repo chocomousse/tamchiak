@@ -72,6 +72,11 @@ class User < ActiveRecord::Base
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end  
+    
+  # Sends billing email.
+  def send_billing_email(current_channel)
+    UserMailer.send_bill(self, current_channel).deliver_now
+  end
 
   private 
   #Converts emails to all lower-case.

@@ -7,11 +7,11 @@ class ChannelsController < ApplicationController
       @channel = current_channel
     else 
       if current_channel.nil?
-      flash[:danger] = "You are not in any channel. Please create or join a channel."
-      redirect_to join_or_create_path
+        flash[:danger] = "You are not in any channel. Please create or join a channel."
+        redirect_to join_or_create_path
       else 
-      flash[:danger] = "This channel is closed."
-      redirect_to join_or_create_path
+        flash[:danger] = "This channel is closed."
+        redirect_to bill_path
       end
     end
   end
@@ -43,7 +43,12 @@ class ChannelsController < ApplicationController
     @channel = current_channel
     @channel.update_attribute(:channel_status, "Closed")
     flash[:danger] = "Your channel has been closed."
-    redirect_to join_or_create_path
+    redirect_to collate_path
+  end
+  
+  def bill
+    @channel = current_channel
+    @bills ||= current_channel.orders.group(:user_id)
   end
 
   private 

@@ -23,6 +23,9 @@ Rails.application.routes.draw do
   delete 'orders' => 'orders#destroy'
   get "collate" => 'orders#collate'
   
+  get 'bill' => 'channels#bill'
+  get 'send_bill' => 'users#bill'
+  
   #For user log in log out
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
