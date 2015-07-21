@@ -13,7 +13,6 @@
       <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Add item", orders_path %> </button>
       <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
       <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Collate Orders", collate_path %></button>
-      <%= render 'layouts/channel_text' %>
       <p></p>
 
       <table class="table table-striped">
@@ -45,7 +44,12 @@
             </tr>
           </p>
           <% end %>
-        </tbody>
+          
+
       </table>
+      </tbody>
     </div>
+  
+  <div align="right"><h4><%= render 'layouts/channel_text' %></h4></div>
+
   </body>

@@ -39,18 +39,17 @@ class OrdersController < ApplicationController
     end 
   end 
 
-  def update
-    @channel = current_channel
-    @order = @channel.orders.find(params[:id])
-    @order.update_attributes(params[:quantity])
-    @orders = @channel.orders
-  end
-
   def destroy
     @order = current_channel.orders.find(params[:id])
-    @order.destroy
-    @orders = current_channel.orders
-    redirect_to current_channel_path
+    if @order.user == current_user
+      @order.destroy
+      @orders = current_channel.orders
+      flash[:success] = "Your order has been deleted."
+      redirect_to current_channel_path
+    else
+      flash[:danger] = "You can only delete orders that you have made!"
+      redirect_to current_channel_path
+    end
   end
 
   private 

@@ -7,11 +7,11 @@
       <button type="button"  class: "btn btn-primary" data-no-turbolink="true"  ><%= link_to "Create a channel!", create_channel_path %></button>
       <button type="button"  class: "btn btn-primary" ><%= link_to "Join a channel!", join_channel_path %></button>   
     </div>
-    <div> 
-      <%= link_to "Log out", logout_path %>
-      <%= link_to "Settings", settings_path %>
-      <%= link_to "Current Channel", current_channel_path %>
-      <%= link_to "All channels", all_channels_path %>
+    <div>   
+      <%= link_to "Current Channel", current_channel_path %> | 
+      <%= link_to "Your channels", all_channels_path %> | 
+      <%= link_to "Settings", settings_path %> | 
+      <%= link_to "Log out", logout_path %> 
 
     </div>
   </div>
