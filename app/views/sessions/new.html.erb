@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <div class="topcorner">  
+      <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
     <div class="container">    
       <div id="loginbox" class="mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"> 
 
@@ -51,7 +62,6 @@
               <span style="margin-left: 20px">Remember me on this computer</span>
               <% end %>
 
-
               <div class="form-group">
                 <!-- Button -->
                 <div class="col-sm-12 controls">
@@ -60,9 +70,10 @@
                   <% end %>                    
                 </div>
               </div>
-            </form>     
-          </div>                     
+            </form>   
+          </div>      
         </div>  
+
       </div>
     </div>
 
@@ -317,5 +328,5 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootsnip.js"></script>
-    </body>
+  </body>
 </html>
