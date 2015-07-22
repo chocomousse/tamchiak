@@ -21,14 +21,21 @@ class UsersController < ApplicationController
     end 
   end 
 
-  def destroy(user)
-    User.find(params[user.id]).destroy
-    flash[:success] = "User deleted"
-    redirect_to all_users_url
+  def destroy
+    @user = User.find(params[:id])
+    if (@user == current_user)
+      flash[:danger] = "You cannot delete your own account!"
+      redirect_to admin_users_path
+    else
+      @user.destroy
+      @users = User.all
+      flash[:success] = "User deleted."
+      redirect_to admin_users_path
+    end
   end
 
-  def all_users
-    @users = User.find(params[:id])
+  def admin_users
+    @users = User.all
   end
 
   def edit

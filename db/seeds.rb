@@ -59,7 +59,7 @@ MenuItem.create! id: 51, name: "Obama (yellow fried rice with egg & hot & spicy 
 MenuItem.create! id: 52, name: "Thai Style with Chicken Egg Sambal", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T71", price: 5.00, active: true
 MenuItem.create! id: 53, name: "Chinese Style with Chicken Egg Sambal", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T71", price: 5.00, active: true
 
-#*******************************************************************************Indian Kitchen*************************************************************************************
+#****************************************************************************** Indian Kitchen ************************************************************************************
 # Tandoori => Need Different Prices
 MenuItem.create! id: 54, name: "Tandoori Chicken", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N01", price: nil , active: true
 MenuItem.create! id: 55, name: "Mixed Chicken Plater", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N02", price: nil, active: true
@@ -119,14 +119,14 @@ MenuItem.create! id: 100, name: "Mutton Vindaloo", cat: "Indian Kitchen", subcat
 
 # Seafood
 MenuItem.create! id: 101, name: "Kadai Fish", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N48", price: 8.00, active: true
-MenuItem.create! id: 102, name: "Fish Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N49", price: 7.00, active: true
+MenuItem.create! id: 102, name: "Fish Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N49", price: 8.00, active: true
 MenuItem.create! id: 103, name: "Madras Fish Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N50", price: 7.00, active: true
-MenuItem.create! id: 104, name: "Fish Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N51", price: 6.00, active: true
+MenuItem.create! id: 104, name: "Fish Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N51", price: 7.00, active: true
 MenuItem.create! id: 105, name: "Kadai Prawn", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N52", price: 8.00, active: true
-MenuItem.create! id: 106, name: "Prawn Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N53", price: 7.00, active: true
-MenuItem.create! id: 107, name: "Prawn Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N54", price: 6.00, active: true
-MenuItem.create! id: 108, name: "Prawn Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N55", price: 6.00, active: true
-MenuItem.create! id: 109, name: "Prawn Do Plaza", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N56", price: 7.00, active: true
+MenuItem.create! id: 106, name: "Prawn Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N53", price: 8.00, active: true
+MenuItem.create! id: 107, name: "Prawn Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N54", price: 7.00, active: true
+MenuItem.create! id: 108, name: "Prawn Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N55", price: 7.00, active: true
+MenuItem.create! id: 109, name: "Prawn Do Plaza", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N56", price: 8.00, active: true
 MenuItem.create! id: 110, name: "Chilli Prawn", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N57", price: 8.00, active: true
 MenuItem.create! id: 111, name: "Fish Head Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N58", price: 15.00, active: true
 
@@ -155,27 +155,27 @@ MenuItem.create! id: 132, name: "Gobi Manchurian", cat: "Indian Kitchen", subcat
 MenuItem.create! id: 133, name: "Chilli Panner", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N80", price: 8.00, active: true
 MenuItem.create! id: 134, name: "Aloo Gobi", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N81", price: 5.00, active: true
 
-#********************************************************************Western Kitchen*******************************************************************************************
+#**************************************************************** Western Kitchen (updated) ***************************************************************************************
 # Finger Food
 MenuItem.create! id: 135, name: "Mushroom Soup", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W01", price: 3.00, active: true
 MenuItem.create! id: 136, name: "French Fries", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W02", price: 3.00, active: true
 MenuItem.create! id: 137, name: "Mash Potao", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W03", price: 2.00, active: true
 MenuItem.create! id: 138, name: "Coleslaw", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W04", price: 1.50, active: true
-MenuItem.create! id: 139, name: "Chicken Nuggets (7pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W05", price: 3.00, active: true
+MenuItem.create! id: 139, name: "Chicken Nuggets (7pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W05", price: 4.00, active: true
 MenuItem.create! id: 140, name: "Chicken Wing Set (2pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W06", price: 3.50, active: true
 MenuItem.create! id: 141, name: "Chicken Wings (3pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W07", price: 4.50, active: true
-MenuItem.create! id: 142, name: "Cheese Fries", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W08", price: 3.50, active: true
+MenuItem.create! id: 142, name: "Cheese Fries", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W08", price: 4.00, active: true
 MenuItem.create! id: 143, name: "Garlic Bread", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W09", price: 2.00, active: true
 MenuItem.create! id: 144, name: "Hot Wing's (price per pc, min 2pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W10", price: 1.50, active: true
-MenuItem.create! id: 145, name: "Spring Chicken", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W11", price: 8.00, active: true
+MenuItem.create! id: 145, name: "Spring Chicken", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W11", price: 9.00, active: true
 
 # Pasta
 MenuItem.create! id: 146, name: "Chicken Pasta", cat: "Western Kitchen", subcat: "Pasta", item_code: "W12", price: 6.00, active: true
-MenuItem.create! id: 147, name: "Beef Bolognaise", cat: "Western Kitchen", subcat: "Pasta", item_code: "W13", price: 6.00, active: true
-MenuItem.create! id: 148, name: "Seafood Marinara", cat: "Western Kitchen", subcat: "Pasta", item_code: "W14", price: 6.00, active: true
+MenuItem.create! id: 147, name: "Beef Bolognaise", cat: "Western Kitchen", subcat: "Pasta", item_code: "W13", price: 6.50, active: true
+MenuItem.create! id: 148, name: "Seafood Marinara", cat: "Western Kitchen", subcat: "Pasta", item_code: "W14", price: 6.50, active: true
 MenuItem.create! id: 149, name: "Mushroom & Chicken Pasta", cat: "Western Kitchen", subcat: "Pasta", item_code: "W15", price: 6.50, active: true
 MenuItem.create! id: 150, name: "Mushroom Olio", cat: "Western Kitchen", subcat: "Pasta", item_code: "W16", price: 5.00, active: true
-MenuItem.create! id: 151, name: "seafood Olio", cat: "Western Kitchen", subcat: "Pasta", item_code: "W17", price: 6.00, active: true
+MenuItem.create! id: 151, name: "Seafood Olio", cat: "Western Kitchen", subcat: "Pasta", item_code: "W17", price: 6.00, active: true
 MenuItem.create! id: 152, name: "Sausage Carbonara", cat: "Western Kitchen", subcat: "Pasta", item_code: "W18", price: 6.50, active: true
 
 # Salad
@@ -189,12 +189,12 @@ MenuItem.create! id: 157, name: "Kebab Original", cat: "Western Kitchen", subcat
 MenuItem.create! id: 158, name: "Kebab with Cheese", cat: "Western Kitchen", subcat: "Kebab", item_code: "W24", price: 4.50, active: true
 
 # Roti John
-MenuItem.create! id: 159, name: "Roti John", cat: "Western Kitchen", subcat: "Roti John", item_code: "W25", price: 3.50, active: true
-MenuItem.create! id: 160, name: "Roti John Cheese", cat: "Western Kitchen", subcat: "Roti John", item_code: "W26", price: 4.00, active: true
-MenuItem.create! id: 161, name: "Roti John Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W27", price: 4.00, active: true
-MenuItem.create! id: 162, name: "Roti John Black Pepper", cat: "Western Kitchen", subcat: "Roti John", item_code: "W28", price: 4.00, active: true
-MenuItem.create! id: 163, name: "Roti John Cheese Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W29", price: 4.50, active: true
-MenuItem.create! id: 164, name: "Roti John Combo", cat: "Western Kitchen", subcat: "Roti John", item_code: "W30", price: 4.80, active: true
+MenuItem.create! id: 159, name: "Roti John", cat: "Western Kitchen", subcat: "Roti John", item_code: "W25", price: 4.00, active: true
+MenuItem.create! id: 160, name: "Roti John Cheese", cat: "Western Kitchen", subcat: "Roti John", item_code: "W26", price: 4.50, active: true
+MenuItem.create! id: 161, name: "Roti John Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W27", price: 4.50, active: true
+MenuItem.create! id: 162, name: "Roti John Black Pepper", cat: "Western Kitchen", subcat: "Roti John", item_code: "W28", price: 4.50, active: true
+MenuItem.create! id: 163, name: "Roti John Cheese Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W29", price: 4.80, active: true
+MenuItem.create! id: 164, name: "Roti John Combo", cat: "Western Kitchen", subcat: "Roti John", item_code: "W30", price: 5.00, active: true
 
 # Burger
 MenuItem.create! id: 165, name: "Fried Fish Burger", cat: "Western Kitchen", subcat: "Burger", item_code: "W31", price: 6.00, active: true
@@ -203,9 +203,9 @@ MenuItem.create! id: 167, name: "Grill Beef Burger", cat: "Western Kitchen", sub
 MenuItem.create! id: 168, name: "Grill Lamb Burger", cat: "Western Kitchen", subcat: "Burger", item_code: "W34", price: 6.00, active: true
 
 # Fish
-MenuItem.create! id: 169, name: "Fish & Chips", cat: "Western Kitchen", subcat: "Fish", item_code: "W35", price: 6.50, active: true
-MenuItem.create! id: 170, name: "Grill Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W36", price: 6.50, active: true
-MenuItem.create! id: 171, name: "Garlic Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W37", price: 6.50, active: true
+MenuItem.create! id: 169, name: "Fish & Chips", cat: "Western Kitchen", subcat: "Fish", item_code: "W35", price: 7.00, active: true
+MenuItem.create! id: 170, name: "Grill Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W36", price: 7.00, active: true
+MenuItem.create! id: 171, name: "Garlic Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W37", price: 7.00, active: true
 
 # Lamb
 MenuItem.create! id: 172, name: "BBQ Lamb", cat: "Western Kitchen", subcat: "Lamb", item_code: "W38", price: 8.00, active: true
@@ -218,56 +218,127 @@ MenuItem.create! id: 176, name: "Mushroom Steak", cat: "Western Kitchen", subcat
 MenuItem.create! id: 177, name: "Pepper Steak", cat: "Western Kitchen", subcat: "Steak", item_code: "W43", price: 8.00, active: true
 MenuItem.create! id: 178, name: "Stirlion Steak", cat: "Western Kitchen", subcat: "Steak", item_code: "W44", price: 8.00, active: true
 MenuItem.create! id: 179, name: "Ameen's Stirlion Steak", cat: "Western Kitchen", subcat: "Steak", item_code: "W45", price: 9.00, active: true
-MenuItem.create! id: 180, name: "Ameen's All Time Special", cat: "Western Kitchen", subcat: "Steak", item_code: "W46", price: 12.00, active: true
+MenuItem.create! id: 180, name: "Ameen's All Time Special Mix Grill", cat: "Western Kitchen", subcat: "Steak", item_code: "W46", price: 12.00, active: true
 
 # Chicken
 MenuItem.create! id: 181, name: "Grill Mushroom Chicken", cat: "Western Kitchen", subcat: "Chicken", item_code: "W47", price: 8.00, active: true
 MenuItem.create! id: 182, name: "Grill Pepper Chicken", cat: "Western Kitchen", subcat: "Chicken", item_code: "W48", price: 8.00, active: true
 MenuItem.create! id: 183, name: "Grill Chicken Chop", cat: "Western Kitchen", subcat: "Chicken", item_code: "W49", price: 8.00, active: true
-
-#********************************************************************Drinks*******************************************************************************************
-# Spin
-MenuItem.create! id: 184, name: "Green Apple", cat: "Drinks", subcat: "Spin", item_code: "D01", price: 3.00, active: true
-MenuItem.create! id: 185, name: "Watermelon", cat: "Drinks", subcat: "Spin", item_code: "D02", price: 3.00, active: true
-MenuItem.create! id: 186, name: "Pineapple", cat: "Drinks", subcat: "Spin", item_code: "D03", price: 3.00, active: true
-MenuItem.create! id: 187, name: "Honeydew", cat: "Drinks", subcat: "Spin", item_code: "D04", price: 3.00, active: true
-MenuItem.create! id: 188, name: "Kiwi", cat: "Drinks", subcat: "Spin", item_code: "D05", price: 3.00, active: true
-MenuItem.create! id: 189, name: "Orange", cat: "Drinks", subcat: "Spin", item_code: "D06", price: 3.00, active: true
-MenuItem.create! id: 190, name: "Rambutan", cat: "Drinks", subcat: "Spin", item_code: "D07", price: 3.00, active: true
-MenuItem.create! id: 191, name: "Lychee", cat: "Drinks", subcat: "Spin", item_code: "D08", price: 3.00, active: true
-MenuItem.create! id: 192, name: "Longan", cat: "Drinks", subcat: "Spin", item_code: "D09", price: 3.00, active: true
-MenuItem.create! id: 193, name: "Blue Lime", cat: "Drinks", subcat: "Spin", item_code: "D10", price: 3.00, active: true
-MenuItem.create! id: 194, name: "Soursop", cat: "Drinks", subcat: "Spin", item_code: "D11", price: 3.00, active: true
-
+MenuItem.create! id: 184, name: "Chicken Cutlet", cat: "Western Kitchen", subcat: "Chicken", item_code: "W50", price: 8.00, active: true
+#******************************************************************* Drinks *******************************************************************************************
+# Spin (updated)
+MenuItem.create! id: 185, name: "Green Apple", cat: "Drinks", subcat: "Spin", item_code: "D01", price: 3.00, active: true
+MenuItem.create! id: 186, name: "Watermelon", cat: "Drinks", subcat: "Spin", item_code: "D02", price: 3.00, active: true
+MenuItem.create! id: 187, name: "Pineapple", cat: "Drinks", subcat: "Spin", item_code: "D03", price: 3.00, active: true
+MenuItem.create! id: 188, name: "Honeydew", cat: "Drinks", subcat: "Spin", item_code: "D04", price: 3.00, active: true
+MenuItem.create! id: 189, name: "Kiwi", cat: "Drinks", subcat: "Spin", item_code: "D05", price: 3.00, active: true
+MenuItem.create! id: 190, name: "Orange", cat: "Drinks", subcat: "Spin", item_code: "D06", price: 3.00, active: true
+MenuItem.create! id: 191, name: "Rambutan", cat: "Drinks", subcat: "Spin", item_code: "D07", price: 3.00, active: true
+MenuItem.create! id: 192, name: "Lychee", cat: "Drinks", subcat: "Spin", item_code: "D08", price: 3.00, active: true
+MenuItem.create! id: 193, name: "Longan", cat: "Drinks", subcat: "Spin", item_code: "D09", price: 3.00, active: true
+MenuItem.create! id: 194, name: "Blue Lime", cat: "Drinks", subcat: "Spin", item_code: "D10", price: 3.00, active: true
+MenuItem.create! id: 195, name: "Soursop", cat: "Drinks", subcat: "Spin", item_code: "D11", price: 3.00, active: true
 
 # Ice Kachang
-MenuItem.create! id: 195, name: "Red Bean", cat: "Drinks", subcat: "Ice Kachang", item_code: "D72", price: 3.00, active: true
-MenuItem.create! id: 196, name: "Strawberry", cat: "Drinks", subcat: "Ice Kachang", item_code: "D73", price: 3.00, active: true
-MenuItem.create! id: 197, name: "Sour Plum", cat: "Drinks", subcat: "Ice Kachang", item_code: "D74", price: 3.00, active: true
-MenuItem.create! id: 198, name: "Durian", cat: "Drinks", subcat: "Ice Kachang", item_code: "D75", price: 3.00, active: true
+MenuItem.create! id: 196, name: "Red Bean", cat: "Drinks", subcat: "Ice Kachang", item_code: "D72", price: 3.00, active: true
+MenuItem.create! id: 197, name: "Strawberry", cat: "Drinks", subcat: "Ice Kachang", item_code: "D73", price: 3.00, active: true
+MenuItem.create! id: 198, name: "Sour Plum", cat: "Drinks", subcat: "Ice Kachang", item_code: "D74", price: 3.00, active: true
+MenuItem.create! id: 199, name: "Durian", cat: "Drinks", subcat: "Ice Kachang", item_code: "D75", price: 3.00, active: true
 
-# Milk Shakes
-MenuItem.create! id: 199, name: "Banana", cat: "Drinks", subcat: "Milk Shakes", item_code: "D21", price: 3.00, active: true
-MenuItem.create! id: 200, name: "Sweet Corn", cat: "Drinks", subcat: "Milk Shakes", item_code: "D22", price: 3.00, active: true
-MenuItem.create! id: 201, name: "Strawberry", cat: "Drinks", subcat: "Milk Shakes", item_code: "D23", price: 3.00, active: true
-MenuItem.create! id: 202, name: "Chocolate", cat: "Drinks", subcat: "Milk Shakes", item_code: "D24", price: 3.00, active: true
-MenuItem.create! id: 203, name: "Vanilla", cat: "Drinks", subcat: "Milk Shakes", item_code: "D25", price: 3.00, active: true
-MenuItem.create! id: 204, name: "Kiwi", cat: "Drinks", subcat: "Milk Shakes", item_code: "D26", price: 3.00, active: true
-MenuItem.create! id: 205, name: "Green Apple", cat: "Drinks", subcat: "Milk Shakes", item_code: "D27", price: 3.00, active: true
-MenuItem.create! id: 206, name: "Mango", cat: "Drinks", subcat: "Milk Shakes", item_code: "D28", price: 3.00, active: true
-MenuItem.create! id: 207, name: "Orange", cat: "Drinks", subcat: "Milk Shakes", item_code: "D29", price: 3.00, active: true
-MenuItem.create! id: 208, name: "Yam", cat: "Drinks", subcat: "Milk Shakes", item_code: "D30", price: 3.00, active: true
-MenuItem.create! id: 209, name: "Mocca", cat: "Drinks", subcat: "Milk Shakes", item_code: "D31", price: 3.00, active: true
-MenuItem.create! id: 210, name: "Latte", cat: "Drinks", subcat: "Milk Shakes", item_code: "D32", price: 3.00, active: true
-MenuItem.create! id: 211, name: "Oreo", cat: "Drinks", subcat: "Milk Shakes", item_code: "D33", price: 3.00, active: true
-MenuItem.create! id: 212, name: "Avacado", cat: "Drinks", subcat: "Milk Shakes", item_code: "D34", price: 3.00, active: true
-MenuItem.create! id: 213, name: "Durian", cat: "Drinks", subcat: "Milk Shakes", item_code: "D35", price: 3.00, active: true
-MenuItem.create! id: 214, name: "Cookie", cat: "Drinks", subcat: "Milk Shakes", item_code: "D36", price: 3.00, active: true
-MenuItem.create! id: 215, name: "dates", cat: "Drinks", subcat: "Milk Shakes", item_code: "D37", price: 3.00, active: true
+# Milk Shakes (Updated)
+MenuItem.create! id: 200, name: "Banana", cat: "Drinks", subcat: "Milk Shakes", item_code: "D21", price: 3.00, active: true
+MenuItem.create! id: 201, name: "Sweet Corn", cat: "Drinks", subcat: "Milk Shakes", item_code: "D22", price: 3.00, active: true
+MenuItem.create! id: 202, name: "Strawberry", cat: "Drinks", subcat: "Milk Shakes", item_code: "D23", price: 3.00, active: true
+MenuItem.create! id: 203, name: "Chocolate", cat: "Drinks", subcat: "Milk Shakes", item_code: "D24", price: 3.00, active: true
+MenuItem.create! id: 204, name: "Vanilla", cat: "Drinks", subcat: "Milk Shakes", item_code: "D25", price: 3.00, active: true
+MenuItem.create! id: 205, name: "Kiwi", cat: "Drinks", subcat: "Milk Shakes", item_code: "D26", price: 3.00, active: true
+MenuItem.create! id: 206, name: "Green Apple", cat: "Drinks", subcat: "Milk Shakes", item_code: "D27", price: 3.00, active: true
+MenuItem.create! id: 207, name: "Mango", cat: "Drinks", subcat: "Milk Shakes", item_code: "D28", price: 3.00, active: true
+MenuItem.create! id: 208, name: "Orange", cat: "Drinks", subcat: "Milk Shakes", item_code: "D29", price: 3.00, active: true
+MenuItem.create! id: 209, name: "Yam", cat: "Drinks", subcat: "Milk Shakes", item_code: "D30", price: 3.00, active: true
+MenuItem.create! id: 210, name: "Mocca", cat: "Drinks", subcat: "Milk Shakes", item_code: "D31", price: 3.00, active: true
+MenuItem.create! id: 211, name: "Latte", cat: "Drinks", subcat: "Milk Shakes", item_code: "D32", price: 3.00, active: true
+MenuItem.create! id: 212, name: "Oreo", cat: "Drinks", subcat: "Milk Shakes", item_code: "D33", price: 3.00, active: true
+MenuItem.create! id: 213, name: "Avacado", cat: "Drinks", subcat: "Milk Shakes", item_code: "D34", price: 3.00, active: true
+MenuItem.create! id: 214, name: "Durian", cat: "Drinks", subcat: "Milk Shakes", item_code: "D35", price: 3.00, active: true
+MenuItem.create! id: 215, name: "Cookie", cat: "Drinks", subcat: "Milk Shakes", item_code: "D36", price: 3.00, active: true
+MenuItem.create! id: 216, name: "dates", cat: "Drinks", subcat: "Milk Shakes", item_code: "D37", price: 3.00, active: true
 
+# Local Favourites (Updated)
+MenuItem.create! id: 217, name: "Tea", cat: "Drinks", subcat: "Local Favourites", item_code: "D54", price: nil, active: true
+MenuItem.create! id: 218, name: "Coffee", cat: "Drinks", subcat: "Local Favourites", item_code: "D55", price: nil, active: true
+MenuItem.create! id: 219, name: "Nescafe", cat: "Drinks", subcat: "Local Favourites", item_code: "D56", price: nil, active: true
+MenuItem.create! id: 220, name: "Milo", cat: "Drinks", subcat: "Local Favourites", item_code: "D57", price: nil, active: true
+MenuItem.create! id: 221, name: "Horlicks", cat: "Drinks", subcat: "Local Favourites", item_code: "D58", price: nil, active: true
+MenuItem.create! id: 222, name: "Chocolate", cat: "Drinks", subcat: "Local Favourites", item_code: "D59", price: nil, active: true
+MenuItem.create! id: 223, name: "Teh 'O'", cat: "Drinks", subcat: "Local Favourites", item_code: "D60", price: nil, active: true
+MenuItem.create! id: 224, name: "Kopi 'O'", cat: "Drinks", subcat: "Local Favourites", item_code: "D61", price: nil, active: true
+MenuItem.create! id: 225, name: "Ginger Tea", cat: "Drinks", subcat: "Local Favourites", item_code: "D62", price: nil, active: true
+MenuItem.create! id: 226, name: "Ginger Coffee", cat: "Drinks", subcat: "Local Favourites", item_code: "D63", price: nil, active: true
+MenuItem.create! id: 227, name: "Tea Chino", cat: "Drinks", subcat: "Local Favourites", item_code: "D64", price: nil, active: true
+MenuItem.create! id: 228, name: "Coffee Chino", cat: "Drinks", subcat: "Local Favourites", item_code: "D65", price: nil, active: true
+MenuItem.create! id: 229, name: "Bandung Chino", cat: "Drinks", subcat: "Local Favourites", item_code: "D66", price: nil, active: true
+MenuItem.create! id: 230, name: "Syrup", cat: "Drinks", subcat: "Local Favourites", item_code: "D67", price: nil, active: true
+MenuItem.create! id: 231, name: "Syrup with Lime", cat: "Drinks", subcat: "Local Favourites", item_code: "D68", price: nil, active: true
+MenuItem.create! id: 232, name: "Tea 'O' with Lime", cat: "Drinks", subcat: "Local Favourites", item_code: "D69", price: nil, active: true
+MenuItem.create! id: 233, name: "Lime", cat: "Drinks", subcat: "Local Favourites", item_code: "D70", price: nil, active: true
+MenuItem.create! id: 234, name: "Lemonade", cat: "Drinks", subcat: "Local Favourites", item_code: "D71", price: nil, active: true
 
-#****************************************************** Creating an admin user************************************************************
+# Favourites (Updated)
+MenuItem.create! id: 235, name: "Milo Dinosaur", cat: "Drinks", subcat: "Favourites", item_code: "D12", price: 2.50, active: true
+MenuItem.create! id: 236, name: "Milo Godzilla", cat: "Drinks", subcat: "Favourites", item_code: "D13", price: 3.00, active: true
+MenuItem.create! id: 237, name: "Milo Hong Kong", cat: "Drinks", subcat: "Favourites", item_code: "D14", price: 3.50, active: true
+MenuItem.create! id: 238, name: "Horlicks Dinosaur", cat: "Drinks", subcat: "Favourites", item_code: "D15", price: 3.00, active: true
+MenuItem.create! id: 239, name: "Horlicks Hong Kong", cat: "Drinks", subcat: "Favourites", item_code: "D16", price: 4.00, active: true
+
+# Lassi (Updated)
+MenuItem.create! id: 240, name: "Sweet Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D17", price: 3.00, active: true
+MenuItem.create! id: 241, name: "Salt Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D18", price: 3.00, active: true
+MenuItem.create! id: 242, name: "Mango Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D19", price: 3.50, active: true
+MenuItem.create! id: 243, name: "Strawberry Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D20", price: 3.50, active: true
+
+# Sodas (Updated)
+MenuItem.create! id: 244, name: "Black Soda", cat: "Drinks", subcat: "Sodas", item_code: "D38", price: 3.00, active: true
+MenuItem.create! id: 245, name: "Pink Soda", cat: "Drinks", subcat: "Sodas", item_code: "D39", price: 3.00, active: true
+MenuItem.create! id: 246, name: "White Soda", cat: "Drinks", subcat: "Sodas", item_code: "D40", price: 3.00, active: true
+
+# Fruit Juice (Updated)
+MenuItem.create! id: 247, name: "Orange", cat: "Drinks", subcat: "Fruit Juice", item_code: "D41", price: 2.50, active: true
+MenuItem.create! id: 248, name: "Green Apple", cat: "Drinks", subcat: "Fruit Juice", item_code: "D42", price: 2.50, active: true
+MenuItem.create! id: 249, name: "Pineapple", cat: "Drinks", subcat: "Fruit Juice", item_code: "D43", price: 2.50, active: true
+MenuItem.create! id: 250, name: "Papaya", cat: "Drinks", subcat: "Fruit Juice", item_code: "D44", price: 2.50, active: true
+MenuItem.create! id: 251, name: "Watermelon", cat: "Drinks", subcat: "Fruit Juice", item_code: "D45", price: 2.50, active: true
+MenuItem.create! id: 252, name: "Starfruit", cat: "Drinks", subcat: "Fruit Juice", item_code: "D46", price: 2.50, active: true
+MenuItem.create! id: 253, name: "Honey Dew", cat: "Drinks", subcat: "Fruit Juice", item_code: "D47", price: 2.50, active: true
+MenuItem.create! id: 254, name: "Longan", cat: "Drinks", subcat: "Fruit Juice", item_code: "D48", price: 2.50, active: true
+MenuItem.create! id: 255, name: "Lychee", cat: "Drinks", subcat: "Fruit Juice", item_code: "D49", price: 2.50, active: true
+MenuItem.create! id: 256, name: "Rambuta", cat: "Drinks", subcat: "Fruit Juice", item_code: "D50", price: 2.50, active: true
+MenuItem.create! id: 257, name: "Carrot", cat: "Drinks", subcat: "Fruit Juice", item_code: "D51", price: 2.50, active: true
+MenuItem.create! id: 258, name: "Celery", cat: "Drinks", subcat: "Fruit Juice", item_code: "D52", price: 2.50, active: true
+MenuItem.create! id: 259, name: "Mix Fruit Juice (Choose any 2 fruits)", cat: "Drinks", subcat: "Fruit Juice", item_code: "D53", price: 3.00, active: true
+
+# Thai Kitchen (Soup)
+#MenuItem.create! id: , name: "", cat: "Thai Kitchen", subcat: "Soup", item_code: "T", price: , active: true
+
+# Thai Kitchen (Vegetables)
+#MenuItem.create! id: , name: "", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T", price: , active: true
+
+# Thai Kitchen (Beef, Chicken, Prawn, Cuttle Fish, Slice Fish)
+#MenuItem.create! id: , name: "", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T", price: , active: true
+
+# Thai Kitchen (Omelet)
+#MenuItem.create! id: , name: "", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T", price: , active: true
+#**************************************************************** Creating an admin user **********************************************************************
+User.delete_all
 User.create! id: 1, name: "chocomousse", email: "tamchiakorbital@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: true, activated: true, activated_at: Time.zone.now
+User.create! id: 2, name: "annabel", email: "annabel.tay17@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: true, activated: true, activated_at: Time.zone.now
+User.create! id: 6, name: "skye", email: "annabeltayyiqing17@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: false, activated: true, activated_at: Time.zone.now
+User.create! id: 3, name: "Lavi", email: "annabeltay17@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: false, activated: true, activated_at: Time.zone.now
+User.create! id: 4, name: "Szeying", email: "ting.szeying@gmail.com", password: "password", password_confirmation: "password", is_admin: true, activated: true, activated_at: Time.zone.now
+
+Channel.delete_all
+Channel.create! id: 1, cname: "Szeying sucks", menu:"Ameens", subtotal: 0.00, delivery: 0.00, tax: 0.00, total: 0.00, added_by: "Szeying", channel_status: "Open", bill: 0.00
+Channel.create! id: 2, cname: "She keeps scolding me :(", menu:"Ameens", subtotal: 0.00, delivery: 0.00, tax: 0.00, total: 0.00, added_by: "chocomousse", channel_status: "Open", bill: 0.00
 
 ChannelStatus.delete_all
 ChannelStatus.create! id: 1, name: "Open"

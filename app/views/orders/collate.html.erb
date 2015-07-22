@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Order this!</title>
+    <% @title="tamchiak | Collated orders for #{current_channel.cname}" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap.min.css">
@@ -12,44 +12,50 @@
     <%= render 'layouts/header_current' %>
 
     <!-- CONTENT -->
+    <h1>
+      Collated Orders for <strong><%= current_channel.cname %></strong>
+      <div class="pull-right">
+        <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+        <%= link_to "Check Bill", bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
+        <% if current_channel.user_id == current_user.id %>
+        <%= link_to "Close Channel", @channel, :method => :get, :class => "btn btn-danger" %>
+        <% end %>
+        </h1>
 
-    <h1><%= current_channel.cname %> - Collated</h1>
-    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Bill", bill_path %></button>
-    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
-    <% if current_channel.user_id == current_user.id %>
-    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Close Channel", @channel, :method => :get %></button>
-    <% end %>
 
-    <div class="container">
+      <div class="container">
 
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Sub-category</th>
-            <th>Item Code</th>
-            <th>Name</th>
-            <th>Quantity</th>
-          </tr>        
-        </thead>
-        <tbody>
-          <% @relevant_orders.find_each do |t| %>
-          <p>
+        <table class="table table-striped">
+          <thead>
             <tr>
-              <td><%= t.cat %></td>
-              <td><%= t.subcat %></td>
-              <td><%= t.item_code %></td>
-              <td><%= t.meal %></td>
-              <td><%= @relevant_orders.sum(:quantity)[t.meal] %></td>
-            </tr>
-          </p>
-          <% end %>
-        </tbody>
-      </table>
-      <div>
-        <h5>Delivery = <%= number_to_currency(@channel.delivery) %></h5>
-        <h3>Total Cost (delivery charge included): <%= number_to_currency(@orders_in_channel.sum(:total_price) + @channel.delivery) %></h3>
+              <th>Category</th>
+              <th>Item Code</th>
+              <th>Name</th>
+              <th>Remarks</th>            
+              <th>Quantity</th>
+            </tr>        
+          </thead>
+          <tbody>
+
+            <% @specific_orders.find_each do |s| %>
+            <p>
+              <tr>
+                <td><%= s.cat %></td>
+                <td><%= s.item_code %></td>
+                <td class="col-md-6"><%= s.meal %></td>
+                <td><%= s.subcat %></td>              
+                <td><%= @orders_in_channel.where(subcat: s.subcat, meal: s.meal).sum(:quantity) %></td>
+              </tr>
+            </p>
+            <% end %>
+          </tbody>
+        </table>
+        <div>
+          <div class="pull-right" align="right">
+            <h4><small><%= render 'layouts/channel_text' %> | Delivery: <%= number_to_currency(@channel.delivery) %></small></h4>
+            <h3>Total: <%= number_to_currency(@orders_in_channel.sum(:total_price) + @channel.delivery) %></h3>
+          </div>
+        </div>
       </div>
-    </div>
-  </body>
-</html>
+      </body>
+    </html>

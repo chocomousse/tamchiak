@@ -19,20 +19,15 @@ class ChannelsController < ApplicationController
 
   def display
     @channel_owner = current_user.channels
+    @user = current_user
   end 
 
   def new
     @channel_owner = Channel.new
   end
-
-  def destroy
-    Channel.find(params[:id]).destroy
-    flash[:success] = "Channel deleted"
-    redirect_to all_channels_url
-  end
     
-  def all_channels
-    @channels = Channel.find(params[:id])
+  def admin_channels
+    @channels = Channel.all
   end
 
   def create 
@@ -67,9 +62,17 @@ class ChannelsController < ApplicationController
       @orders = @channel.orders
     end
   end
+  
+  def destroy
+    @channel = Channel.find(params[:id])
+    @channel.destroy
+    @channels = Channel.all
+    flash[:success] = "Channel deleted."
+    redirect_to admin_channels_path
+  end
 
   private 
   def channel_params
-    params.require(:channel).permit(:cname, :menu, :channel_status, :delivery, :created_at)
+    params.require(:channel).permit(:cname, :menu, :channel_status, :delivery, :created_at, :added_by)
   end 
 end 

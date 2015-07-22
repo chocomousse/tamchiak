@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
     @channel = current_channel
     @relevant_orders ||= Order.where(channel_id: current_channel.id).group(:meal)
     @orders_in_channel ||= Order.where(channel_id: current_channel.id)
+    @specific_orders ||= Order.where(channel_id: current_channel.id).group(:meal, :subcat)
   end 
 
   def show
@@ -29,8 +30,6 @@ class OrdersController < ApplicationController
 
     if @order.save 
       flash[:success] = "Order has been recorded!"
-      #redirect_to join_or_create_path
-      #render 'layout/channel_text'
       render :js => "window.location = '/channels/show'"
     else 
       flash[:danger] = "Order was not recorded!"

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% @title="tamchiak - Home" %>
+    <title>Tamchiak</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,7 +10,7 @@
   <body>
 
     <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header_admin' %>
 
     <!-- CONTENT -->
     <div class="container well">
@@ -18,11 +18,10 @@
         <div class="row">
           <p>
           <h1>Welcome, <%= current_user.name %>!</h1>
-          <h2><small>What would you like to do?</small></h2>
           </p>   
         <p>
-          <%= link_to "Create a channel", create_channel_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>
-          <%= link_to "Join a channel", join_channel_path, {class: "btn btn-default btn-lg", data: { no_turbolink: true }} %> 
+          <%= link_to "All Channels", admin_channels_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>
+          <%= link_to "All Users", admin_users_path, {class: "btn btn-default btn-lg", data: { no_turbolink: true }} %> 
         </p>
 
       </div>

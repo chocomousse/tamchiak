@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
   before_action :logged_in_user, only: [:new_order, :destroy]
-  
+
   def new
   end
-  
+
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
       render 'joining_a_channel'
     end 
   end
-  
+
   # work in progress
   # For users to select previous channels
   def saved_channel

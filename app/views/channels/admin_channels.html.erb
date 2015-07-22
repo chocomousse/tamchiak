@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% @title="tamchiak | All Channels (Admin)" %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%= render 'layouts/header_admin' %>
+
+    <!-- CONTENT -->
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Menu</th>
+            <th>Owner</th>
+            <th>Channel Status</th>
+            <th>Date created</th>
+            <th>Action</th>
+          </tr>        
+        </thead>
+        <tbody>
+          <% @channels.each do |t| %>
+          <p>
+            <tr>
+              <td><%= t.cname %></td>
+              <td><%= t.menu %></td>              
+              <td><%= t.added_by %></td>
+              <td><%= t.channel_status %></td>
+              <td><%= t.created_at.strftime("%d %b %Y") %></td>              
+              <td><%= link_to 'Delete', t, :method => :delete %></td>
+            </tr>
+          </p>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

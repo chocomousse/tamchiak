@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>All Channels</title>
+    <title>All Users</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap.min.css">
@@ -9,29 +9,25 @@
 
   <body>
     <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header_channels' %>
+    <%= render 'layouts/header_admin' %>
 
     <!-- CONTENT -->
-
-    <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Home", join_or_create_path %></button>
-    <% if current_channel.user_id == current_user.id %>
-
     <div class="container">
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Channel Name</th>
-            <th>Channel Owner</th>
+            <th>Name</th>
+            <th>Email</th>
             <th>Action</th>
           </tr>        
         </thead>
         <tbody>
-          <% @channels.find_each do |t| %>
+          <% @users.each do |t| %>
           <p>
             <tr>
-              <td><%= t.cname %></td>
+              <td><%= t.name %></td>
               <td><%= t.email %></td>
-              <td><%= link_to 'Delete', t, :method => :destroy %></td>
+              <td><%= link_to 'Delete', t, :method => :delete %></td>
             </tr>
           </p>
           <% end %>

@@ -4,21 +4,20 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
-  root 'sessions#new'
+  root 'users#choose'
 
   #For channels
   get 'create_channel' => 'channels#new'
   get 'join_channel' => 'sessions#joining_a_channel' #shows that page I think
   post 'join_channel' => 'sessions#new_order'        #happens upon clicking the submit button in the joining_a_channel page
   get 'current_channel' => 'channels#show'
-  delete 'exit' => 'sessions#quit'
+  delete 'sessions' => 'sessions#quit'
   get 'exit' => 'users#choose'
   get 'all_channels' => "channels#display"
   get 'channel' => 'channels#close'
   
   get 'orders' => 'orders#new'
   post 'orders' => 'orders#create'
-  #get 'order_received' => 'orders#order_created'
   get 'all_orders' => 'orders#show'
   delete 'orders' => 'orders#destroy'
   get "collate" => 'orders#collate'
@@ -33,13 +32,17 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'logout' => 'sessions#new'
   get 'join_or_create' => 'users#choose'
+  get 'about' => 'users#about'
 
   #For user profile
   get 'settings' => 'users#edit'
   
   # Admin Pages
-  get 'all_channels' => 'channels#all_channels'
-  get 'all_users' => 'users#all_users'
+  get 'admin' => 'users#admin'
+  get 'admin_channels' => 'channels#admin_channels'
+  delete 'channels' => 'channels#destroy'
+  get 'admin_users' => 'users#admin_users'
+  delete 'users' => 'users#destroy'
   
   resources :orders
   resources :users
