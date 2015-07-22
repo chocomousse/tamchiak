@@ -265,6 +265,10 @@ MenuItem.create! id: 213, name: "Durian", cat: "Drinks", subcat: "Milk Shakes", 
 MenuItem.create! id: 214, name: "Cookie", cat: "Drinks", subcat: "Milk Shakes", item_code: "D36", price: 3.00, active: true
 MenuItem.create! id: 215, name: "dates", cat: "Drinks", subcat: "Milk Shakes", item_code: "D37", price: 3.00, active: true
 
+
+#****************************************************** Creating an admin user************************************************************
+User.create! id: 1, name: "chocomousse", email: "tamchiakorbital@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: true, activated: true, activated_at: Time.zone.now
+
 ChannelStatus.delete_all
 ChannelStatus.create! id: 1, name: "Open"
 ChannelStatus.create! id: 2, name: "Closed"

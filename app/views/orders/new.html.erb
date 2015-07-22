@@ -9,7 +9,7 @@
 
   <body>
     <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header_current' %>
 
     <!-- CONTENT -->
 
@@ -51,7 +51,7 @@
               <!-- DROP DOWN MENU FOR SUB-CATEGORY STARTS -->
               <td>
                 <% if t.subcat == "Mee, Beehoon, Kwayteow, Maggie" %>
-                <%= f.select(:subcat, options_for_select([['Mee', 'Mee'], ['Beehoon', 'Beehon'], ['Kwayteow', 'Kwayteow'], ['Maggie', 'Maggie']]), {class: "form-control"}) %>
+                <%= f.select(:subcat, options_for_select([['Mee', 'Mee'], ['Beehoon', 'Beehoon'], ['Kwayteow', 'Kwayteow'], ['Maggie', 'Maggie']]), {class: "form-control"}) %>
                 <%= f.hidden_field :unit_price, :value => t.price %>
 
 

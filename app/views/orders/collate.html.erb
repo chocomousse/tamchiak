@@ -9,7 +9,7 @@
 
   <body>
     <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header_current' %>
 
     <!-- CONTENT -->
 
@@ -25,18 +25,22 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>Category</th>
+            <th>Sub-category</th>
+            <th>Item Code</th>
             <th>Name</th>
             <th>Quantity</th>
-            <!--<th>Price</th>-->
           </tr>        
         </thead>
         <tbody>
           <% @relevant_orders.find_each do |t| %>
           <p>
             <tr>
+              <td><%= t.cat %></td>
+              <td><%= t.subcat %></td>
+              <td><%= t.item_code %></td>
               <td><%= t.meal %></td>
               <td><%= @relevant_orders.sum(:quantity)[t.meal] %></td>
-              <!-- <td><%= number_to_currency(@relevant_orders.sum(:total_price)[t.meal]) %></td> -->
             </tr>
           </p>
           <% end %>

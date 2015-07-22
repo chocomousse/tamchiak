@@ -27,5 +27,9 @@ class ApplicationController < ActionController::Base
       redirect_to join_channel_url
     end
   end
-
+  
+  # Confirms that the current_user is an admin
+  def admin_user
+    redirect_to(root_url) unless current_user.is_admin?
+  end
 end 

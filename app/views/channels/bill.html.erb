@@ -9,7 +9,7 @@
 
   <body>
     <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header_current' %>
 
     <!-- CONTENT -->
 
@@ -22,24 +22,36 @@
       <% end %>
       <p></p>
 
+      <% @bills.each do |t| %>
+      <h4><%= t.user.name %> ordered <%= number_to_currency(@bills.sum(:total_price)[t.user_id]) %> worth of food</h4>
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>Category</th>
+            <th>Sub-category</th>
+            <th>Item Code</th>
             <th>Name</th>
-            <th>Amount payable</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
           </tr>
         </thead>
-        <tbody>
-          <% @bills.each do |t| %>
+        <tbody> 
+          <% Order.where(user_id: t.user_id).find_each do |s| %>
+
           <p>
             <tr>
-              <td><%= t.user.name %></td>
-              <td><%= number_to_currency(@bills.sum(:total_price)[t.user_id]) %></td>
+              <td><%= s.cat %></td>
+              <td><%= s.subcat %></td>
+              <td><%= s.item_code %></td>
+              <td><%= s.meal %></td>
+              <td><%= s.quantity %></td>
+              <td><%= number_to_currency(s.total_price) %></td>
             </tr>
           </p>
           <% end %>
 
       </table>
       </tbody>
+    <% end %>
     </div>
   </body>

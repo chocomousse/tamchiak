@@ -37,6 +37,10 @@ Rails.application.routes.draw do
   #For user profile
   get 'settings' => 'users#edit'
   
+  # Admin Pages
+  get 'all_channels' => 'channels#all_channels'
+  get 'all_users' => 'users#all_users'
+  
   resources :orders
   resources :users
   resources :channels

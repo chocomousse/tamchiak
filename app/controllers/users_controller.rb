@@ -1,5 +1,6 @@
 class UsersController < ApplicationController 
-  before_action :logged_in_user, only: [:edit, :update, :choose]
+  before_action :logged_in_user, only: [:edit, :update, :choose, :destroy]
+  before_action :admin_user, only: :destroy
 
   def show
     @user = User.find(params[:id])
@@ -19,6 +20,16 @@ class UsersController < ApplicationController
       render 'new'
     end 
   end 
+
+  def destroy(user)
+    User.find(params[user.id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to all_users_url
+  end
+
+  def all_users
+    @users = User.find(params[:id])
+  end
 
   def edit
     @user = current_user
@@ -40,8 +51,8 @@ class UsersController < ApplicationController
       @customer = User.find(t.user_id)
       @customer.send_billing_email(current_channel)
     end
-      flash[:info] = "The bills have been sent!"
-      redirect_to join_or_create_path
+    flash[:info] = "The bills have been sent!"
+    redirect_to join_or_create_path
   end 
 
   # Sends password reset email.

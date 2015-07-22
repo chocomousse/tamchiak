@@ -9,14 +9,12 @@
 
   <body>
     <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header_channels' %>
 
     <!-- CONTENT -->
 
     <div class="container">
       <h1>Your Channels</h1>
-      <%= link_to "Home", join_or_create_path %>
-
       <p></p>
       <table class="table table-striped">
         <thead>
@@ -24,18 +22,22 @@
             <th>Channel Name</th>
             <th>Menu</th>
             <th>Channel Status</th>
+            <th>Date created</th>
           </tr>
         </thead>
         <tbody>
           <% @channel_owner.each do |t| %>
           <p>
             <tr>
-              <%= form_for(:session, url: join_channel_path) do |f| %>
-              <%= f.hidden_field :cname, :value => t.cname %>
-              <td><%= f.submit  "#{t.cname}", {class: "btn btn-link"} %></td>
-              <% end %>
+              <td><%= t.cname %></td>
               <td><%= t.menu %></td>
               <td><%= t.channel_status %></td>
+              <td><%= t.created_at.strftime("%d %b %Y") %></td>
+
+              <td><%= form_for(:session, url: join_channel_path) do |f| %>
+              <%= f.hidden_field :cname, :value => t.cname %>
+              <%= f.submit  "Enter", {class: "btn btn-link"} %>
+              <% end %></td>
 
             </tr>
           </p>
