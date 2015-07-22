@@ -1,8 +1,14 @@
+<!-- NAVIGATION BAR -->
+<%= render 'layouts/header' %>
+
+<!-- CONTENT -->
+
+
 <% provide(:title, 'Create a channel') %>
 
 <div class= "row">
   <div class= "col-md-6 col-md-offset-3">
-  <%= link_to "Home", join_or_create_path %>
+    <%= link_to "Home", join_or_create_path %>
 
     <h1>Create a channel</h1>
     <%= form_for(@channel_owner) do |f| %>
@@ -31,10 +37,10 @@
     </div>
   </div>
   <div class="col-md-6 col-md-offset-3">
-  <%= f.label :Delivery_Location %>
+    <%= f.label :Delivery_Location %>
 
-  <p><%= f.select(:delivery, options_for_select([['Alexandra Terrace ($2)', '2.00'], ['Ayer Rajah ($2)', '2.00'], ['Benoi ($6)', '6.00'], ['Biopolis (All) ($2)', '2.00'], ['Bukit Batok (All) ($4)', '4.00'], ['Bukit Gombak (All) ($4)', '4.00'], ['Bukit Merah (All) ($6)', '6.00'], ['Bukit Panjang (All) ($5)', '5.00'], ['Bukit Timah (All) ($4)', '4.00'], ['Clementi West ($2)', '2.00'], ['Clementi Ave (All) ($2)', '2.00'], ['Choa Chu Kang (All) ($6)', '6.00'], ['Commonwealth Ave ($2)', '2.00'], ['Commonwealth ($4)', '4.00'], ['Depot Road ($4)', '4.00'], ['Doer (All) ($2)', '2.00'], ['Farrer Road ($5)', '5.00'], ['Ghim Moh ($3)', '3.00'], ['Harbour Dr ($2)', '2.00'], ['Holland (All) ($4)', '4.00'], ['Hillgrove / View ($4)', '4.00'], ['IBP ($4)', '4.00'], ['Jln Lempeng ($2)', '2.00'], ['Jln Mat Jambol ($2)', '2.00'], ['Jln Jurong Kecil ($4)', '4.00'], ['Jurong East (All) ($5)', '5.00'], ['Jurong West (All) ($6)', '6.00'], ['Maple Tree ($2)', '2.00'], ['NUS (All) ($2)', '2.00'], ['North Buona Vista ($2)', '2.00'], ['NUH ($2)', '2.00'], ['Normanton ($4)', '4.00'], ['Pasir Panjang ($2)', '2.00'], ['Pandan Crest ($2)', '2.00'], ['Pandan Loop ($4)', '4.00'], ['Pandan Garden ($4)', '4.00'], ['Penjuru ($4)', '4.00'], ['Pine Grove ($2)', '2.00'], ['Pioneer ($6)', '6.00'], ['PSA Gate 4 ($2)', '2.00'], ['PSA Gate 2 ($5)', '5.00'], ['Queensway ($4)', '4.00'], ['Redhill ($4)', '4.00'], ['Science Park (All) ($2)', '2.00'], ['Sixth Ave ($5)', '5.00'], ['Sunset ($2)', '2.00'], ['South Buona Vista ($2)', '2.00'], ['Strathmore ($4)', '4.00'], ['Sentosa ($5)', '5.00'], ['SGH ($6)', '6.00'], ['SIM University ($2)', '2.00'], ['Toh Tuck ($4)', '4.00'], ['Tuas ($8)', '8.00'], ['Toh Guan ($4)', '4.00'], ['Taman Jurong ($6)', '6.00'], ['Telok Blangah (All) ($4)', '4.00'], ['Tanjong Penjuru ($4)', '4.00'], ['Teban ($4)', '4.00'], ['Ulu Pandan ($2)', '2.00'], ['Upper Bukit Timah ($6)', '6.00'], ['West Coast ($2)', '2.00'], ['West Coast Ferry Rd ($2)', '2.00']], {class: "form-control"})) %></p>
-    
+    <p><%= f.select(:delivery, options_for_select([['Alexandra Terrace ($2)', '2.00'], ['Ayer Rajah ($2)', '2.00'], ['Benoi ($6)', '6.00'], ['Biopolis (All) ($2)', '2.00'], ['Bukit Batok (All) ($4)', '4.00'], ['Bukit Gombak (All) ($4)', '4.00'], ['Bukit Merah (All) ($6)', '6.00'], ['Bukit Panjang (All) ($5)', '5.00'], ['Bukit Timah (All) ($4)', '4.00'], ['Clementi West ($2)', '2.00'], ['Clementi Ave (All) ($2)', '2.00'], ['Choa Chu Kang (All) ($6)', '6.00'], ['Commonwealth Ave ($2)', '2.00'], ['Commonwealth ($4)', '4.00'], ['Depot Road ($4)', '4.00'], ['Doer (All) ($2)', '2.00'], ['Farrer Road ($5)', '5.00'], ['Ghim Moh ($3)', '3.00'], ['Harbour Dr ($2)', '2.00'], ['Holland (All) ($4)', '4.00'], ['Hillgrove / View ($4)', '4.00'], ['IBP ($4)', '4.00'], ['Jln Lempeng ($2)', '2.00'], ['Jln Mat Jambol ($2)', '2.00'], ['Jln Jurong Kecil ($4)', '4.00'], ['Jurong East (All) ($5)', '5.00'], ['Jurong West (All) ($6)', '6.00'], ['Maple Tree ($2)', '2.00'], ['NUS (All) ($2)', '2.00'], ['North Buona Vista ($2)', '2.00'], ['NUH ($2)', '2.00'], ['Normanton ($4)', '4.00'], ['Pasir Panjang ($2)', '2.00'], ['Pandan Crest ($2)', '2.00'], ['Pandan Loop ($4)', '4.00'], ['Pandan Garden ($4)', '4.00'], ['Penjuru ($4)', '4.00'], ['Pine Grove ($2)', '2.00'], ['Pioneer ($6)', '6.00'], ['PSA Gate 4 ($2)', '2.00'], ['PSA Gate 2 ($5)', '5.00'], ['Queensway ($4)', '4.00'], ['Redhill ($4)', '4.00'], ['Science Park (All) ($2)', '2.00'], ['Sixth Ave ($5)', '5.00'], ['Sunset ($2)', '2.00'], ['South Buona Vista ($2)', '2.00'], ['Strathmore ($4)', '4.00'], ['Sentosa ($5)', '5.00'], ['SGH ($6)', '6.00'], ['SIM University ($2)', '2.00'], ['Toh Tuck ($4)', '4.00'], ['Tuas ($8)', '8.00'], ['Toh Guan ($4)', '4.00'], ['Taman Jurong ($6)', '6.00'], ['Telok Blangah (All) ($4)', '4.00'], ['Tanjong Penjuru ($4)', '4.00'], ['Teban ($4)', '4.00'], ['Ulu Pandan ($2)', '2.00'], ['Upper Bukit Timah ($6)', '6.00'], ['West Coast ($2)', '2.00'], ['West Coast Ferry Rd ($2)', '2.00']], {class: "form-control"})) %></p>
+
     <%= f.submit "Create my channel", class: "btn btn-primary"%>
   </div>
   <% end %>

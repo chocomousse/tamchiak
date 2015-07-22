@@ -1,6 +1,12 @@
+<!-- NAVIGATION BAR -->
+<%= render 'layouts/header' %>
+
+<!-- CONTENT -->
+
+
 <% provide(:title, @user.name) %>
 
-  <%= @user.name %>
-  <%= @user.email %>
+<%= @user.name %>
+<%= @user.email %>
 <%= link_to "Log out", logout_path %>
 

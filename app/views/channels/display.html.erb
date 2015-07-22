@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Channels you have created</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
-</head>
+  <head>
+    <title>Channels you have created</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/stylesheets/bootstrap.min.css">
+  </head>
 
-<body>
-  <div class="container">
-    <h1>Your Channels</h1>
-    <%= link_to "Home", join_or_create_path %>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%= render 'layouts/header' %>
 
-    <p></p>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Channel Name</th>
-          <th>Menu</th>
-          <th>Channel Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @channel_owner.each do |t| %>
-        <p>
+    <!-- CONTENT -->
+
+    <div class="container">
+      <h1>Your Channels</h1>
+      <%= link_to "Home", join_or_create_path %>
+
+      <p></p>
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <%= form_for(:session, url: join_channel_path) do |f| %>
-            <%= f.hidden_field :cname, :value => t.cname %>
-              <td><%= f.submit  "#{t.cname}", {class: "btn btn-link"} %></td>
-             <% end %>
-            <td><%= t.menu %></td>
-            <td><%= t.channel_status %></td>
-            
+            <th>Channel Name</th>
+            <th>Menu</th>
+            <th>Channel Status</th>
           </tr>
-        </p>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</body>
+        </thead>
+        <tbody>
+          <% @channel_owner.each do |t| %>
+          <p>
+            <tr>
+              <%= form_for(:session, url: join_channel_path) do |f| %>
+              <%= f.hidden_field :cname, :value => t.cname %>
+              <td><%= f.submit  "#{t.cname}", {class: "btn btn-link"} %></td>
+              <% end %>
+              <td><%= t.menu %></td>
+              <td><%= t.channel_status %></td>
+
+            </tr>
+          </p>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </body>

@@ -10,6 +10,10 @@ alert {
   padding-top: 60px;
 }
 
+.without-nav {
+  padding-top: -60px;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -35,6 +39,5 @@ input {
   .form-control {
     color: $state-danger-text;
   }
-  
-
+ 
 }

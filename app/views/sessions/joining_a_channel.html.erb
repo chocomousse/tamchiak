@@ -1,8 +1,14 @@
+<!-- NAVIGATION BAR -->
+<%= render 'layouts/header' %>
+
+<!-- CONTENT -->
+
+
 <%= link_to "Home", join_or_create_path %>
 
 <h1>Join a Channel</h1>
 <%= form_for(:session, url: join_channel_path) do |f| %>
-  <%= f.label :Channel_Name %>
-  <%= f.text_field :cname, class:'form-control' %>
+<%= f.label :Channel_Name %>
+<%= f.text_field :cname, class:'form-control' %>
 <%= f.submit  "Join channel", type: 'submit', class: 'btn btn-primary pull-right' %>
 <% end %>

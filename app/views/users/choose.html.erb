@@ -12,19 +12,21 @@
     <%= render 'layouts/header' %>
 
     <!-- CONTENT -->
-    <div class="container">
-      <div class="center">
+    <div class="container well">
+      <div class="center" align="center">
         <div class="row">
-          <h1>Welcome, <%= current_user.name %>!</h1>
           <p>
-            What would you like to do?<br>
-            <button type="button"  class: "btn btn-primary" data-no-turbolink="true"><%= link_to "Create a channel!", create_channel_path %></button>
-            <button type="button"  class: "btn btn-primary" ><%= link_to "Join a channel!", join_channel_path %></button>   
-          </p>
+          <h1>Welcome, <%= current_user.name %>!</h1>
+          <h2><small>What would you like to do?</small></h2>
+          </p>   
+        <p>
+          <%= link_to "Create a channel", create_channel_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>
+          <%= link_to "Join a channel", join_channel_path, {class: "btn btn-default btn-lg", data: { no_turbolink: true }} %> 
+        </p>
 
-        </div>
-      </div>
       </div>
     </div>
-  </body>
+    </div>
+  </div>
+</body>
 </html>
