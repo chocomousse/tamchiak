@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* universal */
+body {
+  padding-top: 60px;
+}
+
+alert {
+  padding-top: 60px;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -29,5 +38,3 @@ input {
   
 
 }
-
-

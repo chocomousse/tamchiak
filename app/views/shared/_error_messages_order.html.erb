@@ -1,9 +1,9 @@
-<% if !@order.nil? && @order.errors.any? %>
+  <% if !@order.nil? && @order.errors.any? %>
   <div class="alert alert-danger">
     <ul>
-    <% @order.errors.full_messages.each do |msg| %>
+      <% @order.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
-    <% end %>
+      <% end %>
     </ul>
   </div>
-<% end %>
+  <% end %>

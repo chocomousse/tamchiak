@@ -27,7 +27,7 @@
           <tr>
             <%= form_for(:session, url: join_channel_path) do |f| %>
             <%= f.hidden_field :cname, :value => t.cname %>
-              <td><%= f.submit  "#{t.cname}" %></td>
+              <td><%= f.submit  "#{t.cname}", {class: "btn btn-link"} %></td>
              <% end %>
             <td><%= t.menu %></td>
             <td><%= t.channel_status %></td>
