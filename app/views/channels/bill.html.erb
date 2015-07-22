@@ -17,8 +17,8 @@
       <h1>
         Bill for <strong><%= current_channel.cname %></strong>
         <div class="pull-right">
-          <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-          <% if current_channel.user_id == current_user.id %>
+          <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+          <% if current_channel.user_id == current_user.id || current_user.is_admin %>
           <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
           <% end %>
           </h1>

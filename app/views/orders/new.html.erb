@@ -12,23 +12,26 @@
     <%= render 'layouts/header_current' %>
 
     <!-- CONTENT -->
+    <div class="container">
+      <h1>
+        Al Amaan's Menu
+        <div class="pull-right">
+          <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+          </h1>
 
-    <h1>
-      Al Amaan's Menu
-      <div class="pull-right">
-        <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-        </h1>
-
-      <div class="container">
-        <% @menu_items.find_each do |s| %>
         <div class="panel panel-default">
+
+          <% @menu_items.find_each do |s| %>
+
           <div class="panel-heading">
             <h3 class="panel-title"><%= s.cat %></h3>
           </div>
 
           <% MenuItem.where(cat: s.cat).group(:subcat).find_each do |w| %>
-          <h4><%= w.subcat %></h4>
+
           <div class="panel-body">
+            <h5><%= w.subcat %></h5>
+
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -38,9 +41,9 @@
                 </tr>        
               </thead>
 
-              <tbody>
+              <% MenuItem.where(subcat: w.subcat).find_each do |t| %>
 
-                <% MenuItem.where(subcat: w.subcat).find_each do |t| %>
+              <tbody>
                 <p>
                   <tr>
                     <td><%= t.item_code %></td>
@@ -103,17 +106,16 @@
                   </tr>
 
                 </p>
-              </div>
+
+              </tbody>
+
+              <% end %>
+
+            </table>
           </div>
-          <% end %>
+        </div>
 
-          </tbody>
-
-
-        </table>
-
-
-      <% end %>
-      <% end %>
-      </body>
-    </html>
+        <% end %>
+        <% end %>
+        </body>
+      </html>
