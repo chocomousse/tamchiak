@@ -1,11 +1,34 @@
-<!-- NAVIGATION BAR -->
-<%= render 'layouts/header_current' %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% @title="tamchiak | Join Channel" %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<!-- CONTENT -->
+  <body>
+    <!-- NAVIGATION BAR -->
+    <%= render 'layouts/header_current' %>
 
-<h1>Join a Channel</h1>
-<%= form_for(:session, url: join_channel_path) do |f| %>
-<%= f.label :Channel_Name %>
-<%= f.text_field :cname, class:'form-control' %>
-<%= f.submit  "Join channel", type: 'submit', class: 'btn btn-primary pull-right' %>
-<% end %>
+    <!-- CONTENT -->
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+
+        <h1>Join a channel</h1>
+        <div class="panel panel-default">
+
+          <div class="panel-body">
+
+            <%= form_for(:session, url: join_channel_path) do |f| %>
+            <%= f.label "Enter a channel name:" %>
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-log-in"></i></span>
+            <%= f.text_field :cname, class:'form-control' %>
+            </div>
+            <p></p>
+            <%= f.submit  "Join channel", type: 'submit', class: 'btn btn-primary pull-right' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>

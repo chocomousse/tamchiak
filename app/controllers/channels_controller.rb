@@ -1,7 +1,7 @@
 class ChannelsController < ApplicationController
   before_action :logged_in_user  
   before_action :admin_user, only: :destroy
-
+  
   def show
     if !current_channel.nil? && current_channel.channel_status == "Open"
       @orders = current_channel.orders

@@ -15,52 +15,60 @@
 
     <div class="container">
       <h1>
-        Bill for <strong><%= current_channel.cname %></strong>
+        <strong><%= current_channel.cname %></strong> <small>Bill</small>
+
         <div class="pull-right">
           <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
           <% if current_channel.user_id == current_user.id || current_user.is_admin %>
           <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
           <% end %>
-          </h1>
-        <p></p>
+        </div>
+      </h1>
+      <p></p>
 
-        <% @bills.each do |t| %>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title"><strong><%= t.user.name %></strong> ordered <abbr title="attribute"><%= number_to_currency(@bills.sum(:total_price)[t.user_id] + (@channel.delivery / @orders.count(t.user_id, :distinct => true))) %></abbr> worth of food</h3>  </div>
-          <div class="panel-body">
+      <% if @orders.size == 0 %>
+      <div class="well">
+        There are no bills payable.
+      </div>
+      <% else %>
+      <% @bills.each do |t| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong><%= t.user.name %></strong> ordered <abbr title="attribute"><%= number_to_currency(@bills.sum(:total_price)[t.user_id] + (@channel.delivery / @orders.count(t.user_id, :distinct => true))) %></abbr> worth of food</h3>  </div>
+        <div class="panel-body">
 
-            <table class="table">
-              <thead>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Item Code</th>
+                <th>Name</th>
+                <th>Remarks</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <% @orders.where(user_id: t.user_id).find_each do |s| %>
+
+              <p>
                 <tr>
-                  <th>Category</th>
-                  <th>Item Code</th>
-                  <th>Name</th>
-                  <th>Remarks</th>
-                  <th>Quantity</th>
-                  <th>Total Price</th>
+                  <td><%= s.cat %></td>
+                  <td><%= s.item_code %></td>
+                  <td class="col-md-6"><%= s.meal %></td>
+                  <td><%= s.subcat %></td>
+                  <td><%= s.quantity %></td>
+                  <td><%= number_to_currency(s.total_price) %></td>
                 </tr>
-              </thead>
-              <tbody> 
-                <% @orders.where(user_id: t.user_id).find_each do |s| %>
+              </p>
+              <% end %>
 
-                <p>
-                  <tr>
-                    <td><%= s.cat %></td>
-                    <td><%= s.item_code %></td>
-                    <td><%= s.meal %></td>
-                    <td><%= s.subcat %></td>
-                    <td><%= s.quantity %></td>
-                    <td><%= number_to_currency(s.total_price) %></td>
-                  </tr>
-                </p>
-                <% end %>
+          </table>
+          </tbody>
+      </div>
+    </div>
 
-            </table>
-            </tbody>
-        </div>
-        </div>
-
-      <% end %>
+    <% end %>
+    <% end %>
     </div>
   </body>

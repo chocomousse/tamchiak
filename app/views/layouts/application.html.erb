@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= @title %></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag "custom" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="container" style="margin-top: 10px">
-    <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>"><%= message %></div>
-  <% end %>
+  <head>
+    <title><%= @title %></title>
+    <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag "custom" %>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%= yield %>
+  </head>
+  <body>
+    <div class="container" style="margin-top: 10px">
+      <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
 
-</body>
-</html>
+      <%= yield %>
+
+      </body>
+    </html>

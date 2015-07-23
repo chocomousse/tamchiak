@@ -39,7 +39,7 @@ class OrdersController < ApplicationController
 
   def destroy
     @order = current_channel.orders.find(params[:id])
-    if @order.user == current_user
+    if @order.user == current_user || current_user.is_admin
       @order.destroy
       @orders = current_channel.orders
       flash[:success] = "Your order has been deleted."
