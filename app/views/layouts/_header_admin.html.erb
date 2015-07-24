@@ -1,23 +1,26 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "tamchiak", about_path, {class: "navbar-brand"} %>
-    <div class="collapse navbar-collapse">
 
-      <nav>
+    <div class="row">
+      <%= link_to "tamchiak", about_path, {class: "navbar-brand"} %>
+      <div class="collapse navbar-collapse">
 
-        <ul class="nav navbar-nav navbar-left">   
-          <li><%= link_to "Home",   join_or_create_path %></li>
-          <li><%= link_to "Current Channel",   current_channel_path %></li>
-          <li><%= link_to "Your Channels",   all_channels_path %></li>
-          <% if current_user.is_admin? %>
-          <li class="active"><%= link_to "Admin", admin_path %></li>
-          <% end %>
-          <li><%= link_to "Settings",   settings_path %></li>
-        </ul>
+        <nav>
 
-        <p class="navbar-text navbar-right">Signed in as <%= current_user.name %>.   <%= link_to "Sign out", logout_path %></p>
+          <ul class="nav navbar-nav navbar-left">   
+            <li><%= link_to "Home",   join_or_create_path %></li>
+            <li><%= link_to "Current Channel",   current_channel_path %></li>
+            <li><%= link_to "Your Channels",   all_channels_path %></li>
+            <% if current_user.is_admin? %>
+            <li class="active"><%= link_to "Admin", admin_path %></li>
+            <% end %>
+            <li><%= link_to "Settings",   settings_path %></li>
+          </ul>
 
-      </nav>
+          <p class="navbar-text navbar-right">Signed in as <%= current_user.name %>.   <%= link_to "Sign out", logout_path %></p>
+
+        </nav>
+      </div>
     </div>
   </div>
 </header>
