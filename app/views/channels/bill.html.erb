@@ -7,16 +7,18 @@
   <!-- CONTENT -->
 
   <div class="container">
-    <h1>
-      <strong><%= current_channel.cname %></strong> <small>Bill</small>
+    <div class="row">
+      <h1>
+        <strong><%= current_channel.cname %></strong> <small>Bill</small>
 
-      <div class="pull-right">
-        <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-        <% if current_channel.user_id == current_user.id || current_user.is_admin %>
-        <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
-        <% end %>
-      </div>
-    </h1>
+        <div class="pull-right">
+          <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+          <% if current_channel.user_id == current_user.id || current_user.is_admin %>
+          <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
+          <% end %>
+        </div>
+      </h1>
+    </div>
     <p></p>
 
     <% if @orders.size == 0 %>
