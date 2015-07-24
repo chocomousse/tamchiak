@@ -34,12 +34,12 @@
                   <table class="table table-condensed table-hover">
                     <thead>
                       <tr>
-                        <th>#</th>
-                        <th class="col-md-5">Name</th>
-                        <th>Price</th>
                         <th></th>
-                        <th></th>
-                        <th></th>
+                        <th class="col-md-5"></th>
+                        <th class="col-md-2"></th>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-2"></th>
                       </tr>        
                     </thead>
 
@@ -50,8 +50,7 @@
                       <p>
                         <tr>
                           <td><%= t.item_code %></td>
-                          <td class="col-md-5"><%= t.name %></td>
-                          <td><%= number_to_currency(t.price) %></td>
+                          <td class="col-md-6"><%= t.name %></td>
 
                           <%= form_for (@order), remote: true do |f| %>
                           <%= f.hidden_field :cat, :value => t.cat %>
@@ -101,9 +100,11 @@
 
                           </td>     
                           <!-- DROP DOWN INPUT FOR SUB-CATEGORY ENDS -->
+                          
+                          <td><%= number_to_currency(t.price) %></td>
 
-                          <td><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
-                          <td><%= f.submit "Order", class: "btn btn-primary" %></td>
+                          <td class="col-md-1"><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
+                          <td class="col-md-2"><%= f.submit "Order", class: "btn btn-primary" %></td>
                           <% end %>
                         </tr>
 
@@ -129,9 +130,9 @@
         <div class="col-md-2">
           <ul class="list-group">
             <a class="list-group-item" href="#Western" id="Western" onclick="$('html,body').animate({scrollTop:88},'slow');return false;">Western</a> 
-            <a class="list-group-item" href="#Drinks" id="Drinks" onclick="$('html,body').animate({scrollTop:4668},'slow');return false;">Drinks</a>  
-            <a class="list-group-item" href="#Thai" id="Thai" onclick="$('html,body').animate({scrollTop:10095},'slow');return false;">Thai</a>
-            <a class="list-group-item" href="#Indian" id="Indian" onclick="$('html,body').animate({scrollTop:16195},'slow');return false;">Indian</a>
+            <a class="list-group-item" href="#Drinks" id="Drinks" onclick="$('html,body').animate({scrollTop:4468},'slow');return false;">Drinks</a>  
+            <a class="list-group-item" href="#Thai" id="Thai" onclick="$('html,body').animate({scrollTop:9755},'slow');return false;">Thai</a>
+            <a class="list-group-item" href="#Indian" id="Indian" onclick="$('html,body').animate({scrollTop:15715},'slow');return false;">Indian</a>
             <a class="list-group-item" href="#Top" id="backToTop" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Back to Top</a>      
 
           </ul>
