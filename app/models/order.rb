@@ -5,7 +5,6 @@ class Order < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :channel_id, presence: true
-  validates :menu_item_id, presence: true
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
 
   before_save :finalize

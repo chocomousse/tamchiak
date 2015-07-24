@@ -54,7 +54,6 @@
                           <td><%= number_to_currency(t.price) %></td>
 
                           <%= form_for (@order), remote: true do |f| %>
-                          <%= f.hidden_field :menu_item_id, :value => t.id %> 
                           <%= f.hidden_field :cat, :value => t.cat %>
                           <%= f.hidden_field :item_code, :value => t.item_code %>
                           <%= f.hidden_field :meal, :value => t.name %>
