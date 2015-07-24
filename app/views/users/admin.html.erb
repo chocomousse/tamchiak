@@ -10,7 +10,7 @@
     <div class="center" align="center">
       <div class="row">
         <p>
-        <h1>Hello, admin <%= current_user.name %>!</h1>
+        <h1>Hello, admin <strong><%= current_user.name %></strong>!</h1>
         </p>   
       <p>
         <%= link_to "All Channels", admin_channels_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>

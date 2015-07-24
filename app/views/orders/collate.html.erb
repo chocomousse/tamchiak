@@ -7,23 +7,23 @@
 
   <!-- CONTENT -->
   <div class="container">
+    <div class="row">
+      <h1>
+        <strong><%= current_channel.cname %></strong> <small>Collated</small>
+        <div class="pull-right">
 
-    <h1>
-      <strong><%= current_channel.cname %></strong> <small>Collated</small>
-      <div class="pull-right">
+          <% if @channel.channel_status == "Open" %>
+          <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+          <% end %>
 
-        <% if @channel.channel_status == "Open" %>
-        <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-        <% end %>
+          <%= link_to "Check Bill", bill_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
 
-        <%= link_to "Check Bill", bill_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-
-        <% if (current_channel.user_id == current_user.id || current_user.is_admin) && @channel.channel_status == "Open" %>
-        <%= link_to "Close Channel", @channel, :method => :get, :class => "btn btn-danger" %>
-        <% end %>
-      </div>
-    </h1>
-
+          <% if (current_channel.user_id == current_user.id || current_user.is_admin) && @channel.channel_status == "Open" %>
+          <%= link_to "Close Channel", @channel, :method => :get, :class => "btn btn-danger" %>
+          <% end %>
+        </div>
+      </h1>
+    </div>
 
     <% if @orders_in_channel.size == 0 %>
     <div class="well">
