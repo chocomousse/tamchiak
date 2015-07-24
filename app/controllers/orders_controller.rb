@@ -52,6 +52,6 @@ class OrdersController < ApplicationController
 
   private 
   def order_params
-    params.require(:order).permit(:quantity, :menu_item_id, :meal, :cat, :subcat, :item_code, :unit_price)
+    params.require(:order).permit(:quantity, :meal, :cat, :subcat, :item_code, :unit_price)
   end 
 end

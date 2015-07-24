@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722083526) do
+ActiveRecord::Schema.define(version: 20150724155122) do
 
   create_table "channel_statuses", force: :cascade do |t|
     t.string   "name"
@@ -52,9 +52,8 @@ ActiveRecord::Schema.define(version: 20150722083526) do
     t.string   "meal"
     t.integer  "user_id"
     t.integer  "channel_id"
-    t.integer  "menu_item_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.decimal  "unit_price"
     t.integer  "quantity"
     t.decimal  "total_price"
@@ -65,8 +64,7 @@ ActiveRecord::Schema.define(version: 20150722083526) do
 
   add_index "orders", ["channel_id", "created_at"], name: "index_orders_on_channel_id_and_created_at"
   add_index "orders", ["channel_id"], name: "index_orders_on_channel_id"
-  add_index "orders", ["menu_item_id", "created_at"], name: "index_orders_on_menu_item_id_and_created_at"
-  add_index "orders", ["menu_item_id"], name: "index_orders_on_menu_item_id"
+  add_index "orders", ["created_at"], name: "index_orders_on_menu_item_id_and_created_at"
   add_index "orders", ["user_id", "created_at"], name: "index_orders_on_user_id_and_created_at"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
