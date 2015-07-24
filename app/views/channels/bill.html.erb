@@ -31,10 +31,15 @@
         There are no bills payable.
       </div>
       <% else %>
+
       <% @bills.each do |t| %>
+
       <div class="panel panel-default">
+
         <div class="panel-heading">
-          <h3 class="panel-title"><strong><%= t.user.name %></strong> ordered <abbr title="attribute"><%= number_to_currency(@bills.sum(:total_price)[t.user_id] + (@channel.delivery / @orders.count(t.user_id, :distinct => true))) %></abbr> worth of food</h3>  </div>
+          <h3 class="panel-title"><strong><%= t.user.name %></strong> ordered <abbr title="attribute"><%= number_to_currency(@bills.sum(:total_price)[t.user_id] + (@channel.delivery / @orders.count(t.user_id, :distinct => true))) %></abbr> worth of food</h3>  
+        </div>
+
         <div class="panel-body">
 
           <table class="table">
@@ -62,13 +67,17 @@
                 </tr>
               </p>
               <% end %>
+            </tbody>
 
           </table>
-          </tbody>
+        </div>
       </div>
-    </div>
 
-    <% end %>
-    <% end %>
+      <% end %>
+      <% end %>
+      
+      <small>NOTE: Bills payable include delivery cost.</small>
+      <p></p>
+
     </div>
   </body>

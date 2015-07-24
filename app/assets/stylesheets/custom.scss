@@ -4,6 +4,7 @@
 /* universal */
 body {
   padding-top: 60px;
+  position: relative;
 }
 
 alert {
@@ -13,6 +14,13 @@ alert {
 .without-nav {
   padding-top: -60px;
 }
+
+/* menu nav */
+#scroller {
+  position: relative;
+  top: 0px;
+}
+
 
 /* forms */
 
@@ -39,5 +47,5 @@ input {
   .form-control {
     color: $state-danger-text;
   }
- 
+
 }

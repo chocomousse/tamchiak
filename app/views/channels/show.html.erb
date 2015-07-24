@@ -15,7 +15,7 @@
 
     <div class="container">
       <h1>
-        <strong><%= @channel.cname %></strong>
+        <strong><%= @channel.cname %></strong> <small>Channel</small>
         <div class="pull-right">
           <%= link_to "Add item", orders_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
           <%= link_to "Collate Orders", collate_path, {class: "btn btn-primary", data: { no_turbolink: true }}  %>

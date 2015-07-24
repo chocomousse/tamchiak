@@ -59,7 +59,7 @@ class UsersController < ApplicationController
       @customer.send_billing_email(current_channel)
     end
     flash[:info] = "The bills have been sent!"
-    redirect_to join_or_create_path
+    redirect_to bill_path
   end 
 
   # Sends password reset email.
