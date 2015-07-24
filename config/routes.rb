@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'all_channels' => "channels#display"
   get 'channel' => 'channels#close'
   
-  get 'orders' => 'orders#new'
+  get 'add_item' => 'orders#new'
   post 'orders' => 'orders#create'
   get 'all_orders' => 'orders#show'
   delete 'orders' => 'orders#destroy'
