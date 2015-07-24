@@ -1,32 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Tamchiak</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+<% @title="tamchiak | Admin" %>
 
-    <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header_admin' %>
+<body>
 
-    <!-- CONTENT -->
-    <div class="container well">
-      <div class="center" align="center">
-        <div class="row">
-          <p>
-          <h1>Welcome, <%= current_user.name %>!</h1>
-          </p>   
+  <!-- NAVIGATION BAR -->
+  <%= render 'layouts/header_admin' %>
+
+  <!-- CONTENT -->
+  <div class="container well">
+    <div class="center" align="center">
+      <div class="row">
         <p>
-          <%= link_to "All Channels", admin_channels_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>
-          <%= link_to "All Users", admin_users_path, {class: "btn btn-default btn-lg", data: { no_turbolink: true }} %> 
-        </p>
+        <h1>Hello, admin <%= current_user.name %>!</h1>
+        </p>   
+      <p>
+        <%= link_to "All Channels", admin_channels_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>
+        <%= link_to "All Users", admin_users_path, {class: "btn btn-default btn-lg", data: { no_turbolink: true }} %> 
+      </p>
 
-      </div>
-    </div>
     </div>
   </div>
+  </div>
+</div>
 </body>
-</html>

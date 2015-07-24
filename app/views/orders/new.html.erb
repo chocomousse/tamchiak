@@ -1,53 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <% @title="tamchiak | Order" %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap.min.css">
-  </head>
 
-  <body>
-    <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header_current' %>
+<% @title="tamchiak | Order" %>
 
-    <!-- CONTENT -->
-    <div class="container">
-      <h1>
-        Al Amaan's Menu
-        <div class="pull-right">
-          <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-        </div>
-      </h1>
-      <div class="row">
 
-        <!-- SIDE NAV -->
-        <div id="scroller">
-          <div class="col-md-2">
-            <ul class="list-group">
-              <a class="list-group-item" href="#">Western</a> 
-              <a class="list-group-item" href="#">Drinks</a>  
-              <a class="list-group-item" href="#">Thai</a>      
-            </ul>
+<body>
+  <!-- NAVIGATION BAR -->
+  <%= render 'layouts/header_current' %>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div class="row">
+      <!-- MENU -->
+
+      <div class="col-md-10">
+        <h1>
+          Al Amaan's Menu
+          <div class="pull-right">
+            <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
           </div>
-        </div>
-        <!-- MENU -->
+        </h1>
 
-        <div class="col-md-10">
+        <% @menu_items.find_each do |s| %>
+        <div class="panel panel-default">
 
-          <% @menu_items.find_each do |s| %>
-          <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= s.cat %></h3>
+          </div>
+          <ul class="list-group">
 
-            <div class="panel-heading">
-              <h3 class="panel-title"><%= s.cat %></h3>
-            </div>
-            <ul class="list-group">
-
-              <div class="panel-body">
-                <% MenuItem.where(cat: s.cat).group(:subcat).find_each do |w| %>
-                <li class="list-group-item">
-                  <h2><small><strong><%= w.subcat %></strong></small></h2>
-
+            <div class="panel-body">
+              <% MenuItem.where(cat: s.cat).group(:subcat).find_each do |w| %>
+              <li class="list-group-item">
+                <h2><small><strong><%= w.subcat %></strong></small></h2>
+                <div class="table-responsive">
                   <table class="table table-condensed table-hover">
                     <thead>
                       <tr>
@@ -132,15 +117,29 @@
                     <% end %>
 
                   </table>
+                </div>
+                <% end %>
+            </div>
+            </div>
+          </ul>
 
-                  <% end %>
-              </div>
-              </div>
-            </ul>
+        <% end %>
+      </div>
 
-          <% end %>
+
+      <!-- SIDE NAV -->
+      <div id="scroller">
+        <div class="col-md-2">
+          <ul class="list-group">
+            <a class="list-group-item" href="#Western" id="Western" onclick="$('html,body').animate({scrollTop:88},'slow');return false;">Western</a> 
+            <a class="list-group-item" href="#Drinks" id="Drinks" onclick="$('html,body').animate({scrollTop:5178},'slow');return false;">Drinks</a>  
+            <a class="list-group-item" href="#Thai" id="Thai" onclick="$('html,body').animate({scrollTop:10535},'slow');return false;">Thai</a>
+            <a class="list-group-item" href="#Indian" id="Indian" onclick="$('html,body').animate({scrollTop:18090},'slow');return false;">Indian</a>
+            <a class="list-group-item" href="#Top" id="backToTop" onclick="$('html,body').animate({scrollTop:0},'slow');return false;">Back to Top</a>      
+
+          </ul>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</body>

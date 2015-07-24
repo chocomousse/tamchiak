@@ -1,46 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <% @title="tamchiak | Bill for #{@channel.cname}" %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<% @title="tamchiak | Bill for #{@channel.cname}" %>
 
-  </head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <%= render 'layouts/header_current' %>
 
-  <body>
-    <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header_current' %>
+  <!-- CONTENT -->
 
-    <!-- CONTENT -->
+  <div class="container">
+    <h1>
+      <strong><%= current_channel.cname %></strong> <small>Bill</small>
 
-    <div class="container">
-      <h1>
-        <strong><%= current_channel.cname %></strong> <small>Bill</small>
-
-        <div class="pull-right">
-          <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-          <% if current_channel.user_id == current_user.id || current_user.is_admin %>
-          <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
-          <% end %>
-        </div>
-      </h1>
-      <p></p>
-
-      <% if @orders.size == 0 %>
-      <div class="well">
-        There are no bills payable.
+      <div class="pull-right">
+        <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+        <% if current_channel.user_id == current_user.id || current_user.is_admin %>
+        <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
+        <% end %>
       </div>
-      <% else %>
+    </h1>
+    <p></p>
 
-      <% @bills.each do |t| %>
+    <% if @orders.size == 0 %>
+    <div class="well">
+      There are no bills payable.
+    </div>
+    <% else %>
 
-      <div class="panel panel-default">
+    <% @bills.each do |t| %>
 
-        <div class="panel-heading">
-          <h3 class="panel-title"><strong><%= t.user.name %></strong> ordered <abbr title="attribute"><%= number_to_currency(@bills.sum(:total_price)[t.user_id] + (@channel.delivery / @orders.count(t.user_id, :distinct => true))) %></abbr> worth of food</h3>  
-        </div>
+    <div class="panel panel-default">
 
-        <div class="panel-body">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong><%= t.user.name %></strong> ordered <abbr title="attribute"><%= number_to_currency(@bills.sum(:total_price)[t.user_id] + (@channel.delivery / @orders.count(t.user_id, :distinct => true))) %></abbr> worth of food</h3>  
+      </div>
+
+      <div class="panel-body">
+        <div class="table-responsive">
 
           <table class="table">
             <thead>
@@ -72,12 +66,13 @@
           </table>
         </div>
       </div>
-
-      <% end %>
-      <% end %>
-      
-      <small>NOTE: Bills payable include delivery cost.</small>
-      <p></p>
-
     </div>
-  </body>
+
+    <% end %>
+    <% end %>
+
+    <small>NOTE: Bills payable include delivery cost.</small>
+    <p></p>
+
+  </div>
+</body>

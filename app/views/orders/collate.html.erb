@@ -1,41 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <% @title="tamchiak | Collated orders for #{current_channel.cname}" %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap.min.css">
-  </head>
 
-  <body>
-    <!-- NAVIGATION BAR -->
-    <%= render 'layouts/header_current' %>
+<% @title="tamchiak | Collated orders for #{current_channel.cname}" %>
 
-    <!-- CONTENT -->
-    <div class="container">
+<body>
+  <!-- NAVIGATION BAR -->
+  <%= render 'layouts/header_current' %>
 
-      <h1>
-        <strong><%= current_channel.cname %></strong> <small>Collated</small>
-        <div class="pull-right">
-          
-          <% if @channel.channel_status == "Open" %>
-          <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-          <% end %>
-          
-          <%= link_to "Check Bill", bill_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-          
-          <% if (current_channel.user_id == current_user.id || current_user.is_admin) && @channel.channel_status == "Open" %>
-          <%= link_to "Close Channel", @channel, :method => :get, :class => "btn btn-danger" %>
-          <% end %>
-        </div>
-      </h1>
+  <!-- CONTENT -->
+  <div class="container">
 
+    <h1>
+      <strong><%= current_channel.cname %></strong> <small>Collated</small>
+      <div class="pull-right">
 
-      <% if @orders_in_channel.size == 0 %>
-      <div class="well">
-        You have no orders in your channel.
+        <% if @channel.channel_status == "Open" %>
+        <%= link_to "Back to Channel", current_channel_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+        <% end %>
+
+        <%= link_to "Check Bill", bill_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
+
+        <% if (current_channel.user_id == current_user.id || current_user.is_admin) && @channel.channel_status == "Open" %>
+        <%= link_to "Close Channel", @channel, :method => :get, :class => "btn btn-danger" %>
+        <% end %>
       </div>
-      <% else %>
+    </h1>
+
+
+    <% if @orders_in_channel.size == 0 %>
+    <div class="well">
+      You have no orders in your channel.
+    </div>
+    <% else %>
+    <div class="table-responsive">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -61,14 +56,15 @@
           <% end %>
         </tbody>
       </table>
-      <div>
-        <% end %>
-        <div class="pull-right" align="right">
-          <h4><small><%= render 'layouts/channel_text' %> | Delivery: <%= number_to_currency(@channel.delivery) %></small></h4>
-          <h3>Total: <%= number_to_currency(@orders_in_channel.sum(:total_price) + @channel.delivery) %></h3>
-        </div>
-      </div>
-
     </div>
-  </body>
-</html>
+
+    <div>
+      <% end %>
+      <div class="pull-right" align="right">
+        <h4><small><%= render 'layouts/channel_text' %> | Delivery: <%= number_to_currency(@channel.delivery) %></small></h4>
+        <h3>Total: <%= number_to_currency(@orders_in_channel.sum(:total_price) + @channel.delivery) %></h3>
+      </div>
+    </div>
+
+  </div>
+</body>

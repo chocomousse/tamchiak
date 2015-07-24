@@ -7,10 +7,11 @@
         <li><%= link_to "Home",   join_or_create_path %></li>
         <li class="active"><%= link_to "Current Channel",   current_channel_path %></li>
         <li><%= link_to "Your Channels",   all_channels_path %></li>
-        <li><%= link_to "Settings",   settings_path %></li>
         <% if current_user.is_admin? %>
         <li><%= link_to "Admin", admin_path %></li>
         <% end %>
+        <li><%= link_to "Settings",   settings_path %></li>
+
       </ul>
 
       <p class="navbar-text navbar-right">Signed in as <%= current_user.name %>.   <%= link_to "Sign out", logout_path %></p>
