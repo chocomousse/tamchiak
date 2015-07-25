@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
   
   def new
     #@menu_items = MenuItem.group(:cat)
-    @menu_items = MenuItem.select("DISTINCT ON (menu_items.cat) *").group("menu_items.*")
+    @menu_items = select("DISTINCT(menu_items.cat), menu_items.*").order("menu_items.created_at DESC")
     @order = Order.new
   end
 
