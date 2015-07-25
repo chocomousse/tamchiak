@@ -27,7 +27,7 @@
           <ul class="list-group">
 
             <div class="panel-body">
-              <% MenuItem.where(cat: s.cat).select(:subcat).group(:subcat).order(:subcat).find_each do |w| %>
+              <% MenuItem.where(cat: s.cat).group(:subcat).find_each do |w| %>
               <li class="list-group-item">
                 <h2><small><strong><%= w.subcat %></strong></small></h2>
                 <div class="table-responsive">
