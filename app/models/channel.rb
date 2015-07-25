@@ -4,7 +4,7 @@ class Channel < ActiveRecord::Base
   
   belongs_to :user
   
-  validates :cname, presence: true
+  validates :cname, presence: true, uniqueness: {case_sensitive: true}, length: {maximum: 20}
   validates :menu, presence: true
   validates :delivery, presence: true
   

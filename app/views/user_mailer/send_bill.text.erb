@@ -1,11 +1,5 @@
-<h1>Tamchiak</h1>
-
-<p>Hi <%= @user.name %>,</p>
-
-<p>
-Thank you for using Tamchiak! 
-</p>
-
-<p>
-  You owe <%= number_to_currency(@user_order.sum(:total_price)) %> in the chanel "<%= @channel.cname %>".
-</p>
+Hello <%= @user.name %>!<br>
+<br>
+A friendly reminder that your amount payable for the food you ordered in the channel <u><%= @channel.cname %></u> is <%= number_to_currency(@user_order.sum(:total_price) + (@channel.delivery / @channel.orders.count(@user.id, :distinct => true))) %> including delivery costs. Thank you for using Tamchiak!<br>
+<br>
+Love, the cool people from <b>tamchiak</b> ^_^<br>

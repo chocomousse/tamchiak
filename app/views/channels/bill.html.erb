@@ -5,10 +5,12 @@
   <%= render 'layouts/header_current' %>
 
   <!-- CONTENT -->
- <% if @channel.channel_status == "Closed" %>
+  <% if @channel.channel_status == "Closed" %>
   <div class="alert alert-danger" role="alert">This channel is closed. You can still view the collated order and bill pages.</div>
+  <% else %>
+  <div class="alert alert-info" role="alert">To send out bill reminders to your friends who have ordered in this channel, please first close the channel.</div>  
   <% end %>
-  
+
   <div class="container">
     <div class="row">
       <h1>
@@ -16,7 +18,7 @@
 
         <div class="pull-right">
           <%= link_to "Collated Order", collate_path, {class: "btn btn-default", data: { no_turbolink: true }} %>
-          <% if current_channel.user_id == current_user.id || current_user.is_admin %>
+          <% if @channel.channel_status == "Closed" && (current_channel.user_id == current_user.id || current_user.is_admin) %>
           <%= link_to "Send Bill", send_bill_path, {class: "btn btn-primary", data: { no_turbolink: true }} %>
           <% end %>
         </div>

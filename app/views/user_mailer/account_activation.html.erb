@@ -1,9 +1,7 @@
-<h1>Tamchiak</h1>
-
-<p>Hi <%= @user.name %>,</p>
-
-<p>
-Welcome to Tamchiak! Click on the link below to activate your account:
-</p>
-
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
+Hello <%= @user.name %>!<br>
+<br>
+Welcome to Tamchiak! We are so excited to welcome you to our big family. Please click on the link below to activate your account:<br>
+<br>
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %><br>
+<br>
+Love, the cool people from <b>tamchiak</b> ^_^<br>
