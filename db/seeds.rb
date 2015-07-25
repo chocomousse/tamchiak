@@ -104,8 +104,8 @@ MenuItem.create! id: 87, name: "Mutton Briyani", cat: "Indian Kitchen", subcat: 
 MenuItem.create! id: 88, name: "Prawn Briyani", cat: "Indian Kitchen", subcat: "Rice", item_code: "N35", price: 7.00, active: true
 MenuItem.create! id: 89, name: "Vegetable Briyani", cat: "Indian Kitchen", subcat: "Rice", item_code: "N36", price: 5.00, active: true
 MenuItem.create! id: 90, name: "Kashmiri Pulao", cat: "Indian Kitchen", subcat: "Rice", item_code: "N37", price: 4.00, active: true
-MenuItem.create! id: 91, name: "Jeera Rice", cat: "Indian Kitchen", subcat: "Rice", item_code: "N38", price: 3.00, active: true
-MenuItem.create! id: 92, name: "Plain White Rice", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39", price: 1.00, active: true
+MenuItem.create! id: 91, name: "Jeera Rice (Basmati)", cat: "Indian Kitchen", subcat: "Rice", item_code: "N38", price: 3.50, active: true
+MenuItem.create! id: 92, name: "Plain White Rice (Basmati)", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39", price: 1.50, active: true
 
 # Mutton --> Updated
 MenuItem.create! id: 93, name: "Mutton Masala", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N40", price: nil, active: true
