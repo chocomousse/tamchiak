@@ -5,7 +5,10 @@
   <%= render 'layouts/header_current' %>
 
   <!-- CONTENT -->
-
+ <% if @channel.channel_status == "Closed" %>
+  <div class="alert alert-danger" role="alert">This channel is closed. You can still view the collated order and bill pages.</div>
+  <% end %>
+  
   <div class="container">
     <div class="row">
       <h1>

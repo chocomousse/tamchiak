@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   delete 'sessions' => 'sessions#quit'
   get 'exit' => 'users#choose'
   get 'all_channels' => "channels#display"
-  get 'channel' => 'channels#close'
+  get 'channel' => 'channels#toggle_status'
   
   get 'add_item' => 'orders#new'
   post 'orders' => 'orders#create'

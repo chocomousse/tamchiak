@@ -1,4 +1,3 @@
-
 <% @title="tamchiak | Collated orders for #{current_channel.cname}" %>
 
 <body>
@@ -6,6 +5,10 @@
   <%= render 'layouts/header_current' %>
 
   <!-- CONTENT -->
+  <% if @channel.channel_status == "Closed" %>
+  <div class="alert alert-danger" role="alert">This channel is closed. You can still view the collated order and bill pages.</div>
+  <% end %>
+
   <div class="container">
     <div class="row">
       <h1>
@@ -20,7 +23,9 @@
 
           <% if (current_channel.user_id == current_user.id || current_user.is_admin) && @channel.channel_status == "Open" %>
           <%= link_to "Close Channel", @channel, :method => :get, :class => "btn btn-danger" %>
-          <% end %>
+          <% else if (current_channel.user_id == current_user.id || current_user.is_admin) && @channel.channel_status == "Closed" %>
+          <%= link_to "Open Channel", @channel, :method => :get, :class => "btn btn-success" %>
+          <% end %><% end %>
         </div>
       </h1>
     </div>

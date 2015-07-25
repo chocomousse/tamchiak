@@ -1,7 +1,7 @@
 class ChannelsController < ApplicationController
   before_action :logged_in_user  
   before_action :admin_user, only: :destroy
-  
+
   def show
     if !current_channel.nil? && current_channel.channel_status == "Open"
       @orders = current_channel.orders
@@ -11,7 +11,6 @@ class ChannelsController < ApplicationController
         flash[:danger] = "You are not in any channel. Please create or join a channel."
         redirect_to join_or_create_path
       else 
-        flash[:danger] = "This channel is closed."
         redirect_to bill_path
       end
     end
@@ -25,7 +24,7 @@ class ChannelsController < ApplicationController
   def new
     @channel_owner = Channel.new
   end
-    
+
   def admin_channels
     @channels = Channel.all
   end
@@ -45,11 +44,16 @@ class ChannelsController < ApplicationController
     end 
   end 
 
-  def close   
+  def toggle_status   
     @channel = current_channel
-    @channel.update_attribute(:channel_status, "Closed")
-    flash[:danger] = "Your channel has been closed."
-    redirect_to collate_path
+    if @channel.channel_status == "Closed"
+      @channel.update_attribute(:channel_status, "Open")
+      flash[:success] = "This channel is now open."
+      redirect_to current_channel_path
+    else
+      @channel.update_attribute(:channel_status, "Closed")
+      redirect_to collate_path
+    end
   end
 
   def bill
@@ -62,7 +66,7 @@ class ChannelsController < ApplicationController
       @orders = @channel.orders
     end
   end
-  
+
   def destroy
     @channel = Channel.find(params[:id])
     @channel.destroy
