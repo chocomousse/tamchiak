@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
   
   def new
     #@menu_items = MenuItem.group(:cat)
-    @menu_items = MenuItem.select(:cat, :subcat, :item_code, :name, :price).group(:cat)
+    @menu_items = MenuItem.select(:cat, :subcat, :item_code, :name, :price).group(:cat, :subcat).order(:item_code)
     @order = Order.new
   end
 
