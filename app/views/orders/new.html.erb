@@ -18,7 +18,7 @@
           </div>
         </h1>
 
-        <% @menu_items.order(:subcat).find_each do |s| %>
+        <% @menu_items.find_each do |s| %>
         <div class="panel panel-default">
 
           <div class="panel-heading">
@@ -27,7 +27,7 @@
           <ul class="list-group">
 
             <div class="panel-body">
-              <% MenuItem.where(cat: s.cat).group(:subcat).find_each do |w| %>
+              <% MenuItem.where(cat: s.cat).group(:subcat, "menu_items.id").find_each do |w| %>
               <li class="list-group-item">
                 <h2><small><strong><%= w.subcat %></strong></small></h2>
                 <div class="table-responsive">
