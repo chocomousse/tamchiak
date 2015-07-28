@@ -27,7 +27,7 @@
           <ul class="list-group">
 
             <div class="panel-body">
-              <% MenuItem.where(cat: s.cat).group(:subcat).select("DISTINCT(menu_items_id)").find_each do |w| %>
+              <% MenuItem.where(cat: s.cat).group("menu_items.subcat, menu_items.id").find_each do |w| %>
               <li class="list-group-item">
                 <h2><small><strong><%= w.subcat %></strong></small></h2>
                 <div class="table-responsive">
@@ -43,7 +43,7 @@
                       </tr>        
                     </thead>
 
-                    <% MenuItem.where(cat: s.cat, subcat: w.subcat).select("DISTINCT(menu_items_id)").find_each do |t| %>
+                    <% MenuItem.where(cat: s.cat, subcat: w.subcat).find_each do |t| %>
 
                     <tbody>
 
