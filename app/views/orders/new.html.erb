@@ -204,17 +204,48 @@
                             <% else if t.name == "Chicken" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                            
+                            <% else if t.name == "Hot & Spicy" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                                                       
+                            <% else if t.name == "Black Soya Sauce" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                                                       
+                            <% else if t.name == "Ginger Brown Sauce" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
 
+                            <% else if t.name == "Sweet & Sour" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                            
+                            <% else if t.name == "Red Sauce" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                                                        
+                            <% else if t.name == "Yellow Ginger (Crispy)" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($8.00)', '8.00'], ['Medium ($10.00)', '10.00'], ['Large ($12.00)', '12.00']]), {class: "form-control"}) %>  
+            
+                            <% else if t.name == "Thai Salad in Lime Sauce" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($8.00)', '8.00'], ['Medium ($10.00)', '10.00'], ['Large ($12.00)', '12.00']]), {class: "form-control"}) %>  
+                                      
+                            <% else if t.name == "Black Pepper" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($8.00)', '8.00'], ['Medium ($10.00)', '10.00'], ['Large ($12.00)', '12.00']]), {class: "form-control"}) %>                      
+                            
                             <% else %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.hidden_field :unit_price, :value => t.price %>
 
                             <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
                             <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
-                            <% end %><% end %><% end %><% end %><% end %>
-
-                            <% end %><% end %><% end %><% end %>
-
+                            <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
+                            
+                            <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
                           </td>     
                           <!-- DROP DOWN INPUT FOR SUB-CATEGORY ENDS -->
 
