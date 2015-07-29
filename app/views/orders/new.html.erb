@@ -91,28 +91,133 @@
                             <% else if t.name == "Mix Fish Plater" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($15.00)', '15.00'], ['Medium ($20.00)', '20.00'], ['Large ($25.00)', '25.00']]), {class: "form-control"}) %>  
-                            
+
                             <% else if t.name == "Chicken 65" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($12.00)', '12.00'], ['Large ($15.00)', '15.00']]), {class: "form-control"}) %>  
-                            
+
                             <% else if t.name == "Chicken Korma" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($7.00)', '7.00'], ['Medium ($10.00)', '10.00'], ['Large ($15.00)', '15.00']]), {class: "form-control"}) %>  
-                            
+
                             <% else if t.name == "Chilli Chicken" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
-                            <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($12.00)', '12.00'], ['Large ($16.00)', '16.00']]), {class: "form-control"}) %>  
+                            <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($12.00)', '12.00'], ['Large ($16.00)', '16.00']]), {class: "form-control"}) %>
+                            <% else if t.name == "Tea" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.90)', '0.90'], ['Cold ($1.30)', '1.30']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Coffee" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.90)', '0.90'], ['Cold ($1.30)', '1.30']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Nescafe" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.20)', '1.20'], ['Cold ($1.50)', '1.50']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Milo" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.20)', '1.20'], ['Cold ($1.50)', '1.50']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Horlicks" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.20)', '1.20'], ['Cold ($1.50)', '1.50']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Chocolate" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.50)', '1.50'], ['Cold ($2.00)', '2.00']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Teh 'O'" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.80)', '0.80'], ['Cold ($1.00)', '1.00']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Kopi 'O'" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.80)', '0.80'], ['Cold ($1.00)', '1.00']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Ginger Tea" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.00)', '1.00'], ['Cold ($1.40)', '1.40']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Ginger Coffee" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.00)', '1.00'], ['Cold ($1.40)', '1.40']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Teh Chino" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.30)', '1.30'], ['Cold ($1.50)', '1.50']]), {class: "form-control"}) %>
+
+                            <% else if t.name == "Coffee Chino" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.30)', '1.30'], ['Cold ($1.50)', '1.50']]), {class: "form-control"}) %>                                                                                   
+                            <% else if t.name == "Bandung Chino" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.30)', '1.30'], ['Cold ($1.50)', '1.50']]), {class: "form-control"}) %>    
+
+                            <% else if t.name == "Syrup" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.90)', '0.80'], ['Cold ($1.00)', '1.00']]), {class: "form-control"}) %>    
+
+                            <% else if t.name == "Syrup With Lime" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.90)', '0.90'], ['Cold ($1.30)', '1.30']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Teh 'O' With Lime" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.90)', '0.90'], ['Cold ($1.30)', '1.30']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Lime" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($0.90)', '0.90'], ['Cold ($1.30)', '1.30']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Lemonade" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Hot ($1.50)', '1.50'], ['Cold ($2.00)', '2.00']]), {class: "form-control"}) %>
+
+                            <% else if t.subcat == "Vegetables" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($4.00)', '4.00'], ['Medium ($6.00)', '6.00'], ['Large ($8.00)', '8.00']]), {class: "form-control"}) %>  
+                            <% else if t.name == "Slice Fish with Vegetables" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($5.00)', '5.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Fish Ball" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($5.00)', '5.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Ox Tail" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($9.00)', '9.00'], ['Large ($12.00)', '12.00']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Tomyam Seafood" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                            
+                            <% else if t.name == "Tomyam Slice Fish" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+
+                            <% else if t.name == "Tomyam Chicken" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
+                            
+                            <% else if t.name == "Chicken" %>
+                            <%= f.hidden_field :subcat, :value => "-" %>
+                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>  
 
                             <% else %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.hidden_field :unit_price, :value => t.price %>
 
-                            <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
+                            <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
+                            <% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %><% end %>
+                            <% end %><% end %><% end %><% end %><% end %>
+
+                            <% end %><% end %><% end %><% end %>
 
                           </td>     
                           <!-- DROP DOWN INPUT FOR SUB-CATEGORY ENDS -->
-                          
+
                           <td><%= number_to_currency(t.price) %></td>
 
                           <td class="col-md-1"><%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %></td>
