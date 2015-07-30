@@ -3,14 +3,23 @@
 <body>
 
   <!-- NAVIGATION BAR -->
-  <%= render 'layouts/header' %>
+  <%= render 'layouts/header_about' %>
 
   <!-- CONTENT -->
   <div class="container well">
-    <div class="center" align="center">
+    <div class="center" >
       <div class="row">
-        <p>
-        <h1>About tamchiak</h1>
+        
+        <h1 align="center">About tamchiak</h1>
+<p align="left">
+        Hello, thank you for using tamchiak! Tamchiak, or greedy in hokkien, aims to help you collate meal orders in a hassle free manner. <br/>
+        <br/>
+
+  To collate orders, simply <%= link_to "create a channel", create_channel_path %>, and pm your channel name to your friends. When all the orders are in, close the channel and send the bill (inclusive of delivery charge) to your friends! To place an order with your friends, simply <%= link_to "join a channel", join_channel_path %>, place your orders and wait for the food (and bill) to come! <br/>
+        <br/>
+        We are still working on other menu options and integrating online ordering to this app so do check back soon! Feel free to drop us an email at tamchiakorbital@gmail.com for any feedback or bugs. <br/>
+        <br/>
+        Love, Szeying and Annabel from <b>tamchiak</b> ^_^
         </p>
 
     </div>
