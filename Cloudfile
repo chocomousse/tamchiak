@@ -1,0 +1,19 @@
+tamchiak:
+  ruby_version: 2.2.2
+  environment: production # RAILS_ENV
+  domains:
+    - tamchiak.shellyapp.com
+  servers:
+    app1:
+      size: small
+      thin: 2
+      # delayed_job: 1
+      # sidekiq: 1
+      # clockwork: on
+      # whenever: on
+      # elasticsearch: on
+      databases:
+        - mysql
+        # - postgresql
+        # - mongodb
+        # - redis
