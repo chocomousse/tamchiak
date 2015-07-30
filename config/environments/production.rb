@@ -81,10 +81,10 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  host = 'tamchiak.herokuapp.com'
+  host = 'tamchiak.shellyapp.com'
   config.action_mailer.default_url_options = { host: host }
   config.action_mailer.smtp_settings = {
-    address:              'gmail.com',
+    address:              'smtp.gmail.com',
     port:                 587,
     domain:               'gmail.com',
     user_name:            'tamchiakorbital@gmail.com',
