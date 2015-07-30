@@ -12,9 +12,9 @@ MenuItem.create! id: 8, name: "Sambal Style Fried (serve with chicken)", cat: "T
 MenuItem.create! id: 9, name: "Chinese Style Friend (serve with chicken)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T36", price: 4.00, active: true
 MenuItem.create! id: 10, name: "Fried with Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T37", price: 4.00, active: true
 MenuItem.create! id: 11, name: "Fried with Seafood (cuttle fish and prawn)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T38", price: 4.00, active: true
-MenuItem.create! id: 12, name: "Pataya - Chicken", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.00, active: true
-MenuItem.create! id: 13, name: "Pataya - Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.00, active: true
-MenuItem.create! id: 14, name: "Pataya - Seafood", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.00, active: true
+MenuItem.create! id: 12, name: "Pataya - Chicken", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.50, active: true
+MenuItem.create! id: 13, name: "Pataya - Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.50, active: true
+MenuItem.create! id: 14, name: "Pataya - Seafood", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.50, active: true
 MenuItem.create! id: 15, name: "Fried with cockles", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T40", price: 4.00, active: true
 
 # Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn) --> Not in Menu
