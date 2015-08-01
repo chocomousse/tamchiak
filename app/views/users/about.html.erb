@@ -12,7 +12,7 @@
         
         <h1 align="center">About tamchiak</h1>
 <p align="left">
-        Hello, thank you for using tamchiak! Tamchiak, or greedy in hokkien, aims to help you collate meal orders in a hassle free manner. <br/>
+  Hello <strong><%= current_user.name %></strong>, thank you for using tamchiak! Tamchiak, or greedy in hokkien, aims to help you collate meal orders in a hassle free manner. <br/>
         <br/>
 
   To collate orders, simply <%= link_to "create a channel", create_channel_path %>, and pm your channel name to your friends. When all the orders are in, close the channel and send the bill (inclusive of delivery charge) to your friends! To place an order with your friends, simply <%= link_to "join a channel", join_channel_path %>, place your orders and wait for the food (and bill) to come! <br/>
