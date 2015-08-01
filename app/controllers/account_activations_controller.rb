@@ -5,7 +5,7 @@ class AccountActivationsController < ApplicationController
       user.activate
       log_in user
       flash[:success] = "Account activated!"
-      redirect_to join_or_create_path
+      redirect_to about_path
     else
       flash[:danger] = "Invalid activation link"
       redirect_to login_path
