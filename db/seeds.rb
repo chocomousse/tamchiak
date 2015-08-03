@@ -4,94 +4,94 @@ MenuItem.delete_all
 MenuItem.create! id: 1, name: "Tomyam - Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T30", price: 6.50, active: true
 MenuItem.create! id: 2, name: "Tomyam - Chicken", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T30", price: 6.50, active: true
 MenuItem.create! id: 3, name: "Tomyam - Seafood", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T30", price: 6.50, active: true
-MenuItem.create! id: 4, name: "Bandung, Soup", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T31", price: 4.00, active: true
-MenuItem.create! id: 5, name: "Hong Kong (white sauce)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T32", price: 4.00, active: true
-MenuItem.create! id: 6, name: "Haillam (black sauce)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T33", price: 4.00, active: true
-MenuItem.create! id: 7, name: "Thai Style Fried with Mixture Chicken Prawn and Cuttlefish", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T34", price: 4.50, active: true
-MenuItem.create! id: 8, name: "Sambal Style Fried (serve with chicken)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T35", price: 4.00, active: true
-MenuItem.create! id: 9, name: "Chinese Style Friend (serve with chicken)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T36", price: 4.00, active: true
-MenuItem.create! id: 10, name: "Fried with Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T37", price: 4.00, active: true
-MenuItem.create! id: 11, name: "Fried with Seafood (cuttle fish and prawn)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T38", price: 4.00, active: true
+MenuItem.create! id: 4, name: "Bandung, Soup", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T31", price: 4.50, active: true
+MenuItem.create! id: 5, name: "Hong Kong (white sauce)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T32", price: 4.50, active: true
+MenuItem.create! id: 6, name: "Haillam (black sauce)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T33", price: 4.50, active: true
+MenuItem.create! id: 7, name: "Thai Style Fried with Mixture Chicken Prawn and Cuttlefish", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T34", price: 4.80, active: true
+MenuItem.create! id: 8, name: "Sambal Style Fried (serve with chicken)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T35", price: 4.50, active: true
+MenuItem.create! id: 9, name: "Chinese Style Friend (serve with chicken)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T36", price: 4.50, active: true
+MenuItem.create! id: 10, name: "Fried with Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T37", price: 4.50, active: true
+MenuItem.create! id: 11, name: "Fried with Seafood (cuttle fish and prawn)", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T38", price: 4.50, active: true
 MenuItem.create! id: 12, name: "Pataya - Chicken", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.50, active: true
 MenuItem.create! id: 13, name: "Pataya - Beef", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.50, active: true
 MenuItem.create! id: 14, name: "Pataya - Seafood", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T39", price: 5.50, active: true
-MenuItem.create! id: 15, name: "Fried with cockles", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T40", price: 4.00, active: true
+MenuItem.create! id: 15, name: "Fried with cockles", cat: "Thai Kitchen", subcat: "Mee, Beehoon, Kwayteow, Maggie", item_code: "T40", price: 4.50, active: true
 
 # Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn) --> Not in Menu
-MenuItem.create! id: 16, name: "Hot & Spicy with Red Sauce", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T41", price: 4.50, active: true
-MenuItem.create! id: 17, name: "Black Oyster Sauce", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T42", price: 4.50, active: true
-MenuItem.create! id: 18, name: "Sweet & Sour", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T43", price: 4.50, active: true
+MenuItem.create! id: 16, name: "Hot & Spicy with Red Sauce", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T41", price: 4.80, active: true
+MenuItem.create! id: 17, name: "Black Oyster Sauce", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T42", price: 4.80, active: true
+MenuItem.create! id: 18, name: "Sweet & Sour", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T43", price: 4.80, active: true
 MenuItem.create! id: 19, name: "Black Pepper", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T44", price: 4.80, active: true
 MenuItem.create! id: 20, name: "Ginger Brown Sauce", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T45", price: 4.80, active: true
-MenuItem.create! id: 21, name: "Mui Fun (thick clear sauce)", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T46", price: 4.00, active: true
+MenuItem.create! id: 21, name: "Mui Fun (thick clear sauce)", cat: "Thai Kitchen", subcat: "Steam Rice (Chicken, Beef, Slice Fish, Cuttlefish, Prawn)", item_code: "T46", price: 4.50, active: true
 
 # Fried Rice --> Not in Menu
 MenuItem.create! id: 22, name: "Chinese Style Serve with Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T47", price: 4.00, active: true
-MenuItem.create! id: 23, name: "Thai Style Serve with Micture Chicken Prawn, Cuttle Fish", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T48", price: 4.50, active: true
-MenuItem.create! id: 24, name: "Ikan Billis & Egg", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T49", price: 4.00, active: true
-MenuItem.create! id: 25, name: "Tomato & Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T50", price: 4.00, active: true
-MenuItem.create! id: 26, name: "Fried Chicken with Chilli Sauce", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T51", price: 4.00, active: true
+MenuItem.create! id: 23, name: "Thai Style Serve with Micture Chicken Prawn, Cuttle Fish", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T48", price: 4.80, active: true
+MenuItem.create! id: 24, name: "Ikan Billis & Egg", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T49", price: 4.50, active: true
+MenuItem.create! id: 25, name: "Tomato & Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T50", price: 4.50, active: true
+MenuItem.create! id: 26, name: "Fried Chicken with Chilli Sauce", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T51", price: 4.50, active: true
 MenuItem.create! id: 27, name: "Salted Fish", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T52", price: 4.00, active: true
-MenuItem.create! id: 28, name: "Kampong Style", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T53", price: 4.50, active: true
-MenuItem.create! id: 29, name: "Cockles", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T54", price: 4.00, active: true
-MenuItem.create! id: 30, name: "Pataya - Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T55", price: 5.00, active: true
-MenuItem.create! id: 31, name: "Pataya - Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T55", price: 5.00, active: true
-MenuItem.create! id: 32, name: "Pataya - Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T55", price: 5.00, active: true
-MenuItem.create! id: 33, name: "Chinese or Thai Style with Red Chilli Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T56", price: 5.00, active: true
-MenuItem.create! id: 34, name: "Chinese Style with Hot & Spicy Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T57", price: 5.00, active: true
-MenuItem.create! id: 35, name: "Chinese Style with Hot & Spicy Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T57", price: 5.00, active: true
-MenuItem.create! id: 36, name: "Thai Style with Hot & Spicy Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T58", price: 5.00, active: true
-MenuItem.create! id: 37, name: "Thai Style with Hot & Spicy Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T58", price: 5.00, active: true
-MenuItem.create! id: 38, name: "Chinese Style with Black Oyster Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T59", price: 5.00, active: true
-MenuItem.create! id: 39, name: "Chinese Style with Black Oyster Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T59", price: 5.00, active: true
-MenuItem.create! id: 40, name: "Button Mushroom & Egg", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T60", price: 4.00, active: true
-MenuItem.create! id: 41, name: "Sambal Mushroom & Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T61", price: 5.00, active: true
+MenuItem.create! id: 28, name: "Kampong Style", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T53", price: 4.80, active: true
+MenuItem.create! id: 29, name: "Cockles", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T54", price: 4.50, active: true
+MenuItem.create! id: 30, name: "Pataya - Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T55", price: 5.50, active: true
+MenuItem.create! id: 31, name: "Pataya - Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T55", price: 5.50, active: true
+MenuItem.create! id: 32, name: "Pataya - Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T55", price: 5.50, active: true
+MenuItem.create! id: 33, name: "Chinese or Thai Style with Red Chilli Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T56", price: 5.50, active: true
+MenuItem.create! id: 34, name: "Chinese Style with Hot & Spicy Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T57", price: 5.50, active: true
+MenuItem.create! id: 35, name: "Chinese Style with Hot & Spicy Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T57", price: 5.50, active: true
+MenuItem.create! id: 36, name: "Thai Style with Hot & Spicy Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T58", price: 5.50, active: true
+MenuItem.create! id: 37, name: "Thai Style with Hot & Spicy Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T58", price: 5.50, active: true
+MenuItem.create! id: 38, name: "Chinese Style with Black Oyster Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T59", price: 5.50, active: true
+MenuItem.create! id: 39, name: "Chinese Style with Black Oyster Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T59", price: 5.50, active: true
+MenuItem.create! id: 40, name: "Button Mushroom & Egg", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T60", price: 4.50, active: true
+MenuItem.create! id: 41, name: "Sambal Mushroom & Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T61", price: 5.50, active: true
 MenuItem.create! id: 42, name: "3 Taste (Sweet, sour, chilli) with Chicken & Seafood", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T62", price: 6.00, active: true
-MenuItem.create! id: 43, name: "Sambal with Fried Sambal Chickem", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T63", price: 5.00, active: true
-MenuItem.create! id: 44, name: "Black Pepper Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T64", price: 5.00, active: true
-MenuItem.create! id: 45, name: "Black Pepper Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T64", price: 5.00, active: true
+MenuItem.create! id: 43, name: "Sambal with Fried Sambal Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T63", price: 5.50, active: true
+MenuItem.create! id: 44, name: "Black Pepper Chicken", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T64", price: 5.50, active: true
+MenuItem.create! id: 45, name: "Black Pepper Beef", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T64", price: 5.50, active: true
 MenuItem.create! id: 46, name: "Pineapple (serve with chicken and seafood)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T65", price: 5.00, active: true
-MenuItem.create! id: 47, name: "Chinese Style with Sweet & Sour (chicken, slice fish)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T66", price: 5.00, active: true
-MenuItem.create! id: 48, name: "Chinese Style with Ginger Brown Sauce (Chicken, beef)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T67", price: 5.00, active: true
+MenuItem.create! id: 47, name: "Chinese Style with Sweet & Sour (chicken, slice fish)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T66", price: 5.50, active: true
+MenuItem.create! id: 48, name: "Chinese Style with Ginger Brown Sauce (Chicken, beef)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T67", price: 5.50, active: true
 MenuItem.create! id: 49, name: "Thai Style with Crispy Ginger Yellow Chicken & Egg", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T68", price: 6.00, active: true
 MenuItem.create! id: 50, name: "Bush (yellow fried rice with egg & hot & spicy chicken)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T69", price: 6.00, active: true
 MenuItem.create! id: 51, name: "Obama (yellow fried rice with egg & hot & spicy beef)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T70", price: 6.00, active: true
-MenuItem.create! id: 52, name: "Thai Style with Chicken Egg Sambal", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T71", price: 5.00, active: true
-MenuItem.create! id: 53, name: "Chinese Style with Chicken Egg Sambal", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T71", price: 5.00, active: true
+MenuItem.create! id: 52, name: "Thai Style with Chicken Egg Sambal", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T71", price: 5.50, active: true
+MenuItem.create! id: 53, name: "Chinese Style with Chicken Egg Sambal", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T71", price: 5.50, active: true
 
 #****************************************************************************** Indian Kitchen ************************************************************************************
 # Tandoori => Need Different Prices --> Updated
 MenuItem.create! id: 54, name: "Tandoori Chicken", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N01", price: nil , active: true
 MenuItem.create! id: 55, name: "Mixed Chicken Plater", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N02", price: nil, active: true
 MenuItem.create! id: 56, name: "Chicken Tikka", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N03", price: nil, active: true
-MenuItem.create! id: 57, name: "Chicken Hariyall", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N04", price: nil, active: true
+MenuItem.create! id: 57, name: "Chicken Hariyali", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N04", price: nil, active: true
 MenuItem.create! id: 58, name: "Chicken Reshmi Kebab", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N05", price: nil, active: true
 MenuItem.create! id: 59, name: "Chicken Iranian Kebab", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N06", price: nil, active: true
 MenuItem.create! id: 60, name: "Seekh Kebab", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N07", price: nil, active: true
 MenuItem.create! id: 61, name: "Panner Tikka", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N08", price: nil, active: true
 MenuItem.create! id: 62, name: "Fish Tikka", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N09", price: nil, active: true
-MenuItem.create! id: 63, name: "Fish Hariyall", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N10", price: nil, active: true
+MenuItem.create! id: 63, name: "Fish Hariyali", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N10", price: nil, active: true
 MenuItem.create! id: 64, name: "Fish Reshmi", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N11", price: nil, active: true
 MenuItem.create! id: 65, name: "Mix Fish Plater", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N12", price: nil, active: true
 
 # Breads --> updated
-MenuItem.create! id: 66, name: "Plain Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N13", price: 1.30, active: true
-MenuItem.create! id: 67, name: "Butter Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N14", price: 1.50, active: true
-MenuItem.create! id: 68, name: "Garlic Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N15", price: 2.00, active: true
+MenuItem.create! id: 66, name: "Plain Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N13", price: 1.50, active: true
+MenuItem.create! id: 67, name: "Butter Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N14", price: 1.70, active: true
+MenuItem.create! id: 68, name: "Garlic Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N15", price: 2.50, active: true
 MenuItem.create! id: 69, name: "Kashmiri Naan (top with dry fruits)", cat: "Indian Kitchen", subcat: "Breads", item_code: "N16", price: 4.00, active: true
 MenuItem.create! id: 70, name: "Cheese Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N17", price: 3.00, active: true
 MenuItem.create! id: 71, name: "Kheema Naan", cat: "Indian Kitchen", subcat: "Breads", item_code: "N18", price: 4.00, active: true
 MenuItem.create! id: 72, name: "Aloo Pratha", cat: "Indian Kitchen", subcat: "Breads", item_code: "N19", price: 2.50, active: true
 MenuItem.create! id: 73, name: "Poodina Pratha", cat: "Indian Kitchen", subcat: "Breads", item_code: "N20", price: 2.00, active: true
-MenuItem.create! id: 74, name: "Garlic & Onion Kulcha", cat: "Indian Kitchen", subcat: "Breads", item_code: "N21", price: 3.00, active: true
-MenuItem.create! id: 75, name: "Tandoori Roti", cat: "Indian Kitchen", subcat: "Breads", item_code: "N22", price: 1.30, active: true
+MenuItem.create! id: 74, name: "Garlic & Onion Kulcha", cat: "Indian Kitchen", subcat: "Breads", item_code: "N21", price: 3.50, active: true
+MenuItem.create! id: 75, name: "Tandoori Roti", cat: "Indian Kitchen", subcat: "Breads", item_code: "N22", price: 1.50, active: true
 MenuItem.create! id: 76, name: "Paneer Kulcha", cat: "Indian Kitchen", subcat: "Breads", item_code: "N23", price: 3.00, active: true
 
 # Chicken --> updated
-MenuItem.create! id: 77, name: "Chicken Korma", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N24", price: 6.00, active: true
+MenuItem.create! id: 77, name: "Chicken Korma", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N24", price: 7.00, active: true
 MenuItem.create! id: 78, name: "Chicken Spinach", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N25", price: 7.00, active: true
-MenuItem.create! id: 79, name: "Chicken Masala", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N26", price: 6.00, active: true
-MenuItem.create! id: 80, name: "Chicken Vartha", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N27", price: 6.00, active: true
+MenuItem.create! id: 79, name: "Chicken Masala", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N26", price: 7.00, active: true
+MenuItem.create! id: 80, name: "Chicken Vartha", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N27", price: 7.00, active: true
 MenuItem.create! id: 81, name: "Chicken Jalfrazzi", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N28", price: 8.00, active: true
 MenuItem.create! id: 82, name: "Chicken Muglai", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N29", price: 7.00, active: true
 MenuItem.create! id: 83, name: "Butter Chicken", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N30", price: 7.00, active: true
@@ -104,29 +104,29 @@ MenuItem.create! id: 87, name: "Mutton Briyani", cat: "Indian Kitchen", subcat: 
 MenuItem.create! id: 88, name: "Prawn Briyani", cat: "Indian Kitchen", subcat: "Rice", item_code: "N35", price: 7.00, active: true
 MenuItem.create! id: 89, name: "Vegetable Briyani", cat: "Indian Kitchen", subcat: "Rice", item_code: "N36", price: 5.00, active: true
 MenuItem.create! id: 90, name: "Kashmiri Pulao", cat: "Indian Kitchen", subcat: "Rice", item_code: "N37", price: 4.00, active: true
-MenuItem.create! id: 91, name: "Jeera Rice (Basmati)", cat: "Indian Kitchen", subcat: "Rice", item_code: "N38", price: 3.00, active: true
-MenuItem.create! id: 92, name: "Plain White Rice (Basmati)", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39", price: 1.00, active: true
+MenuItem.create! id: 91, name: "Jeera Rice (Basmati)", cat: "Indian Kitchen", subcat: "Rice", item_code: "N38", price: 3.50, active: true
+MenuItem.create! id: 92, name: "Plain White Rice (Basmati)", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39", price: 1.50, active: true
 
 # Mutton --> Updated
-MenuItem.create! id: 93, name: "Mutton Masala", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N40", price: 6.00, active: true
-MenuItem.create! id: 94, name: "Mutton Do Plaza", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N41", price: 7.00, active: true
-MenuItem.create! id: 95, name: "Mutton Spinach", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N42", price: 7.00, active: true
+MenuItem.create! id: 93, name: "Mutton Masala", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N40", price: 7.00, active: true
+MenuItem.create! id: 94, name: "Mutton Do Piaza", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N41", price: 8.00, active: true
+MenuItem.create! id: 95, name: "Mutton Spinach", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N42", price: 8.00, active: true
 MenuItem.create! id: 96, name: "Kadai Mutton", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N43", price: 8.00, active: true
 MenuItem.create! id: 97, name: "Mutton Kheema", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N44", price: 5.00, active: true
-MenuItem.create! id: 98, name: "Mutton Korma", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N45", price: 6.00, active: true
-MenuItem.create! id: 99, name: "Mutton Rogan Josh", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N46", price: 6.00, active: true
-MenuItem.create! id: 100, name: "Mutton Vindaloo", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N47", price: 7.00, active: true
+MenuItem.create! id: 98, name: "Mutton Korma", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N45", price: 7.00, active: true
+MenuItem.create! id: 99, name: "Mutton Rogan Josh", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N46", price: 7.00, active: true
+MenuItem.create! id: 100, name: "Mutton Vindaloo", cat: "Indian Kitchen", subcat: "Mutton", item_code: "N47", price: 8.00, active: true
 
 # Seafood --> Updated
 MenuItem.create! id: 101, name: "Kadai Fish", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N48", price: 8.00, active: true
-MenuItem.create! id: 102, name: "Fish Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N49", price: 7.00, active: true
+MenuItem.create! id: 102, name: "Fish Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N49", price: 8.00, active: true
 MenuItem.create! id: 103, name: "Madras Fish Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N50", price: 7.00, active: true
-MenuItem.create! id: 104, name: "Fish Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N51", price: 6.00, active: true
+MenuItem.create! id: 104, name: "Fish Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N51", price: 7.00, active: true
 MenuItem.create! id: 105, name: "Kadai Prawn", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N52", price: 8.00, active: true
-MenuItem.create! id: 106, name: "Prawn Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N53", price: 7.00, active: true
-MenuItem.create! id: 107, name: "Prawn Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N54", price: 6.00, active: true
-MenuItem.create! id: 108, name: "Prawn Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N55", price: 6.00, active: true
-MenuItem.create! id: 109, name: "Prawn Do Plaza", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N56", price: 7.00, active: true
+MenuItem.create! id: 106, name: "Prawn Vindaloo", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N53", price: 8.00, active: true
+MenuItem.create! id: 107, name: "Prawn Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N54", price: 7.00, active: true
+MenuItem.create! id: 108, name: "Prawn Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N55", price: 7.00, active: true
+MenuItem.create! id: 109, name: "Prawn Do Piaza", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N56", price: 8.00, active: true
 MenuItem.create! id: 110, name: "Chilli Prawn", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N57", price: 8.00, active: true
 MenuItem.create! id: 111, name: "Fish Head Curry", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N58", price: 15.00, active: true
 
@@ -138,7 +138,7 @@ MenuItem.create! id: 115, name: "Shai Paneer", cat: "Indian Kitchen", subcat: "V
 MenuItem.create! id: 116, name: "Mattar Paneer", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N63", price: 7.00, active: true
 MenuItem.create! id: 117, name: "Aloo Mattar Makani", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N64", price: 5.00, active: true
 MenuItem.create! id: 118, name: "Mix Vegetable Curry", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N65", price: 5.00, active: true
-MenuItem.create! id: 119, name: "Vegetable Makani", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N66", price: 6.00, active: true
+MenuItem.create! id: 119, name: "Vegetable Makani", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N66", price: 5.00, active: true
 MenuItem.create! id: 120, name: "Channa Masala", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N67", price: 5.00, active: true
 MenuItem.create! id: 121, name: "Dal Makani", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N68", price: 5.00, active: true
 MenuItem.create! id: 122, name: "Yellow Dal", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N69", price: 3.00, active: true
@@ -146,14 +146,14 @@ MenuItem.create! id: 123, name: "Dal Palak", cat: "Indian Kitchen", subcat: "Veg
 MenuItem.create! id: 124, name: "Bhindi Masala", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N71", price: 5.00, active: true
 MenuItem.create! id: 125, name: "Brinjal Masala", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N72", price: 5.00, active: true
 MenuItem.create! id: 126, name: "Mixed Raita", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N73", price: 4.00, active: true
-MenuItem.create! id: 127, name: "Plain Yogurt", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N74", price: 3.00, active: true
+MenuItem.create! id: 127, name: "Plain Yoghurt", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N74", price: 3.00, active: true
 MenuItem.create! id: 128, name: "Navrattan Korma", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N75", price: 6.00, active: true
-MenuItem.create! id: 129, name: "Malai Kotta", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N76", price: 6.00, active: true
+MenuItem.create! id: 129, name: "Malai Kotta", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N76", price: 5.00, active: true
 MenuItem.create! id: 130, name: "Paneer Tikka Masala", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N77", price: 8.00, active: true
 MenuItem.create! id: 131, name: "Green Indian Salad", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N78", price: 3.00, active: true
-MenuItem.create! id: 132, name: "Gobi Manchurian", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N79", price: 7.00, active: true
-MenuItem.create! id: 133, name: "Chilli Panner", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N80", price: 10.00, active: true
-MenuItem.create! id: 134, name: "Aloo Gobi", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N81", price: 6.00, active: true
+MenuItem.create! id: 132, name: "Gobi Manchurian", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N79", price: 6.00, active: true
+MenuItem.create! id: 133, name: "Chilli Panner", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N80", price: 8.00, active: true
+MenuItem.create! id: 134, name: "Aloo Gobi", cat: "Indian Kitchen", subcat: "Vegetables", item_code: "N81", price: 5.00, active: true
 
 #**************************************************************** Western Kitchen (updated) ***************************************************************************************
 # Finger Food --> Updated
@@ -161,18 +161,18 @@ MenuItem.create! id: 135, name: "Mushroom Soup", cat: "Western Kitchen", subcat:
 MenuItem.create! id: 136, name: "French Fries", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W02", price: 3.00, active: true
 MenuItem.create! id: 137, name: "Mash Potao", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W03", price: 2.00, active: true
 MenuItem.create! id: 138, name: "Coleslaw", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W04", price: 1.50, active: true
-MenuItem.create! id: 139, name: "Chicken Nuggets (7pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W05", price: 3.00, active: true
+MenuItem.create! id: 139, name: "Chicken Nuggets (7pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W05", price: 4.00, active: true
 MenuItem.create! id: 140, name: "Chicken Wing Set (2pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W06", price: 3.50, active: true
 MenuItem.create! id: 141, name: "Chicken Wings (3pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W07", price: 4.50, active: true
-MenuItem.create! id: 142, name: "Cheese Fries", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W08", price: 3.50, active: true
+MenuItem.create! id: 142, name: "Cheese Fries", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W08", price: 4.00, active: true
 MenuItem.create! id: 143, name: "Garlic Bread", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W09", price: 2.00, active: true
 MenuItem.create! id: 144, name: "Hot Wing's (price per pc, min 2pcs)", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W10", price: 1.50, active: true
-MenuItem.create! id: 145, name: "Spring Chicken", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W11", price: 8.00, active: true
+MenuItem.create! id: 145, name: "Spring Chicken", cat: "Western Kitchen", subcat: "Finger Food", item_code: "W11", price: 9.00, active: true
 
 # Pasta --> Updated
 MenuItem.create! id: 146, name: "Chicken Pasta", cat: "Western Kitchen", subcat: "Pasta", item_code: "W12", price: 6.00, active: true
-MenuItem.create! id: 147, name: "Beef Bolognaise", cat: "Western Kitchen", subcat: "Pasta", item_code: "W13", price: 6.00, active: true
-MenuItem.create! id: 148, name: "Seafood Marinara", cat: "Western Kitchen", subcat: "Pasta", item_code: "W14", price: 6.00, active: true
+MenuItem.create! id: 147, name: "Beef Bolognaise", cat: "Western Kitchen", subcat: "Pasta", item_code: "W13", price: 6.50, active: true
+MenuItem.create! id: 148, name: "Seafood Marinara", cat: "Western Kitchen", subcat: "Pasta", item_code: "W14", price: 6.50, active: true
 MenuItem.create! id: 149, name: "Mushroom & Chicken Pasta", cat: "Western Kitchen", subcat: "Pasta", item_code: "W15", price: 6.50, active: true
 MenuItem.create! id: 150, name: "Mushroom Olio", cat: "Western Kitchen", subcat: "Pasta", item_code: "W16", price: 5.00, active: true
 MenuItem.create! id: 151, name: "Seafood Olio", cat: "Western Kitchen", subcat: "Pasta", item_code: "W17", price: 6.00, active: true
@@ -189,12 +189,12 @@ MenuItem.create! id: 157, name: "Kebab Original", cat: "Western Kitchen", subcat
 MenuItem.create! id: 158, name: "Kebab with Cheese", cat: "Western Kitchen", subcat: "Kebab", item_code: "W24", price: 4.50, active: true
 
 # Roti John --> Updated
-MenuItem.create! id: 159, name: "Roti John", cat: "Western Kitchen", subcat: "Roti John", item_code: "W25", price: 3.50, active: true
-MenuItem.create! id: 160, name: "Roti John Cheese", cat: "Western Kitchen", subcat: "Roti John", item_code: "W26", price: 4.00, active: true
-MenuItem.create! id: 161, name: "Roti John Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W27", price: 4.00, active: true
-MenuItem.create! id: 162, name: "Roti John Black Pepper", cat: "Western Kitchen", subcat: "Roti John", item_code: "W28", price: 4.00, active: true
-MenuItem.create! id: 163, name: "Roti John Cheese Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W29", price: 4.50, active: true
-MenuItem.create! id: 164, name: "Roti John Combo", cat: "Western Kitchen", subcat: "Roti John", item_code: "W30", price: 4.80, active: true
+MenuItem.create! id: 159, name: "Roti John", cat: "Western Kitchen", subcat: "Roti John", item_code: "W25", price: 4.00, active: true
+MenuItem.create! id: 160, name: "Roti John Cheese", cat: "Western Kitchen", subcat: "Roti John", item_code: "W26", price: 4.50, active: true
+MenuItem.create! id: 161, name: "Roti John Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W27", price: 4.50, active: true
+MenuItem.create! id: 162, name: "Roti John Black Pepper", cat: "Western Kitchen", subcat: "Roti John", item_code: "W28", price: 4.50, active: true
+MenuItem.create! id: 163, name: "Roti John Cheese Mushroom", cat: "Western Kitchen", subcat: "Roti John", item_code: "W29", price: 4.80, active: true
+MenuItem.create! id: 164, name: "Roti John Combo", cat: "Western Kitchen", subcat: "Roti John", item_code: "W30", price: 5.00, active: true
 
 # Burger --> Updated
 MenuItem.create! id: 165, name: "Fried Fish Burger", cat: "Western Kitchen", subcat: "Burger", item_code: "W31", price: 6.00, active: true
@@ -203,9 +203,9 @@ MenuItem.create! id: 167, name: "Grill Beef Burger", cat: "Western Kitchen", sub
 MenuItem.create! id: 168, name: "Grill Lamb Burger", cat: "Western Kitchen", subcat: "Burger", item_code: "W34", price: 6.00, active: true
 
 # Fish --> Updated
-MenuItem.create! id: 169, name: "Fish & Chips", cat: "Western Kitchen", subcat: "Fish", item_code: "W35", price: 6.50, active: true
-MenuItem.create! id: 170, name: "Grill Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W36", price: 6.50, active: true
-MenuItem.create! id: 171, name: "Garlic Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W37", price: 6.50, active: true
+MenuItem.create! id: 169, name: "Fish & Chips", cat: "Western Kitchen", subcat: "Fish", item_code: "W35", price: 7.00, active: true
+MenuItem.create! id: 170, name: "Grill Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W36", price: 7.00, active: true
+MenuItem.create! id: 171, name: "Garlic Fish", cat: "Western Kitchen", subcat: "Fish", item_code: "W37", price: 7.00, active: true
 
 # Lamb --> Updated
 MenuItem.create! id: 172, name: "BBQ Lamb", cat: "Western Kitchen", subcat: "Lamb", item_code: "W38", price: 8.00, active: true
@@ -264,143 +264,5 @@ MenuItem.create! id: 214, name: "Durian", cat: "Drinks", subcat: "Milk Shakes", 
 MenuItem.create! id: 215, name: "Cookie", cat: "Drinks", subcat: "Milk Shakes", item_code: "D36", price: 3.00, active: true
 MenuItem.create! id: 216, name: "dates", cat: "Drinks", subcat: "Milk Shakes", item_code: "D37", price: 3.00, active: true
 
-# Local Favourites (Updated)
-MenuItem.create! id: 217, name: "Tea", cat: "Drinks", subcat: "Local Favourites", item_code: "D54", price: nil, active: true
-MenuItem.create! id: 218, name: "Coffee", cat: "Drinks", subcat: "Local Favourites", item_code: "D55", price: nil, active: true
-MenuItem.create! id: 219, name: "Nescafe", cat: "Drinks", subcat: "Local Favourites", item_code: "D56", price: nil, active: true
-MenuItem.create! id: 220, name: "Milo", cat: "Drinks", subcat: "Local Favourites", item_code: "D57", price: nil, active: true
-MenuItem.create! id: 221, name: "Horlicks", cat: "Drinks", subcat: "Local Favourites", item_code: "D58", price: nil, active: true
-MenuItem.create! id: 222, name: "Chocolate", cat: "Drinks", subcat: "Local Favourites", item_code: "D59", price: nil, active: true
-MenuItem.create! id: 223, name: "Teh 'O'", cat: "Drinks", subcat: "Local Favourites", item_code: "D60", price: nil, active: true
-MenuItem.create! id: 224, name: "Kopi 'O'", cat: "Drinks", subcat: "Local Favourites", item_code: "D61", price: nil, active: true
-MenuItem.create! id: 225, name: "Ginger Tea", cat: "Drinks", subcat: "Local Favourites", item_code: "D62", price: nil, active: true
-MenuItem.create! id: 226, name: "Ginger Coffee", cat: "Drinks", subcat: "Local Favourites", item_code: "D63", price: nil, active: true
-MenuItem.create! id: 227, name: "Tea Chino", cat: "Drinks", subcat: "Local Favourites", item_code: "D64", price: nil, active: true
-MenuItem.create! id: 228, name: "Coffee Chino", cat: "Drinks", subcat: "Local Favourites", item_code: "D65", price: nil, active: true
-MenuItem.create! id: 229, name: "Bandung Chino", cat: "Drinks", subcat: "Local Favourites", item_code: "D66", price: nil, active: true
-MenuItem.create! id: 230, name: "Syrup", cat: "Drinks", subcat: "Local Favourites", item_code: "D67", price: nil, active: true
-MenuItem.create! id: 231, name: "Syrup with Lime", cat: "Drinks", subcat: "Local Favourites", item_code: "D68", price: nil, active: true
-MenuItem.create! id: 232, name: "Tea 'O' with Lime", cat: "Drinks", subcat: "Local Favourites", item_code: "D69", price: nil, active: true
-MenuItem.create! id: 233, name: "Lime", cat: "Drinks", subcat: "Local Favourites", item_code: "D70", price: nil, active: true
-MenuItem.create! id: 234, name: "Lemonade", cat: "Drinks", subcat: "Local Favourites", item_code: "D71", price: nil, active: true
-
-# Favourites (Updated) --> Updated
-MenuItem.create! id: 235, name: "Milo Dinosaur", cat: "Drinks", subcat: "Favourites", item_code: "D12", price: 2.00, active: true
-MenuItem.create! id: 236, name: "Milo Godzilla", cat: "Drinks", subcat: "Favourites", item_code: "D13", price: 3.00, active: true
-MenuItem.create! id: 237, name: "Milo Hong Kong", cat: "Drinks", subcat: "Favourites", item_code: "D14", price: 3.50, active: true
-MenuItem.create! id: 238, name: "Horlicks Dinosaur", cat: "Drinks", subcat: "Favourites", item_code: "D15", price: 3.00, active: true
-MenuItem.create! id: 239, name: "Horlicks Hong Kong", cat: "Drinks", subcat: "Favourites", item_code: "D16", price: 3.50, active: true
-
-# Lassi (Updated) --> Updated
-MenuItem.create! id: 240, name: "Sweet Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D17", price: 3.00, active: true
-MenuItem.create! id: 241, name: "Salt Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D18", price: 3.00, active: true
-MenuItem.create! id: 242, name: "Mango Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D19", price: 3.50, active: true
-MenuItem.create! id: 243, name: "Strawberry Lassi", cat: "Drinks", subcat: "Lassi", item_code: "D20", price: 3.50, active: true
-
-# Sodas (Updated) --> Updated
-MenuItem.create! id: 244, name: "Black Soda", cat: "Drinks", subcat: "Sodas", item_code: "D38", price: 3.00, active: true
-MenuItem.create! id: 245, name: "Pink Soda", cat: "Drinks", subcat: "Sodas", item_code: "D39", price: 3.00, active: true
-MenuItem.create! id: 246, name: "White Soda", cat: "Drinks", subcat: "Sodas", item_code: "D40", price: 3.00, active: true
-
-# Fruit Juice (Updated) --> Updated
-MenuItem.create! id: 247, name: "Orange", cat: "Drinks", subcat: "Fruit Juice", item_code: "D41", price: 2.00, active: true
-MenuItem.create! id: 248, name: "Green Apple", cat: "Drinks", subcat: "Fruit Juice", item_code: "D42", price: 2.00, active: true
-MenuItem.create! id: 249, name: "Pineapple", cat: "Drinks", subcat: "Fruit Juice", item_code: "D43", price: 2.00, active: true
-MenuItem.create! id: 250, name: "Papaya", cat: "Drinks", subcat: "Fruit Juice", item_code: "D44", price: 2.00, active: true
-MenuItem.create! id: 251, name: "Watermelon", cat: "Drinks", subcat: "Fruit Juice", item_code: "D45", price: 2.00, active: true
-MenuItem.create! id: 252, name: "Starfruit", cat: "Drinks", subcat: "Fruit Juice", item_code: "D46", price: 2.00, active: true
-MenuItem.create! id: 253, name: "Honey Dew", cat: "Drinks", subcat: "Fruit Juice", item_code: "D47", price: 2.00, active: true
-MenuItem.create! id: 254, name: "Longan", cat: "Drinks", subcat: "Fruit Juice", item_code: "D48", price: 2.00, active: true
-MenuItem.create! id: 255, name: "Lychee", cat: "Drinks", subcat: "Fruit Juice", item_code: "D49", price: 2.00, active: true
-MenuItem.create! id: 256, name: "Rambutan", cat: "Drinks", subcat: "Fruit Juice", item_code: "D50", price: 2.00, active: true
-MenuItem.create! id: 257, name: "Carrot", cat: "Drinks", subcat: "Fruit Juice", item_code: "D51", price: 2.00, active: true
-MenuItem.create! id: 258, name: "Celery", cat: "Drinks", subcat: "Fruit Juice", item_code: "D52", price: 2.00, active: true
-MenuItem.create! id: 259, name: "Mix Fruit Juice (Choose any 2 fruits)", cat: "Drinks", subcat: "Fruit Juice", item_code: "D53", price: 3.00, active: true
-
-# Thai Kitchen (Soup) --> Updated
-MenuItem.create! id: 260, name: "Tomyam Seafood", cat: "Thai Kitchen", subcat: "Soup", item_code: "T01", price: nil, active: true
-MenuItem.create! id: 261, name: "Tomyam Slice Fish", cat: "Thai Kitchen", subcat: "Soup", item_code: "T02", price: nil, active: true
-MenuItem.create! id: 262, name: "Tomyam Chicken", cat: "Thai Kitchen", subcat: "Soup", item_code: "T03", price: nil, active: true
-MenuItem.create! id: 263, name: "Chicken", cat: "Thai Kitchen", subcat: "Soup", item_code: "T04", price: nil, active: true
-MenuItem.create! id: 264, name: "Slice Fish with Vegetables", cat: "Thai Kitchen", subcat: "Soup", item_code: "T05", price: nil, active: true
-MenuItem.create! id: 265, name: "Fish Ball", cat: "Thai Kitchen", subcat: "Soup", item_code: "T06", price: nil, active: true
-MenuItem.create! id: 266, name: "Ox Tail", cat: "Thai Kitchen", subcat: "Soup", item_code: "T07", price: nil, active: true
-
-# Thai Kitchen (Vegetables) --> Updated
-MenuItem.create! id: 267, name: "Mix Vegetables", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T08", price: nil, active: true
-MenuItem.create! id: 268, name: "Kailan Salted Fish", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T09", price: nil, active: true
-MenuItem.create! id: 269, name: "Kailan Shrimp Paste", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T10", price: nil, active: true
-MenuItem.create! id: 270, name: "Kailan Oyster", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T11", price: nil, active: true
-MenuItem.create! id: 271, name: "Kailan Beef", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T12", price: nil, active: true
-MenuItem.create! id: 272, name: "Kang Kung Shrimp Paste", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T13", price: nil, active: true
-MenuItem.create! id: 273, name: "Bean Sprouts Salted Fish", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T14", price: nil, active: true
-MenuItem.create! id: 274, name: "Fried Long Bean with Egg", cat: "Thai Kitchen", subcat: "Vegetables", item_code: "T15", price: nil, active: true
-
-# Thai Kitchen (Beef, Chicken, Prawn, Cuttle Fish, Slice Fish) -- diff price, diff sub cat --> Updated
-MenuItem.create! id: 275, name: "Hot & Spicy", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T16", price: nil, active: true
-MenuItem.create! id: 276, name: "Black Soya Sauce", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T17", price: nil, active: true
-MenuItem.create! id: 277, name: "Ginger Brown Sauce", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T18", price: nil, active: true
-MenuItem.create! id: 278, name: "Sweet & Sour", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T19", price: nil, active: true
-MenuItem.create! id: 279, name: "Red Sauce", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T20", price: nil, active: true
-MenuItem.create! id: 280, name: "Yellow Ginger (Crispy)", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T21", price: nil, active: true
-MenuItem.create! id: 281, name: "Thai Salad in Lime Sauce", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T22", price: nil, active: true
-MenuItem.create! id: 282, name: "Black Pepper", cat: "Thai Kitchen", subcat: "Beef, Chicken, Prawn, Cuttle Fish, Slice Fish", item_code: "T23", price: nil, active: true
-
-# Thai Kitchen (Omelet) --> Updated
-MenuItem.create! id: 283, name: "Crab Stick", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T24", price: 3.00, active: true
-MenuItem.create! id: 284, name: "Onion with Chilli", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T25", price: 2.00, active: true
-MenuItem.create! id: 285, name: "Sausage", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T26", price: 3.00, active: true
-MenuItem.create! id: 286, name: "Prawn", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T27", price: 5.00, active: true
-MenuItem.create! id: 287, name: "Chicken with Mix Veg", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T28", price: 5.00, active: true
-MenuItem.create! id: 289, name: "Beef with Sweet & Sour Sauce", cat: "Thai Kitchen", subcat: "Omelet", item_code: "T29", price: 5.00, active: true
-
-# Indian Kitchen (Seafood)
-MenuItem.create! id: 290, name: "Chilli Fish", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N58A", price: 10.00, active: true
-MenuItem.create! id: 291, name: "Fish Tikka Masala", cat: "Indian Kitchen", subcat: "Seafood", item_code: "N58B", price: 12.00, active: true
-
-# Indian Kitchen (Vegetable)
-MenuItem.create! id: 292, name: "Veg Jaipuri", cat: "Indian Kitchen", subcat: "Vegetable", item_code: "N81A", price: 6.00, active: true
-MenuItem.create! id: 293, name: "Veg Chilli", cat: "Indian Kitchen", subcat: "Vegetable", item_code: "N81B", price: 6.00, active: true
-
-# Indian Kitchen (Tandoori)
-#MenuItem.create! id: 294, name: "Chicken Lolly Pop", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N12A", price: nil, active: true
-#MenuItem.create! id: 295, name: "Chicken 65", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N12B", price: nil, active: true
-#MenuItem.create! id: 296, name: "Prawn Takka", cat: "Indian Kitchen", subcat: "Tandoori", item_code: "N12C", price: nil, active: true
-
-# Indian Kitchen (Chicken)
-MenuItem.create! id: 297, name: "Chilli Chicken", cat: "Indian Kitchen", subcat: "Chicken", item_code: "N32A", price: nil, active: true
-
-# Indian Kichen (Rice)
-MenuItem.create! id: 298, name: "Egg Fried Rice", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39A", price: 4.00, active: true
-MenuItem.create! id: 299, name: "Chicken Fried Rice", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39B", price: 5.50, active: true
-MenuItem.create! id: 300, name: "Veg Fried Rice", cat: "Indian Kitchen", subcat: "Rice", item_code: "N39C", price: 4.00, active: true
-
-# Indian Kichen (Soup)
-MenuItem.create! id: 301, name: "Sweet Corn Soup", cat: "Indian Kitchen", subcat: "Soup", item_code: "N39D", price: 3.00, active: true
-MenuItem.create! id: 302, name: "Hot & Sour Chicken Soup", cat: "Indian Kitchen", subcat: "Soup", item_code: "N39E", price: 3.00, active: true
-
-# Drinks (Ice Kachang)
-MenuItem.create! id: 303, name: "Kiwi", cat: "Drinks", subcat: "Ice Kachang", item_code: "D76", price: 3.00, active: true
-MenuItem.create! id: 304, name: "Yam", cat: "Drinks", subcat: "Ice Kachang", item_code: "D77", price: 3.00, active: true
-
-# Drinks (Ice Cream)
-MenuItem.create! id: 305, name: "Banana Split", cat: "Drinks", subcat: "Ice Cream", item_code: "D78", price: 3.80, active: true
-MenuItem.create! id: 306, name: "Mix Ice Cream", cat: "Drinks", subcat: "Ice Cream", item_code: "D78", price: 3.80, active: true
-MenuItem.create! id: 307, name: "2 Scoop Ice Cream", cat: "Drinks", subcat: "Ice Cream", item_code: "D78", price: 2.50, active: true
-MenuItem.create! id: 308, name: "Deep Fried Ice Cream(5pcs)", cat: "Drinks", subcat: "Ice Cream", item_code: "D78", price: 6.00, active: true
-MenuItem.create! id: 309, name: "Brownie with Vanilla Ice Cream", cat: "Drinks", subcat: "Ice Cream", item_code: "D78", price: 5.00, active: true
-#**************************************************************** Creating an admin user **********************************************************************
-User.delete_all
-User.create! id: 1, name: "chocomousse", email: "tamchiakorbital@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: true, activated: true, activated_at: Time.zone.now
-User.create! id: 2, name: "annabel", email: "annabel.tay17@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: true, activated: true, activated_at: Time.zone.now
-User.create! id: 6, name: "skye", email: "annabeltayyiqing17@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: false, activated: true, activated_at: Time.zone.now
-User.create! id: 3, name: "Lavi", email: "annabeltay17@gmail.com", password: "orbital19", password_confirmation: "orbital19", is_admin: false, activated: true, activated_at: Time.zone.now
-User.create! id: 4, name: "Szeying", email: "ting.szeying@gmail.com", password: "password", password_confirmation: "password", is_admin: true, activated: true, activated_at: Time.zone.now
-
-Channel.delete_all
-Channel.create! id: 1, cname: "Szeying sucks", menu:"Ameens", subtotal: 0.00, delivery: 0.00, tax: 0.00, total: 0.00, added_by: "Szeying", channel_status: "Open", bill: 0.00
-Channel.create! id: 2, cname: "Supper time!", menu:"Ameens", subtotal: 0.00, delivery: 0.00, tax: 0.00, total: 0.00, added_by: "chocomousse", channel_status: "Open", bill: 0.00
-
-ChannelStatus.delete_all
-ChannelStatus.create! id: 1, name: "Open"
-ChannelStatus.create! id: 2, name: "Closed"
+# Thai Kitchen (Fried Rice)
+MenuItem.create! id: 217, name: "Al Amaan Fried Rice (Special)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T72", price: 7.00, active: true

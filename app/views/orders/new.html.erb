@@ -70,13 +70,13 @@
 
                             <% else if t.name == "Tandoori Chicken" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
-                            <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'],['Medium ($10.00)', '10.00'], ['Large ($18.00)', '18.00']]), {class: "form-control"}) %>
+                            <%= f.select(:unit_price, options_for_select([['Medium ($10.00)', '10.00'], ['Large ($18.00)', '18.00']]), {class: "form-control"}) %>
 
                             <% else if t.name == "Mixed Chicken Plater" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($15.00)', '15.00'], ['Large ($20.00)', '20.00']]), {class: "form-control"}) %>
 
-                            <% else if t.name == "Chicken Tikka" || t.name == "Chicken Hariyall" || t.name == "Chicken Reshmi Kebab" || t.name == "Chicken Lolly Pop" %>
+                            <% else if t.name == "Chicken Tikka" || t.name == "Chicken Hariyali" || t.name == "Chicken Reshmi Kebab" || t.name == "Chicken Lolly Pop" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($6.00)', '6.00'], ['Medium ($8.00)', '8.00'], ['Large ($10.00)', '10.00']]), {class: "form-control"}) %>     
 
@@ -84,7 +84,7 @@
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($8.00)', '8.00'], ['Medium ($10.00)', '10.00'], ['Large ($12.00)', '12.00']]), {class: "form-control"}) %>  
 
-                            <% else if t.name == "Fish Tikka" || t.name == "Fish Hariyall" || t.name == "Fish Reshmi" || t.name == "Prawn Tikka" %>
+                            <% else if t.name == "Fish Tikka" || t.name == "Fish Hariyali" || t.name == "Fish Reshmi" || t.name == "Prawn Tikka" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
                             <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($15.00)', '15.00'], ['Large ($20.00)', '20.00']]), {class: "form-control"}) %>  
 
@@ -94,7 +94,7 @@
 
                             <% else if t.name == "Chicken 65" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
-                            <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($12.00)', '12.00'], ['Large ($15.00)', '15.00']]), {class: "form-control"}) %>  
+                            <%= f.select(:unit_price, options_for_select([['Small ($10.00)', '10.00'], ['Medium ($15.00)', '15.00'], ['Large ($20.00)', '20.00']]), {class: "form-control"}) %>  
 
                             <% else if t.name == "Chicken Korma" %>
                             <%= f.hidden_field :subcat, :value => "-" %>
