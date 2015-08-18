@@ -6,7 +6,6 @@
 
   <!-- CONTENT -->
   <div class="container">
-    <% if current_user.is_admin? %>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -37,9 +36,5 @@
         <% end %>
       </tbody>
     </table>
-    <% end %>
-    <% else %>
-    <h1>Your current account does not have admin privileges!</h1>
-    <% end %>
   </div>
 </body>
