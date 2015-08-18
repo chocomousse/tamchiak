@@ -8,6 +8,7 @@
   <!-- CONTENT -->
   <div class="container well">
     <div class="center" align="center">
+      <% if current_user.is_admin? %>
       <div class="row">
         <p>
         <h1>Hello, admin <strong><%= current_user.name %></strong>!</h1>
@@ -16,9 +17,12 @@
         <%= link_to "All Channels", admin_channels_path, {class: "btn btn-primary btn-lg", data: { no_turbolink: true }} %>
         <%= link_to "All Users", admin_users_path, {class: "btn btn-default btn-lg", data: { no_turbolink: true }} %> 
       </p>
-
-    </div>
+      <% end %>
+      <% else %>
+      <h1>Your current account does not have admin privileges!</h1>
+    <% end %>
   </div>
   </div>
 </div>
+
 </body>
