@@ -77,6 +77,6 @@ class ChannelsController < ApplicationController
 
   private 
   def channel_params
-    params.require(:channel).permit(:cname, :menu, :channel_status, :delivery, :created_at, :added_by)
+    params.require(:channel).permit(:cname, :menu, :channel_status, :delivery, :created_at)
   end 
 end 
