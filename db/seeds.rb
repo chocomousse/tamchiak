@@ -266,3 +266,6 @@ MenuItem.create! id: 216, name: "dates", cat: "Drinks", subcat: "Milk Shakes", i
 
 # Thai Kitchen (Fried Rice)
 MenuItem.create! id: 217, name: "Al Amaan Fried Rice (Special)", cat: "Thai Kitchen", subcat: "Fried Rice", item_code: "T72", price: 7.00, active: true
+
+# User
+User.create! id: 1, name: "admin", email: "tamchiakorbital@gmail.com", created_at: DateTime.parse("30/04/2016 17:00"), updated_at: DateTime.parse("30/04/2016 17:00"), password_digest: User.digest('admin'), remember_digest: User.digest(User.new_token), activation_digest: User.digest(User.new_token), activated: true, activated_at: DateTime.parse("30/04/2016 17:00"), is_admin: true
